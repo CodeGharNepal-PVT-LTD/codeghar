@@ -30,61 +30,103 @@
 <body class="page-header-offset">
 
     <!-- Header -->
-    <header id="header" class="scrolled">
-        <div class="container nav-container" style="display: flex; justify-content: space-between; width: 100%;">
-            <a href="index.html" class="logo">Code <span>Ghar</span></a>
-            <nav class="nav-links" id="navLinks">
-                <div class="nav-item"><a href="index.html">Home</a></div>
-                <div class="nav-item dropdown">
-                    <a href="#">Core <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="services.html">Product/Service</a></li>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="founders.html">Founders</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+<header id="header" style="position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #eee;">
+    <div style="display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:12px 24px;">
+        <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+            <img src="logo.jpeg" alt="CodeGhar Logo" style="height:38px;width:38px;border-radius:50%;object-fit:contain;">
+            <span style="font-weight:800;color:#0A1929;font-size:1.1rem;font-family:'Poppins',sans-serif;letter-spacing:0.5px;">CODEGHAR NEPAL</span>
+        </a>
+        <nav style="display:flex;align-items:center;gap:4px;">
+            <a href="index.html" style="padding:8px 14px;font-weight:600;font-size:0.9rem;color:#0A1929;text-decoration:none;border-radius:6px;">Home</a>
+
+            <div class="cgdrop">
+                <a href="services.html" class="cgdrop-trigger">Services &#8964;</a>
+                <div class="cgdrop-menu">
+                    <a href="service-web.html">Web Development</a>
+                    <a href="service-webapp.html">Web Applications</a>
+                    <a href="service-mobile.html">Mobile Apps</a>
+                    <a href="service-ai.html">AI Solutions</a>
+                    <a href="service-marketing.html">Digital Marketing</a>
+                    <a href="solutions.html">Digital Solutions</a>
                 </div>
-                <div class="nav-item dropdown">
-                    <a href="#">Growth <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="case-studies.html">Case Studies</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
-                        <li><a href="blog.html">Blog / Insights</a></li>
-                        <li><a href="resources.html">Resources</a></li>
-                        <li><a href="solutions.html">Solutions</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                    </ul>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="#">Support <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="documentation.html">Documentation</a></li>
-                        <li><a href="faq.html">Help Center / FAQ</a></li>
-                        <li><a href="security.html">Security & Compliance</a></li>
-                        <li><a href="status.html">Status Page</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="mobile-toggle" id="mobileToggle">
-                <i class="fa-solid fa-bars"></i>
             </div>
-        </div>
-    </header>
+
+            <div class="cgdrop">
+                <a href="about.html" class="cgdrop-trigger">Company &#8964;</a>
+                <div class="cgdrop-menu">
+                    <a href="about.html">About Us</a>
+                    <a href="founders.html">Founders</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div class="cgdrop">
+                <a href="resources.html" class="cgdrop-trigger">Resources &#8964;</a>
+                <div class="cgdrop-menu">
+                    <a href="blog.html">Blog</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+
+            <a href="contact.html" style="padding:10px 20px;background:#1E88E5;color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.9rem;margin-left:8px;">Get Quote</a>
+        </nav>
+    </div>
+</header>
+
+<style>
+.cgdrop { position:relative; display:inline-block; }
+.cgdrop-trigger {
+    display:inline-block;
+    padding:8px 14px;
+    font-weight:600;
+    font-size:0.9rem;
+    color:#0A1929;
+    text-decoration:none;
+    border-radius:6px;
+    cursor:pointer;
+    white-space:nowrap;
+}
+.cgdrop-trigger:hover { background:#F0F7FF; color:#1E88E5; }
+.cgdrop-menu {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:190px;
+    background:#fff;
+    border:1px solid #E2E8F0;
+    border-radius:12px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.12);
+    padding:8px 0;
+    z-index:9999;
+}
+.cgdrop:hover .cgdrop-menu { display:block; }
+.cgdrop-menu a {
+    display:block;
+    padding:10px 18px;
+    font-size:0.88rem;
+    font-weight:500;
+    color:#334155;
+    text-decoration:none;
+}
+.cgdrop-menu a:hover { background:#F0F7FF; color:#1E88E5; padding-left:22px; }
+</style>
 
     <main>
-        <!-- Mini Hero -->
-        <div class="page-banner">
+        <!-- Hero Banner -->
+        <section class="hero gradient-bg" style="min-height:55vh; text-align:center; background:linear-gradient(135deg,rgba(10,30,60,0.90) 0%,rgba(0,40,104,0.85) 100%),url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat; display:flex; align-items:center; margin-bottom:0;">
             <div class="container">
-                <div class="reveal">
-                    <h1 style="color: var(--primary);">Help Center & FAQ</h1>
-                    <p>Find answers to common questions about our services, process, and technology.</p>
+                <div class="hero-content" style="margin:0 auto;">
+                    <div class="reveal">
+                        <h1 style="font-size:3.5rem; color:var(--white); margin-bottom:1rem;">Help Center &amp; FAQ</h1>
+                        <p style="font-size:1.2rem; color:rgba(255,255,255,0.85); max-width:700px; margin:0 auto 0.5rem;">Find answers to common questions about our services, process, and technology.</p>
+                        <p style="font-size:1rem; color:rgba(255,255,255,0.65); max-width:700px; margin:0 auto;">हाम्रो सेवा, प्रक्रिया र प्रविधिबारे सामान्य प्रश्नहरूको जवाफ पाउनुस्।</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <section>
             <div class="container" style="max-width: 900px;">
@@ -95,17 +137,17 @@
                     <div class="accordion">
                         <div class="accordion-item active">
                             <div class="accordion-header">
-                                <span>What is your typical project timeline?</span>
+                                <span>What is your typical project timeline? / सामान्य परियोजना समयरेखा के हो?</span>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                             <div class="accordion-content">
-                                <p>A simple MVP usually takes 6–10 weeks. Bigger projects — full web apps, integrations with old systems — can run 3 to 6 months. We'll give you a realistic timeline upfront, not an optimistic one we'll miss.</p>
+                                <p>A simple MVP usually takes 6–10 weeks. Bigger projects — full web apps, integrations with old systems — can run 3 to 6 months. We give you a realistic timeline upfront, not an optimistic one we will miss.</p>
                             </div>
                         </div>
 
                         <div class="accordion-item">
                             <div class="accordion-header">
-                                <span>Do you offer post-launch support?</span>
+                                <span>Do you offer post-launch support? / सुरु गरेपछि सहयोग पाइन्छ?</span>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                             <div class="accordion-content">
@@ -115,7 +157,7 @@
 
                         <div class="accordion-item">
                             <div class="accordion-header">
-                                <span>Where is your team located?</span>
+                                <span>Where is your team located? / तपाईंको टोली कहाँ छ?</span>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                             <div class="accordion-content">
@@ -127,12 +169,12 @@
 
                 <!-- Category: Technical -->
                 <div class="reveal" style="margin-bottom: 3rem;">
-                    <h2 style="margin-bottom: 2rem;"><i class="fa-solid fa-gear" style="color: var(--accent); margin-right: 15px;"></i> Technical FAQ</h2>
+                    <h2 style="margin-bottom:0.3rem;"><i class="fa-solid fa-gear" style="color: var(--accent); margin-right: 15px;"></i> Technical FAQ</h2>
                     
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-header">
-                                <span>What technologies do you specialize in?</span>
+                                <span>What technologies do you specialize in? / कुन प्रविधिमा विशेषज्ञ हुनुहुन्छ?</span>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                             <div class="accordion-content">
@@ -142,7 +184,7 @@
 
                         <div class="accordion-item">
                             <div class="accordion-header">
-                                <span>Can you integrate with my existing systems?</span>
+                                <span>Can you integrate with my existing systems? / के तपाईं मेरो अवस्थित प्रणालीसँग जोड्न सक्नुहुन्छ?</span>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                             <div class="accordion-content">
@@ -152,7 +194,7 @@
 
                         <div class="accordion-item">
                             <div class="accordion-header">
-                                <span>How do you handle data security?</span>
+                                <span>How do you handle data security? / डेटा सुरक्षा कसरी गर्नुहुन्छ?</span>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                             <div class="accordion-content">
@@ -168,9 +210,10 @@
         <section style="background: var(--bg-light); text-align: center; padding: 80px 0;">
             <div class="container">
                 <div class="reveal">
-                    <h2>Still have questions?</h2>
-                    <p style="margin-bottom: 2rem;">Didn't find your answer? Message us — we'll get back to you quickly.</p>
-                    <a href="contact.html" class="btn btn-primary">Message Our Team</a>
+                    <h2>Still have questions? / अझै प्रश्न छ?</h2>
+                    <p style="margin-bottom: 0.5rem;">Did not find your answer? Message us — we will get back to you quickly.</p>
+                    <p style="color:var(--text-muted); margin-bottom: 2rem;">जवाफ भेट्टाउनु भएन? हामीलाई सन्देश पठाउनुस् — हामी चाँडै फर्किनेछौं।</p>
+                    <a href="contact.html" class="btn btn-primary">Message Our Team / हाम्रो टोलीलाई सन्देश</a>
                 </div>
             </div>
         </section>
@@ -210,5 +253,8 @@
         </div>
     </footer>
     <script src="script.js"></script>
+
+    
+
 </body>
 </html>

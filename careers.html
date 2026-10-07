@@ -40,32 +40,112 @@
 
         footer { padding: 40px 0; text-align: center; border-top: 1px solid #EEE; color: #888; }
         @media (max-width: 768px) { .job-card { flex-direction: column; text-align: center; gap: 20px; } .culture-grid { grid-template-columns: 1fr; } }
+    
+        
+
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="nav-flex">
-                <a href="index.html" class="logo">
-                    <img src="logo.jpeg" alt="CodeGhar Logo">
-                    <span>CODEGHAR NEPAL</span>
-                </a>
-                <a href="index.html" class="btn-outline" style="padding: 10px 20px; border-radius: 8px; text-decoration: none;">Home</a>
-            </div>
-        </div>
-    </header>
+    <!-- Header -->
+<header id="header" style="position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #eee;">
+    <div style="display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:12px 24px;">
+        <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+            <img src="logo.jpeg" alt="CodeGhar Logo" style="height:38px;width:38px;border-radius:50%;object-fit:contain;">
+            <span style="font-weight:800;color:#0A1929;font-size:1.1rem;font-family:'Poppins',sans-serif;letter-spacing:0.5px;">CODEGHAR NEPAL</span>
+        </a>
+        <nav style="display:flex;align-items:center;gap:4px;">
+            <a href="index.html" style="padding:8px 14px;font-weight:600;font-size:0.9rem;color:#0A1929;text-decoration:none;border-radius:6px;">Home</a>
 
-    <section class="careers-hero">
+            <div class="cgdrop">
+                <a href="services.html" class="cgdrop-trigger">Services &#8964;</a>
+                <div class="cgdrop-menu">
+                    <a href="service-web.html">Web Development</a>
+                    <a href="service-webapp.html">Web Applications</a>
+                    <a href="service-mobile.html">Mobile Apps</a>
+                    <a href="service-ai.html">AI Solutions</a>
+                    <a href="service-marketing.html">Digital Marketing</a>
+                    <a href="solutions.html">Digital Solutions</a>
+                </div>
+            </div>
+
+            <div class="cgdrop">
+                <a href="about.html" class="cgdrop-trigger">Company &#8964;</a>
+                <div class="cgdrop-menu">
+                    <a href="about.html">About Us</a>
+                    <a href="founders.html">Founders</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div class="cgdrop">
+                <a href="resources.html" class="cgdrop-trigger">Resources &#8964;</a>
+                <div class="cgdrop-menu">
+                    <a href="blog.html">Blog</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+
+            <a href="contact.html" style="padding:10px 20px;background:#1E88E5;color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.9rem;margin-left:8px;">Get Quote</a>
+        </nav>
+    </div>
+</header>
+
+<style>
+.cgdrop { position:relative; display:inline-block; }
+.cgdrop-trigger {
+    display:inline-block;
+    padding:8px 14px;
+    font-weight:600;
+    font-size:0.9rem;
+    color:#0A1929;
+    text-decoration:none;
+    border-radius:6px;
+    cursor:pointer;
+    white-space:nowrap;
+}
+.cgdrop-trigger:hover { background:#F0F7FF; color:#1E88E5; }
+.cgdrop-menu {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:190px;
+    background:#fff;
+    border:1px solid #E2E8F0;
+    border-radius:12px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.12);
+    padding:8px 0;
+    z-index:9999;
+}
+.cgdrop:hover .cgdrop-menu { display:block; }
+.cgdrop-menu a {
+    display:block;
+    padding:10px 18px;
+    font-size:0.88rem;
+    font-weight:500;
+    color:#334155;
+    text-decoration:none;
+}
+.cgdrop-menu a:hover { background:#F0F7FF; color:#1E88E5; padding-left:22px; }
+</style>
+
+    <section class="hero gradient-bg" style="min-height:60vh; text-align:center; background:linear-gradient(135deg,rgba(10,30,60,0.90) 0%,rgba(0,40,104,0.85) 100%),url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat; display:flex; align-items:center;">
         <div class="container">
-            <h1>Join CodeGhar Nepal</h1>
-            <p>Small team, real projects, Bhaktapur office. If you're good at building things and want to work with people who care about the output, say hello.</p>
+            <h1 style="font-size:3.5rem; color:var(--white); margin-bottom:1rem;">Join CodeGhar Nepal</h1>
+            <p style="font-size:1.2rem; color:rgba(255,255,255,0.85); max-width:700px; margin:0 auto 0.5rem;">Small team, real projects, Bhaktapur office. If you are good at building things and want to work with people who care about the output, say hello.</p>
+            <p style="font-size:1rem; color:rgba(255,255,255,0.65); max-width:700px; margin:0 auto;">सानो टोली, वास्तविक परियोजनाहरू, भक्तपुर कार्यालय। यदि तपाईं राम्रो कोडर हुनुहुन्छ र मनले काम गर्ने मान्छहरूसँग काम गर्न चाहनुहुन्छ भने, हाम्रोसँग आउनुस्।</p>
         </div>
     </section>
 
-    <section class="jobs-section">
+    <section style="padding:80px 0;">
         <div class="container">
-            <h2 style="margin-bottom: 40px; font-family: 'Poppins', sans-serif;">Open Positions</h2>
-            
+            <div class="section-header" style="margin-bottom:3rem;">
+                <h2>Open Positions / खुला पदहरू</h2>
+                <p>We are growing slowly and carefully. Here is what we are currently looking for.</p>
+            </div>
+
             <div class="job-card">
                 <div class="job-info">
                     <h3>Senior Full-Stack Developer</h3>
@@ -74,7 +154,7 @@
                         <span><i class="fas fa-clock"></i> Full-time</span>
                     </div>
                 </div>
-                <a href="mailto:nepalcodeghar@gmail.com" class="btn">Coming Soon</a>
+                <a href="mailto:nepalcodeghar@gmail.com" class="btn">Apply / आवेदन</a>
             </div>
 
             <div class="job-card">
@@ -85,7 +165,7 @@
                         <span><i class="fas fa-clock"></i> Full-time</span>
                     </div>
                 </div>
-                <a href="mailto:nepalcodeghar@gmail.com" class="btn">Coming Soon</a>
+                <a href="mailto:nepalcodeghar@gmail.com" class="btn">Apply / आवेदन</a>
             </div>
 
             <div class="job-card">
@@ -96,29 +176,44 @@
                         <span><i class="fas fa-clock"></i> Internship</span>
                     </div>
                 </div>
-                <a href="mailto:nepalcodeghar@gmail.com" class="btn">Coming Soon</a>
+                <a href="mailto:nepalcodeghar@gmail.com" class="btn">Apply / आवेदन</a>
+            </div>
+
+            <div class="job-card">
+                <div class="job-info">
+                    <h3>Digital Marketing Executive</h3>
+                    <div class="job-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Bhaktapur</span>
+                        <span><i class="fas fa-clock"></i> Full-time</span>
+                    </div>
+                </div>
+                <a href="mailto:nepalcodeghar@gmail.com" class="btn">Apply / आवेदन</a>
             </div>
         </div>
     </section>
 
     <section class="culture-section">
         <div class="container">
-            <h2>Our Core Values</h2>
+            <h2>Our Culture / हाम्रो संस्कृति</h2>
+            <p style="color:rgba(255,255,255,0.7); margin-bottom:2.5rem;">What it is actually like to work here. / यहाँ काम गर्नु वास्तवमा कस्तो छ।</p>
             <div class="culture-grid">
                 <div class="culture-item">
                     <i class="fas fa-lightbulb"></i>
-                    <h3>Always Learning</h3>
+                    <h3>Always Learning / सधैं सिक्दै</h3>
                     <p>We try new tools when they make sense — not because a blog post told us to.</p>
+                    <p style="font-size:0.85rem; opacity:0.7; margin-top:0.4rem;">नयाँ उपकरणहरू जव अर्थ लाग्छ तव प्रयोग गर्छौं।</p>
                 </div>
                 <div class="culture-item">
                     <i class="fas fa-heart"></i>
                     <h3>Care</h3>
                     <p>We build software that helps people, not just impresses investors.</p>
+                    <p style="font-size:0.85rem; opacity:0.7; margin-top:0.4rem;">मानिसहरूलाई मद्दत गर्ने सफ्टवेयर बनाउँछौं, लगानीकर्तालाई प्रभावित गर्न होइन।</p>
                 </div>
                 <div class="culture-item">
                     <i class="fas fa-shield-alt"></i>
                     <h3>Honesty</h3>
-                    <p>We tell clients the truth — about timelines, costs, and what's actually feasible.</p>
+                    <p>We tell clients the truth — about timelines, costs, and what is actually feasible.</p>
+                    <p style="font-size:0.85rem; opacity:0.7; margin-top:0.4rem;">हामी ग्राहकलाई सत्य बताउँछौं — समयरेखा, लागत र के वास्तवमा सम्भव छ।</p>
                 </div>
             </div>
         </div>
@@ -129,5 +224,8 @@
             <p>&copy; 2026 CodeGhar Nepal Pvt. Ltd. | All Rights Reserved.</p>
         </div>
     </footer>
+
+    
+
 </body>
 </html>

@@ -209,13 +209,13 @@ nav {
     backdrop-filter: blur(10px);
 }
 
-.nav-item.dropdown:hover .dropdown-menu {
+.nav-item.dropdown.open .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-.nav-item.dropdown:hover > a i {
+.nav-item.dropdown.open > a i {
     transform: rotate(180deg);
 }
 
@@ -478,56 +478,60 @@ nav {
 }
 
 .founder-card {
-    background: var(--white);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    padding: 1.2rem 1.2rem;
     text-align: center;
     transition: var(--transition);
     position: relative;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    color: white;
 }
 
 .founder-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--accent-light);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.13);
 }
 
 .founder-avatar {
-    width: 100px;
-    height: 100px;
+    width: 72px;
+    height: 72px;
     background: var(--card-bg);
     border-radius: 50%;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color: var(--accent);
     border: 3px solid var(--white);
     box-shadow: var(--shadow-sm);
 }
 
 .founder-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    color: white;
 }
 
 .founder-info .role {
-    color: var(--accent);
+    color: #7DD3FC;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
     display: block;
 }
 
 .founder-info .bio {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
 }
 
 .social-links {
@@ -1275,4 +1279,76 @@ footer {
     letter-spacing: 0.1em;
     font-size: 0.8rem;
     opacity: 0.8;
+}
+
+/* =========================================
+   Animations & Reveal Effects 
+========================================= */
+
+/* Reveal on Scroll (Handled by JS IntersectionObserver) */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional staggering delays for lists/grids */
+.reveal.delay-100 { transition-delay: 100ms; }
+.reveal.delay-200 { transition-delay: 200ms; }
+.reveal.delay-300 { transition-delay: 300ms; }
+.reveal.delay-400 { transition-delay: 400ms; }
+.reveal.delay-500 { transition-delay: 500ms; }
+
+/* Continuous Keyframe Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 0 0 rgba(30, 136, 229, 0.4); }
+    70% { box-shadow: 0 0 0 20px rgba(30, 136, 229, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(30, 136, 229, 0); }
+}
+
+/* Hover Enhancements for Cards & Buttons */
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.service-card:hover, .team-card:hover, .why-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-light);
+}
+
+/* Hero specific animation */
+.hero-content h1 {
+    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Auto Play Services Animation */
+#autoPlayServices {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    display: inline-block;
+}
+#autoPlayServices.fade-out {
+    opacity: 0;
+    transform: translateY(-15px);
+}
+#autoPlayServices.fade-in {
+    opacity: 0;
+    transform: translateY(15px);
 }

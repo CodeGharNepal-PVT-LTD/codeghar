@@ -455,32 +455,104 @@
                 flex-direction: column
             }
         }
+    
+        
+
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="nav-flex">
-                <a href="index.html" class="logo"><img src="logo.jpeg" alt="CodeGhar"><span>CODEGHAR NEPAL</span></a>
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#services">Services</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                    </ul>
-                </nav>
-                <a href="index.html#contact" class="btn">Get Quote</a>
+    <!-- Header -->
+<header id="header" style="position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #eee;">
+    <div style="display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:12px 24px;">
+        <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+            <img src="logo.jpeg" alt="CodeGhar Logo" style="height:38px;width:38px;border-radius:50%;object-fit:contain;">
+            <span style="font-weight:800;color:#0A1929;font-size:1.1rem;font-family:'Poppins',sans-serif;letter-spacing:0.5px;">CODEGHAR NEPAL</span>
+        </a>
+        <nav style="display:flex;align-items:center;gap:4px;">
+            <a href="index.html" style="padding:8px 14px;font-weight:600;font-size:0.9rem;color:#0A1929;text-decoration:none;border-radius:6px;">Home</a>
+
+            <div class="cgdrop">
+                <a href="services.html" class="cgdrop-trigger">Services &#8964;</a>
+                <div class="cgdrop-menu">
+                    <a href="service-web.html">Web Development</a>
+                    <a href="service-webapp.html">Web Applications</a>
+                    <a href="service-mobile.html">Mobile Apps</a>
+                    <a href="service-ai.html">AI Solutions</a>
+                    <a href="service-marketing.html">Digital Marketing</a>
+                    <a href="solutions.html">Digital Solutions</a>
+                </div>
             </div>
-        </div>
-    </header>
+
+            <div class="cgdrop">
+                <a href="about.html" class="cgdrop-trigger">Company &#8964;</a>
+                <div class="cgdrop-menu">
+                    <a href="about.html">About Us</a>
+                    <a href="founders.html">Founders</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div class="cgdrop">
+                <a href="resources.html" class="cgdrop-trigger">Resources &#8964;</a>
+                <div class="cgdrop-menu">
+                    <a href="blog.html">Blog</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+
+            <a href="contact.html" style="padding:10px 20px;background:#1E88E5;color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.9rem;margin-left:8px;">Get Quote</a>
+        </nav>
+    </div>
+</header>
+
+<style>
+.cgdrop { position:relative; display:inline-block; }
+.cgdrop-trigger {
+    display:inline-block;
+    padding:8px 14px;
+    font-weight:600;
+    font-size:0.9rem;
+    color:#0A1929;
+    text-decoration:none;
+    border-radius:6px;
+    cursor:pointer;
+    white-space:nowrap;
+}
+.cgdrop-trigger:hover { background:#F0F7FF; color:#1E88E5; }
+.cgdrop-menu {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:190px;
+    background:#fff;
+    border:1px solid #E2E8F0;
+    border-radius:12px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.12);
+    padding:8px 0;
+    z-index:9999;
+}
+.cgdrop:hover .cgdrop-menu { display:block; }
+.cgdrop-menu a {
+    display:block;
+    padding:10px 18px;
+    font-size:0.88rem;
+    font-weight:500;
+    color:#334155;
+    text-decoration:none;
+}
+.cgdrop-menu a:hover { background:#F0F7FF; color:#1E88E5; padding-left:22px; }
+</style>
 
     <section class="blog-hero">
         <div class="container">
-            <div class="blog-hero-tag"><i class="fas fa-pen-nib"></i> Insights</div>
-            <h1>Our Blog</h1>
+            <div class="blog-hero-tag"><i class="fas fa-pen-nib"></i> Insights / विचारहरू</div>
+            <h1>Our Blog / हाम्रो ब्लग</h1>
             <p>Notes on building software in Nepal — from our team, not a content agency.</p>
+            <p style="font-size:0.9rem; color:rgba(255,255,255,0.7); margin-top:0.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">नेपालमा सफ्टवेयर बनाउने बारे हाम्रा टिपोटहरू — हाम्रो टोलीबाट, कुनै सामग्री एजेन्सीबाट होइन।</p>
         </div>
     </section>
 
@@ -493,11 +565,12 @@
                         alt="AI in Nepal">
                 </div>
                 <div class="featured-content">
-                    <span class="post-tag">AI & Technology</span>
-                    <h2>The Future of AI in Nepal's Tech Landscape</h2>
+                    <span class="post-tag">AI &amp; Technology</span>
+                    <h2>The Future of AI in Nepal's Tech Landscape / नेपालको प्रविधिमा AI को भविष्य</h2>
                     <p>How Nepali businesses are actually using AI — chatbots, automation, and where to start without overspending.</p>
+                    <p style="font-size:0.9rem; color:#666; margin-bottom: 24px;">नेपाली व्यवसायहरूले वास्तवमा AI कसरी प्रयोग गरिरहेका छन् — च्याटबटहरू, अटोमेसन र धेरै खर्च नगरी कहाँबाट सुरु गर्ने।</p>
                     <div class="post-meta">
-                        <span><i class="fas fa-user"></i> <a href="founder-gobinda.html" style="color: var(--accent); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--accent); padding-bottom: 2px;">Gobinda Bista <i class="fas fa-crown" style="font-size: 0.8em; margin-left: 2px;"></i></a></span>
+                        <span><i class="fas fa-user"></i> <a href="founder-gobinda.html" style="color: var(--accent); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--accent); padding-bottom: 2px;">Gobinda Bista</a></span>
                         <span><i class="fas fa-calendar"></i> April 24, 2026</span>
                         <span><i class="fas fa-clock"></i> 5 min read</span>
                     </div>
@@ -549,11 +622,12 @@
 
     <section class="newsletter">
         <div class="container">
-            <h2>Stay in the Loop</h2>
+            <h2>Stay in the Loop / हामीसँग जोडिनुहोस्</h2>
             <p>Get our latest articles and tech insights delivered to your inbox.</p>
+            <p style="font-size:0.9rem; color:rgba(255,255,255,0.7); margin-bottom: 30px;">हाम्रा नवीनतम लेखहरू र प्रविधि विचारहरू तपाईंको इनबक्समा प्राप्त गर्नुहोस्।</p>
             <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!')">
                 <input type="email" placeholder="your@email.com" required>
-                <button type="submit">Subscribe</button>
+                <button type="submit">Subscribe / सदस्यता लिनुस्</button>
             </form>
         </div>
     </section>
@@ -563,6 +637,9 @@
             <p>&copy; 2026 CodeGhar Nepal Pvt. Ltd. | Bhaktapur Municipality-8, Libali, Bhaktapur, Nepal</p>
         </div>
     </footer>
+
+    
+
 </body>
 
 </html>

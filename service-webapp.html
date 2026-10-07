@@ -45,17 +45,96 @@
         .btn-accent:hover{background:var(--white)}
         footer{padding:30px 0;text-align:center;border-top:1px solid #EEE;color:#888;font-size:.9rem}
         @media(max-width:768px){.hero h1{font-size:2rem}}
+    
+        
+
     </style>
 </head>
 <body>
-<header>
-    <div class="container">
-        <div class="nav-flex">
-            <a href="index.html" class="logo"><img src="logo.jpeg" alt="CodeGhar"><span>CODEGHAR NEPAL</span></a>
-            <a href="index.html#contact" class="btn">Get Quote</a>
-        </div>
+<!-- Header -->
+<header id="header" style="position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #eee;">
+    <div style="display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:12px 24px;">
+        <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+            <img src="logo.jpeg" alt="CodeGhar Logo" style="height:38px;width:38px;border-radius:50%;object-fit:contain;">
+            <span style="font-weight:800;color:#0A1929;font-size:1.1rem;font-family:'Poppins',sans-serif;letter-spacing:0.5px;">CODEGHAR NEPAL</span>
+        </a>
+        <nav style="display:flex;align-items:center;gap:4px;">
+            <a href="index.html" style="padding:8px 14px;font-weight:600;font-size:0.9rem;color:#0A1929;text-decoration:none;border-radius:6px;">Home</a>
+
+            <div class="cgdrop">
+                <a href="services.html" class="cgdrop-trigger">Services &#8964;</a>
+                <div class="cgdrop-menu">
+                    <a href="service-web.html">Web Development</a>
+                    <a href="service-webapp.html">Web Applications</a>
+                    <a href="service-mobile.html">Mobile Apps</a>
+                    <a href="service-ai.html">AI Solutions</a>
+                    <a href="service-marketing.html">Digital Marketing</a>
+                    <a href="solutions.html">Digital Solutions</a>
+                </div>
+            </div>
+
+            <div class="cgdrop">
+                <a href="about.html" class="cgdrop-trigger">Company &#8964;</a>
+                <div class="cgdrop-menu">
+                    <a href="about.html">About Us</a>
+                    <a href="founders.html">Founders</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div class="cgdrop">
+                <a href="resources.html" class="cgdrop-trigger">Resources &#8964;</a>
+                <div class="cgdrop-menu">
+                    <a href="blog.html">Blog</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+
+            <a href="contact.html" style="padding:10px 20px;background:#1E88E5;color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.9rem;margin-left:8px;">Get Quote</a>
+        </nav>
     </div>
 </header>
+
+<style>
+.cgdrop { position:relative; display:inline-block; }
+.cgdrop-trigger {
+    display:inline-block;
+    padding:8px 14px;
+    font-weight:600;
+    font-size:0.9rem;
+    color:#0A1929;
+    text-decoration:none;
+    border-radius:6px;
+    cursor:pointer;
+    white-space:nowrap;
+}
+.cgdrop-trigger:hover { background:#F0F7FF; color:#1E88E5; }
+.cgdrop-menu {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:190px;
+    background:#fff;
+    border:1px solid #E2E8F0;
+    border-radius:12px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.12);
+    padding:8px 0;
+    z-index:9999;
+}
+.cgdrop:hover .cgdrop-menu { display:block; }
+.cgdrop-menu a {
+    display:block;
+    padding:10px 18px;
+    font-size:0.88rem;
+    font-weight:500;
+    color:#334155;
+    text-decoration:none;
+}
+.cgdrop-menu a:hover { background:#F0F7FF; color:#1E88E5; padding-left:22px; }
+</style>
 
 <section class="hero">
     <div class="container">
@@ -102,5 +181,8 @@
 </section>
 
 <footer><div class="container"><p>&copy; 2026 CodeGhar Nepal Pvt. Ltd. | Bhaktapur Municipality-8, Libali, Bhaktapur, Nepal</p></div></footer>
+
+    
+
 </body>
 </html>

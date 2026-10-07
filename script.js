@@ -47,14 +47,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Mobile Dropdown Accordion
+    // Click-to-open Dropdowns (Desktop & Mobile)
     document.querySelectorAll('.nav-item.dropdown > a').forEach(link => {
         link.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                link.parentElement.classList.toggle('open');
+            e.preventDefault();
+            const parent = link.parentElement;
+            const isOpen = parent.classList.contains('open');
+            
+            // Close all others
+            document.querySelectorAll('.nav-item.dropdown').forEach(d => d.classList.remove('open'));
+            
+            if (!isOpen) {
+                parent.classList.add('open');
             }
         });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav-item.dropdown')) {
+            document.querySelectorAll('.nav-item.dropdown').forEach(d => d.classList.remove('open'));
+        }
     });
 
     // 5. Advanced Reveal System (IntersectionObserver)
@@ -92,6 +105,42 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Auto Play Services in Hero
+    const autoPlayElement = document.getElementById('autoPlayServices');
+    if (autoPlayElement) {
+        const services = [
+            "Web Applications",
+            "Mobile Platforms",
+            "Custom Software",
+            "AI Solutions",
+            "SaaS Products"
+        ];
+        let serviceIndex = 0;
+
+        setInterval(() => {
+            // Fade out up
+            autoPlayElement.classList.add('fade-out');
+            
+            setTimeout(() => {
+                // Change text and prepare to fade in from bottom
+                serviceIndex = (serviceIndex + 1) % services.length;
+                autoPlayElement.textContent = services[serviceIndex];
+                
+                // Swap classes instantly
+                autoPlayElement.classList.remove('fade-out');
+                autoPlayElement.classList.add('fade-in');
+                
+                // Allow browser to register the 'fade-in' state
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        // Remove 'fade-in' to trigger transition to original position
+                        autoPlayElement.classList.remove('fade-in');
+                    });
+                });
+            }, 500); // Wait for fade-out to finish
+        }, 3000); // Change every 3 seconds
+    }
 
     // 6. EmailJS Form Handling
     // Initialize EmailJS with your Public Key
