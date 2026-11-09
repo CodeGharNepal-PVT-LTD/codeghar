@@ -470,14 +470,53 @@ nav {
     text-transform: uppercase;
 }
 
-/* Founders Section (Critical: 2x2 Grid) */
+/* Founders Section (3-Column Layout for 3 Founders) */
 .founders-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
+@media (max-width: 992px) {
+    .founders-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+.founder-card .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.founder-card .social-links a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #FFF;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.founder-card .social-links a:hover {
+    background: var(--accent);
+    color: var(--primary);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
 .founder-card {
+    display: block;
+    text-decoration: none;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 14px;
@@ -498,18 +537,30 @@ nav {
 }
 
 .founder-avatar {
-    width: 72px;
-    height: 72px;
-    background: var(--card-bg);
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5rem;
-    color: var(--accent);
-    border: 3px solid var(--white);
-    box-shadow: var(--shadow-sm);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: rgba(10, 25, 41, 0.6);
+    border-radius: 12px;
+    margin: 0 0 1.2rem;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.founder-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 12px;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.founder-card:hover .founder-avatar img {
+    transform: scale(1.04);
 }
 
 .founder-info h3 {

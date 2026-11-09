@@ -4,13 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO & Social Meta Tags -->
-    <meta name="description" content="Meet the three founders of CodeGhar Nepal — Gobinda, Subash, and Suresh. A small team from Bhaktapur building software together.">
+    <meta name="description" content="Meet the leadership of CodeGhar Nepal — Led by Founder & CEO Gobinda Bista (GB / Govinda Bista) and Co-Founders. A dedicated software engineering team based in Bhaktapur, Nepal.">
+    <meta name="keywords" content="Gobinda Bista, Govinda Bista, GB, GB Sir, Bista GB, CodeGhar, CodeGhar Nepal, Code Ghar, Code Ghar Nepal, Founder CEO CodeGhar, Leadership CodeGhar">
+    <meta name="author" content="Gobinda Bista (GB)">
+    <link rel="canonical" href="https://codegharnepal.com.np/founders.html">
     
     <!-- OpenGraph (Facebook/LinkedIn) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Our Founders | CodeGhar Nepal">
-    <meta property="og:description" content="Three founders, one office in Bhaktapur. Here's who you'll actually be working with.">
-    <meta property="og:image" content="https://codeghar.com.np/og-founders.jpg">
+    <meta property="og:title" content="Our Leadership | CodeGhar Nepal — Gobinda Bista (GB)">
+    <meta property="og:description" content="Led by Founder & CEO Gobinda Bista (GB / Govinda Bista) alongside passionate co-founders in Bhaktapur building software together.">
+    <meta property="og:image" content="https://codegharnepal.com.np/Gobinda.jpg">
+
+    <!-- Schema.org Markup (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "CodeGhar Leadership & Founders",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Gobinda Bista",
+        "alternateName": ["GB", "Govinda Bista", "Bista GB", "GB Sir", "Gobinda Bista GB"],
+        "jobTitle": "Founder & CEO",
+        "url": "https://codegharnepal.com.np/founder-gobinda.html",
+        "sameAs": [
+          "https://gobindabista.com.np/",
+          "https://www.linkedin.com/in/gobinda-bista-8ba3b4267/",
+          "https://github.com/GOBINDABISTA",
+          "https://www.facebook.com/ElonGobinda.Bista.526Gb.GB"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "CodeGhar Nepal",
+          "url": "https://codegharnepal.com.np/"
+        }
+      }
+    }
+    </script>
     
     <!-- Mobile & Theme -->
     <meta name="theme-color" content="#0A1E3C">
@@ -113,67 +143,185 @@
     text-decoration:none;
 }
 .cgdrop-menu a:hover { background:#F0F7FF; color:#1E88E5; padding-left:22px; }
+
+/* --- Founders Page: Screenshot-Match Layout --- */
+.founders-team-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.founders-featured-card {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    background: rgba(255,255,255,0.04);
+    border: 1.5px solid rgba(0,191,255,0.55);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 28px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+.founders-featured-card:hover {
+    border-color: #00BFFF;
+    background: rgba(0,191,255,0.07);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    transform: translateY(-3px);
+}
+.founders-featured-photo {
+    overflow: hidden;
+    min-height: 240px;
+}
+.founders-featured-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: top center;
+    display: block;
+    transition: all 0.3s ease;
+}
+.founders-featured-card:hover .founders-featured-photo img { transform: scale(1.04); }
+.founders-featured-content {
+    padding: 32px 36px;
+    display: flex; flex-direction: column; justify-content: center;
+}
+.founders-featured-content h3 {
+    font-size: 1.75rem; font-family: 'Poppins', sans-serif;
+    color: #FFFFFF; font-weight: 700;
+    margin: 0 0 14px 0; line-height: 1.25;
+}
+.founders-featured-content p {
+    color: rgba(255,255,255,0.72);
+    line-height: 1.75; font-size: 0.95rem;
+    margin: 0 0 22px 0;
+}
+.founders-featured-social { display: flex; gap: 10px; align-items: center; }
+.founders-featured-social a {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: transparent;
+    border: 1.5px solid rgba(0,191,255,0.6);
+    color: rgba(255,255,255,0.85);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.95rem; text-decoration: none;
+    transition: all 0.3s ease;
+}
+.founders-featured-social a:hover {
+    background: #00BFFF; border-color: #00BFFF;
+    color: #0A1E3C; transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,191,255,0.4);
+}
+
+.founders-cofounders-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+.founders-cofounder-card {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px; overflow: hidden;
+    min-height: 150px;
+    transition: all 0.3s ease;
+}
+.founders-cofounder-card:hover {
+    border-color: #00BFFF;
+    background: rgba(0,191,255,0.06);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+}
+.founders-cofounder-photo { overflow: hidden; }
+.founders-cofounder-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: top center;
+    display: block; transition: all 0.3s ease;
+}
+.founders-cofounder-card:hover .founders-cofounder-photo img { transform: scale(1.04); }
+.founders-cofounder-info {
+    padding: 22px 20px;
+    display: flex; flex-direction: column; justify-content: center;
+}
+.founders-cofounder-badge {
+    display: inline-block;
+    background: rgba(0,191,255,0.15);
+    border: 1px solid rgba(0,191,255,0.4);
+    color: #38BDF8;
+    font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 3px 11px; border-radius: 20px;
+    margin-bottom: 8px; width: fit-content;
+}
+.founders-cofounder-info h4 {
+    color: #FFFFFF; font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; margin: 0 0 6px 0;
+}
+.founders-cofounder-info p {
+    color: rgba(255,255,255,0.68);
+    font-size: 0.88rem; line-height: 1.6; margin: 0;
+}
+
+@media (max-width: 860px) {
+    .founders-featured-card { grid-template-columns: 1fr !important; }
+    .founders-featured-photo { min-height: 260px; }
+    .founders-featured-content { padding: 26px 24px; }
+    .founders-featured-content h3 { font-size: 1.5rem; }
+}
+@media (max-width: 640px) {
+    .founders-cofounders-grid { grid-template-columns: 1fr; }
+    .founders-cofounder-card { grid-template-columns: 130px 1fr; }
+}
 </style>
 
     <main>
-        <section class="founders-section" style="background:linear-gradient(135deg,rgba(10,30,60,0.90) 0%,rgba(0,40,104,0.85) 100%),url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat; padding:120px 0 80px; margin-bottom:0;">
+        <section class="founders-section" style="background:linear-gradient(135deg,rgba(10,30,60,0.95) 0%,rgba(0,40,104,0.90) 100%),url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat; padding:120px 0 90px; margin-bottom:0;">
             <div class="container">
-                <div class="section-header reveal" style="color:white;">
-                    <h2 style="color:white; font-size:3rem;">Meet Our Founders</h2>
-                    <p style="color:rgba(255,255,255,0.85);">CodeGhar started when three friends in Bhaktapur decided to stop complaining about bad software and start building good stuff instead.</p>
+                <div class="section-header reveal" style="color:white; margin-bottom: 48px;">
+                    <h2 style="color:white; font-size:3rem;">Meet the Team</h2>
+                    <p style="color:rgba(255,255,255,0.75); max-width:700px; margin:0 auto; line-height:1.8;">The people behind CodeGhar — engineers building practical AI and software solutions from Bhaktapur, Nepal.</p>
                 </div>
 
-                <div class="founders-grid">
-                    <!-- Founder 1 -->
-                    <a href="founder-gobinda.html" class="founder-card reveal">
-                        <div class="founder-avatar">
-                            <img src="Gobinda.jpg" alt="Gobinda Bista" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+                <div class="founders-team-wrap">
+                    <!-- Gobinda Bista — Full-Width Featured Card -->
+                    <div class="founders-featured-card reveal" style="display: grid; grid-template-columns: 220px 1fr; background: rgba(255, 255, 255, 0.04); border: 1.5px solid rgba(0, 191, 255, 0.55); border-radius: 16px; overflow: hidden; margin-bottom: 28px;">
+                        <div style="overflow: hidden; min-height: 240px;">
+                            <a href="founder-gobinda.html" style="display: block; width: 100%; height: 100%; text-decoration: none;" title="View Gobinda Bista Profile">
+                                <img src="Gobinda.jpg" alt="Gobinda Bista" style="width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform 0.3s ease;">
+                            </a>
                         </div>
-                        <div class="founder-info">
-                            <h3>Gobinda Bista</h3>
-                            <span class="role">Founder & CEO</span>
-                            <p class="bio">Sets the direction, talks to clients, and makes sure the company stays focused on building things people actually need.</p>
-                            <div class="social-links">
-                                <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-github"></i></a>
-                                <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-linkedin-in"></i></a>
-                                <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-facebook-f"></i></a>
+                        <div style="padding: 32px 36px; display: flex; flex-direction: column; justify-content: center;">
+                            <h3 style="font-size: 1.75rem; font-family: 'Poppins', sans-serif; color: #FFFFFF; margin: 0 0 14px 0; font-weight: 700; line-height: 1.25;"><a href="founder-gobinda.html" style="color: inherit; text-decoration: none;" title="View Profile">Gobinda Bista</a></h3>
+                            <p style="color: rgba(255, 255, 255, 0.72); line-height: 1.75; font-size: 0.95rem; margin: 0 0 22px 0;">Gobinda is the Founder &amp; CEO of CodeGhar Nepal. He builds practical AI automation and reliable software that solve real, everyday problems for local businesses, clinics, schools, and today's generation — from Bhaktapur.</p>
+                            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                                <a href="https://github.com/GOBINDABISTA" target="_blank" title="GitHub" style="width: 40px; height: 40px; border-radius: 50%; background: transparent; border: 1.5px solid rgba(0, 191, 255, 0.6); color: rgba(255, 255, 255, 0.85); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; text-decoration: none;"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/gobinda-bista-8ba3b4267/" target="_blank" title="LinkedIn" style="width: 40px; height: 40px; border-radius: 50%; background: transparent; border: 1.5px solid rgba(0, 191, 255, 0.6); color: rgba(255, 255, 255, 0.85); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; text-decoration: none;"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.facebook.com/ElonGobinda.Bista.526Gb.GB" target="_blank" title="Facebook" style="width: 40px; height: 40px; border-radius: 50%; background: transparent; border: 1.5px solid rgba(0, 191, 255, 0.6); color: rgba(255, 255, 255, 0.85); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://gobindabista.com.np/" target="_blank" title="Website" style="width: 40px; height: 40px; border-radius: 50%; background: transparent; border: 1.5px solid rgba(0, 191, 255, 0.6); color: rgba(255, 255, 255, 0.85); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; text-decoration: none;"><i class="fas fa-globe"></i></a>
+                                <a href="founder-gobinda.html" style="margin-left: auto; color: #38BDF8; font-size: 0.88rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 8px; background: rgba(0, 191, 255, 0.1); border: 1px solid rgba(0, 191, 255, 0.3); transition: all 0.3s ease;">Profile <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></a>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
-                    <!-- Founder 2 -->
-                    <a href="founder-subash.html" class="founder-card reveal">
-                        <div class="founder-avatar">
-                            <img src="Subash.jpeg" alt="Subash Bhandari" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
-                        </div>
-                        <div class="founder-info">
-                            <h3>Subash Bhandari</h3>
-                            <span class="role">Co-Founder</span>
-                            <p class="bio">Keeps projects on schedule and teams aligned. If something's behind or blocked, Subash is usually the one fixing it.</p>
-                            <div class="social-links">
-                                <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-github"></i></a>
-                                <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-linkedin-in"></i></a>
-                                <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-facebook-f"></i></a>
+                    <!-- Co-Founders — 2-Column Row -->
+                    <div class="founders-cofounders-grid">
+                        <!-- Co-Founder 1 -->
+                        <div class="founders-cofounder-card reveal">
+                            <div class="founders-cofounder-photo">
+                                <img src="Subash.jpeg" alt="Subash Bhandari">
+                            </div>
+                            <div class="founders-cofounder-info">
+                                <span class="founders-cofounder-badge">Co-Founder</span>
+                                <h4>Subash Bhandari</h4>
                             </div>
                         </div>
-                    </a>
-
-                    <!-- Founder 3 -->
-                    <a href="founder-suresh.html" class="founder-card reveal">
-                        <div class="founder-avatar">
-                            <img src="Suresh.jpeg" alt="Suresh Shrestha" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
-                        </div>
-                        <div class="founder-info">
-                            <h3>Suresh Shrestha</h3>
-                            <span class="role">Co-Founder</span>
-                            <p class="bio">Handles the money side — budgets, billing, contracts, and making sure the company stays financially healthy as it grows.</p>
-                            <div class="social-links">
-                                <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-github"></i></a>
-                                <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-linkedin-in"></i></a>
-                                <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-facebook-f"></i></a>
+                        <!-- Co-Founder 2 -->
+                        <div class="founders-cofounder-card reveal">
+                            <div class="founders-cofounder-photo">
+                                <img src="Suresh.jpeg" alt="Suresh Shrestha">
+                            </div>
+                            <div class="founders-cofounder-info">
+                                <span class="founders-cofounder-badge">Co-Founder</span>
+                                <h4>Suresh Shrestha</h4>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -186,8 +334,8 @@
                 </div>
                 <div class="about-grid">
                     <div class="about-text reveal">
-                        <p style="font-size:1.1rem; line-height:1.85; margin-bottom:0.5rem;">We did not start CodeGhar with a big investor or a fancy office. We started with a laptop, a shared Google Doc, and a lot of chai. The first few projects were for friends and local businesses who needed a website but could not afford Kathmandu agency prices.</p>
-                        <p style="font-size:1.1rem; line-height:1.85; margin-bottom:0.5rem;">Things grew slowly. We took on harder problems. We built real products for clients who trust us with their business systems. That trust is not something we take lightly.</p>
+                        <p style="font-size:1.1rem; line-height:1.85; margin-bottom:0.5rem;">Under the vision and leadership of Founder &amp; CEO <strong>Gobinda Bista</strong>, CodeGhar started with a simple belief: Nepal has world-class engineering talent, and businesses deserve technology built with transparency, precision, and genuine dedication. We didn't launch with big corporate investor backing; we began with deep engineering expertise, shared goals, and a lot of chai in Bhaktapur.</p>
+                        <p style="font-size:1.1rem; line-height:1.85; margin-bottom:0.5rem;">As Founder &amp; CEO, Gobinda steers our overall technical architecture, company direction, and client partnerships, ensuring that every web application, mobile app, and AI system we deploy solves real business problems. We remain intentionally hands-on so that when you partner with CodeGhar, you work directly with passionate engineers who care deeply about your success.</p>
                     </div>
                     <div class="profile-sidebar reveal">
                         <div class="sidebar-card" style="background:white;">
@@ -216,6 +364,8 @@
                 </div>
             </div>
         </section>
+
+    </main>
 
     <!-- Footer -->
     <footer>

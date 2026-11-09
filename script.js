@@ -110,11 +110,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const autoPlayElement = document.getElementById('autoPlayServices');
     if (autoPlayElement) {
         const services = [
-            "Web Applications",
-            "Mobile Platforms",
-            "Custom Software",
-            "AI Solutions",
-            "SaaS Products"
+            "AI for Business",
+            "AI for Education",
+            "AI for Healthcare",
+            "Daily Automation",
+            "Custom Software"
         ];
         let serviceIndex = 0;
 

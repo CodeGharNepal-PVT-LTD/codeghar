@@ -1,43 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
-  <url><loc>https://codegharnepal.com.np/</loc><lastmod>2026-05-12</lastmod><priority>1.00</priority></url>
-  <url><loc>https://codegharnepal.com.np/about.html</loc><lastmod>2026-05-12</lastmod><priority>0.80</priority></url>
-  <url><loc>https://codegharnepal.com.np/services.html</loc><lastmod>2026-05-12</lastmod><priority>0.90</priority></url>
-  <url><loc>https://codegharnepal.com.np/contact.html</loc><lastmod>2026-05-12</lastmod><priority>0.90</priority></url>
-  <url><loc>https://codegharnepal.com.np/features.html</loc><lastmod>2026-05-12</lastmod><priority>0.70</priority></url>
-  <url><loc>https://codegharnepal.com.np/pricing.html</loc><lastmod>2026-05-12</lastmod><priority>0.70</priority></url>
-  <url><loc>https://codegharnepal.com.np/blog.html</loc><lastmod>2026-05-12</lastmod><priority>0.80</priority></url>
+  <url><loc>https://codegharnepal.com.np/</loc><lastmod>2026-11-09</lastmod><priority>1.00</priority></url>
+  <url><loc>https://codegharnepal.com.np/about.html</loc><lastmod>2026-11-09</lastmod><priority>0.80</priority></url>
+  <url><loc>https://codegharnepal.com.np/services.html</loc><lastmod>2026-11-09</lastmod><priority>0.90</priority></url>
+  <url><loc>https://codegharnepal.com.np/contact.html</loc><lastmod>2026-11-09</lastmod><priority>0.90</priority></url>
+  <url><loc>https://codegharnepal.com.np/features.html</loc><lastmod>2026-11-09</lastmod><priority>0.70</priority></url>
+  <url><loc>https://codegharnepal.com.np/pricing.html</loc><lastmod>2026-11-09</lastmod><priority>0.70</priority></url>
+  <url><loc>https://codegharnepal.com.np/blog.html</loc><lastmod>2026-11-09</lastmod><priority>0.80</priority></url>
+  
+  <!-- Founder & Leadership Pages (Gobinda Bista / GB / CodeGhar) -->
+  <url><loc>https://codegharnepal.com.np/founder-gobinda.html</loc><lastmod>2026-11-09</lastmod><priority>0.90</priority></url>
+  <url><loc>https://codegharnepal.com.np/founders.html</loc><lastmod>2026-11-09</lastmod><priority>0.85</priority></url>
   
   <!-- Individual Service Pages -->
-  <url><loc>https://codegharnepal.com.np/service-ai.html</loc><lastmod>2026-05-12</lastmod><priority>0.85</priority></url>
-  <url><loc>https://codegharnepal.com.np/service-mobile.html</loc><lastmod>2026-05-12</lastmod><priority>0.85</priority></url>
-  <url><loc>https://codegharnepal.com.np/service-web.html</loc><lastmod>2026-05-12</lastmod><priority>0.85</priority></url>
-  <url><loc>https://codegharnepal.com.np/service-webapp.html</loc><lastmod>2026-05-12</lastmod><priority>0.85</priority></url>
+  <url><loc>https://codegharnepal.com.np/service-ai.html</loc><lastmod>2026-11-09</lastmod><priority>0.85</priority></url>
+  <url><loc>https://codegharnepal.com.np/service-mobile.html</loc><lastmod>2026-11-09</lastmod><priority>0.85</priority></url>
+  <url><loc>https://codegharnepal.com.np/service-web.html</loc><lastmod>2026-11-09</lastmod><priority>0.85</priority></url>
+  <url><loc>https://codegharnepal.com.np/service-webapp.html</loc><lastmod>2026-11-09</lastmod><priority>0.85</priority></url>
   
   <!-- Individual Blog Posts -->
-  <url><loc>https://codegharnepal.com.np/blog-1.html</loc><lastmod>2026-05-12</lastmod><priority>0.60</priority></url>
-  <url><loc>https://codegharnepal.com.np/blog-2.html</loc><lastmod>2026-05-12</lastmod><priority>0.60</priority></url>
-  <url><loc>https://codegharnepal.com.np/blog-3.html</loc><lastmod>2026-05-12</lastmod><priority>0.60</priority></url>
-  
-  <!-- Founder Pages -->
-  <url><loc>https://codegharnepal.com.np/founders.html</loc><lastmod>2026-05-12</lastmod><priority>0.50</priority></url>
-  <url><loc>https://codegharnepal.com.np/founder-gobinda.html</loc><lastmod>2026-05-12</lastmod><priority>0.50</priority></url>
-  <url><loc>https://codegharnepal.com.np/founder-subash.html</loc><lastmod>2026-05-12</lastmod><priority>0.50</priority></url>
-  <url><loc>https://codegharnepal.com.np/founder-suresh.html</loc><lastmod>2026-05-12</lastmod><priority>0.50</priority></url>
+  <url><loc>https://codegharnepal.com.np/blog-1.html</loc><lastmod>2026-11-09</lastmod><priority>0.60</priority></url>
+  <url><loc>https://codegharnepal.com.np/blog-2.html</loc><lastmod>2026-11-09</lastmod><priority>0.60</priority></url>
+  <url><loc>https://codegharnepal.com.np/blog-3.html</loc><lastmod>2026-11-09</lastmod><priority>0.60</priority></url>
   
   <!-- Other Important Pages -->
-  <url><loc>https://codegharnepal.com.np/case-studies.html</loc><lastmod>2026-05-12</lastmod><priority>0.70</priority></url>
-  <url><loc>https://codegharnepal.com.np/testimonials.html</loc><lastmod>2026-05-12</lastmod><priority>0.70</priority></url>
-  <url><loc>https://codegharnepal.com.np/solutions.html</loc><lastmod>2026-05-12</lastmod><priority>0.75</priority></url>
-  <url><loc>https://codegharnepal.com.np/careers.html</loc><lastmod>2026-05-12</lastmod><priority>0.60</priority></url>
-  <url><loc>https://codegharnepal.com.np/resources.html</loc><lastmod>2026-05-12</lastmod><priority>0.60</priority></url>
-  <url><loc>https://codegharnepal.com.np/faq.html</loc><lastmod>2026-05-12</lastmod><priority>0.50</priority></url>
-  <url><loc>https://codegharnepal.com.np/documentation.html</loc><lastmod>2026-05-12</lastmod><priority>0.50</priority></url>
-  <url><loc>https://codegharnepal.com.np/security.html</loc><lastmod>2026-05-12</lastmod><priority>0.50</priority></url>
-  <url><loc>https://codegharnepal.com.np/status.html</loc><lastmod>2026-05-12</lastmod><priority>0.40</priority></url>
+  <url><loc>https://codegharnepal.com.np/case-studies.html</loc><lastmod>2026-11-09</lastmod><priority>0.70</priority></url>
+  <url><loc>https://codegharnepal.com.np/testimonials.html</loc><lastmod>2026-11-09</lastmod><priority>0.70</priority></url>
+  <url><loc>https://codegharnepal.com.np/solutions.html</loc><lastmod>2026-11-09</lastmod><priority>0.75</priority></url>
+  <url><loc>https://codegharnepal.com.np/careers.html</loc><lastmod>2026-11-09</lastmod><priority>0.60</priority></url>
+  <url><loc>https://codegharnepal.com.np/resources.html</loc><lastmod>2026-11-09</lastmod><priority>0.60</priority></url>
+  <url><loc>https://codegharnepal.com.np/faq.html</loc><lastmod>2026-11-09</lastmod><priority>0.50</priority></url>
+  <url><loc>https://codegharnepal.com.np/documentation.html</loc><lastmod>2026-11-09</lastmod><priority>0.50</priority></url>
+  <url><loc>https://codegharnepal.com.np/security.html</loc><lastmod>2026-11-09</lastmod><priority>0.50</priority></url>
+  <url><loc>https://codegharnepal.com.np/status.html</loc><lastmod>2026-11-09</lastmod><priority>0.40</priority></url>
   
   <!-- Legal Pages -->
-  <url><loc>https://codegharnepal.com.np/privacy.html</loc><lastmod>2026-05-12</lastmod><priority>0.30</priority></url>
-  <url><loc>https://codegharnepal.com.np/terms.html</loc><lastmod>2026-05-12</lastmod><priority>0.30</priority></url>
+  <url><loc>https://codegharnepal.com.np/privacy.html</loc><lastmod>2026-11-09</lastmod><priority>0.30</priority></url>
+  <url><loc>https://codegharnepal.com.np/terms.html</loc><lastmod>2026-11-09</lastmod><priority>0.30</priority></url>
 </urlset>
