@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Header Scroll Effect
     const header = document.getElementById('header');
     const updateHeader = () => {
+        if (!header) return;
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
         } else {
@@ -27,46 +28,117 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     };
-    window.addEventListener('scroll', updateHeader);
-    updateHeader();
+    if (header) {
+        window.addEventListener('scroll', updateHeader);
+        updateHeader();
+    }
 
-    // 4. Mobile Navigation
+    // 4. Mobile Navigation Drawer & Dropdown Logic
     const mobileToggle = document.getElementById('mobileToggle');
     const navLinks = document.getElementById('navLinks');
+    const navBackdrop = document.getElementById('navBackdrop');
+    const navCloseBtn = document.getElementById('navCloseBtn');
+
+    const closeMobileMenu = () => {
+        if (navLinks && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            if (navBackdrop) navBackdrop.classList.remove('active');
+            if (mobileToggle) {
+                const icon = mobileToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            }
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+            document.querySelectorAll('.cgdrop, .nav-item.dropdown').forEach(d => d.classList.remove('open'));
+        }
+    };
+
+    const openMobileMenu = () => {
+        if (navLinks) {
+            navLinks.classList.add('active');
+            if (navBackdrop) navBackdrop.classList.add('active');
+            if (mobileToggle) {
+                const icon = mobileToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+                mobileToggle.setAttribute('aria-expanded', 'true');
+            }
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+        }
+    };
 
     if (mobileToggle && navLinks) {
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = mobileToggle.querySelector('i');
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             if (navLinks.classList.contains('active')) {
-                icon.classList.replace('fa-bars', 'fa-xmark');
+                closeMobileMenu();
             } else {
-                icon.classList.replace('fa-xmark', 'fa-bars');
-                document.querySelectorAll('.nav-item.dropdown').forEach(d => d.classList.remove('open'));
+                openMobileMenu();
             }
         });
     }
 
-    // Click-to-open Dropdowns (Desktop & Mobile)
-    document.querySelectorAll('.nav-item.dropdown > a').forEach(link => {
-        link.addEventListener('click', (e) => {
+    if (navCloseBtn) {
+        navCloseBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeMobileMenu();
+        });
+    }
+
+    if (navBackdrop) {
+        navBackdrop.addEventListener('click', closeMobileMenu);
+    }
+
+    // Close menu when tapping any regular navigation link
+    document.querySelectorAll('#navLinks a:not(.cgdrop-trigger)').forEach(link => {
+        link.addEventListener('click', () => {
+            closeMobileMenu();
+        });
+    });
+
+    // Dropdown Toggling for .cgdrop
+    document.querySelectorAll('.cgdrop-trigger').forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
             e.preventDefault();
-            const parent = link.parentElement;
+            e.stopPropagation();
+            const parent = trigger.closest('.cgdrop');
+            if (!parent) return;
             const isOpen = parent.classList.contains('open');
-            
-            // Close all others
-            document.querySelectorAll('.nav-item.dropdown').forEach(d => d.classList.remove('open'));
-            
+
+            // Close other dropdowns
+            document.querySelectorAll('.cgdrop').forEach(d => {
+                if (d !== parent) d.classList.remove('open');
+            });
+
             if (!isOpen) {
                 parent.classList.add('open');
+                trigger.setAttribute('aria-expanded', 'true');
+            } else {
+                parent.classList.remove('open');
+                trigger.setAttribute('aria-expanded', 'false');
             }
         });
     });
 
     // Close dropdowns when clicking outside
     document.addEventListener('click', (e) => {
-        if (!e.target.closest('.nav-item.dropdown')) {
-            document.querySelectorAll('.nav-item.dropdown').forEach(d => d.classList.remove('open'));
+        if (!e.target.closest('.cgdrop') && !e.target.closest('.nav-item.dropdown')) {
+            document.querySelectorAll('.cgdrop, .nav-item.dropdown').forEach(d => d.classList.remove('open'));
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeMobileMenu();
+            document.querySelectorAll('.cgdrop, .nav-item.dropdown').forEach(d => d.classList.remove('open'));
         }
     });
 
@@ -93,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         header.addEventListener('click', () => {
             const item = header.parentElement;
             const isActive = item.classList.contains('active');
-            
+
             // Close other items in the same accordion
             const accordion = item.parentElement;
             accordion.querySelectorAll('.accordion-item').forEach(i => {
@@ -110,27 +182,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const autoPlayElement = document.getElementById('autoPlayServices');
     if (autoPlayElement) {
         const services = [
-            "AI for Business",
-            "AI for Education",
-            "AI for Healthcare",
-            "Daily Automation",
-            "Custom Software"
+            "AI Products for Business",
+            "Smart AI Automations",
+            "AI for Education & Youth",
+            "Healthcare AI Systems",
+            "Scalable Custom Software"
         ];
         let serviceIndex = 0;
 
         setInterval(() => {
             // Fade out up
             autoPlayElement.classList.add('fade-out');
-            
+
             setTimeout(() => {
                 // Change text and prepare to fade in from bottom
                 serviceIndex = (serviceIndex + 1) % services.length;
                 autoPlayElement.textContent = services[serviceIndex];
-                
+
                 // Swap classes instantly
                 autoPlayElement.classList.remove('fade-out');
                 autoPlayElement.classList.add('fade-in');
-                
+
                 // Allow browser to register the 'fade-in' state
                 requestAnimationFrame(() => {
                     requestAnimationFrame(() => {
@@ -144,37 +216,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 6. EmailJS Form Handling
     // Initialize EmailJS with your Public Key
-    emailjs.init("VIgUDPahfPdZmEG5V");
-    
+    if (typeof emailjs !== 'undefined') { emailjs.init("VIgUDPahfPdZmEG5V"); }
+
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             // Get form data
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
                 message: document.getElementById('message').value
             };
-            
+
             console.log('Form Data:', formData);
-            
+
             const btn = contactForm.querySelector('button');
             const originalText = btn.textContent;
-            
+
             btn.textContent = "Sending...";
             btn.disabled = true;
 
             // Send email using EmailJS
             emailjs.send(
-                "service_05j4wnp",  // Your Service ID
-                "template_rcgrwzk", // Your Template ID
+                "service_05j4wnp",
+                "template_rcgrwzk",
                 {
                     from_name: formData.name,
                     from_email: formData.email,
                     message: formData.message,
-                    to_email: "nepalcodegahr@gmail.com" // Your email
+                    to_email: "nepalcodegahr@gmail.com"
                 }
             ).then(() => {
                 alert("Message sent successfully! We'll contact you soon.");

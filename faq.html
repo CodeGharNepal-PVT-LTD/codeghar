@@ -30,89 +30,75 @@
 <body class="page-header-offset">
 
     <!-- Header -->
-<header id="header" style="position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #eee;">
-    <div style="display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:12px 24px;">
-        <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-            <img src="image.png" alt="CodeGhar Logo" style="height:38px;width:38px;border-radius:50%;object-fit:contain;">
-            <span style="font-weight:800;color:#0A1929;font-size:1.1rem;font-family:'Poppins',sans-serif;letter-spacing:0.5px;">CODEGHAR NEPAL</span>
-        </a>
-        <nav style="display:flex;align-items:center;gap:4px;">
-            <a href="index.html" style="padding:8px 14px;font-weight:600;font-size:0.9rem;color:#0A1929;text-decoration:none;border-radius:6px;">Home</a>
+    <header id="header" class="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="image.png" alt="CodeGhar Logo" class="brand-logo" width="38" height="38" style="width:38px;height:38px;max-width:38px;max-height:38px;object-fit:contain;border-radius:0;flex-shrink:0;display:block;">
+                <span class="brand-title">CODEGHAR NEPAL</span>
+            </a>
 
-            <div class="cgdrop">
-                <a href="services.html" class="cgdrop-trigger">Services &#8964;</a>
-                <div class="cgdrop-menu">
-                    <a href="service-web.html">Web Development</a>
-                    <a href="service-webapp.html">Web Applications</a>
-                    <a href="service-mobile.html">Mobile Apps</a>
-                    <a href="service-ai.html">AI Solutions</a>
-                    <a href="service-marketing.html">Digital Marketing</a>
-                    <a href="solutions.html">Digital Solutions</a>
+            <!-- Mobile Hamburger Toggle -->
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" type="button" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu" id="navLinks">
+                <!-- Mobile Drawer Header -->
+                <div class="nav-drawer-header">
+                    <div class="nav-drawer-brand">
+                        <img src="image.png" alt="CodeGhar Logo" width="30" height="30">
+                        <span>CODEGHAR NEPAL</span>
+                    </div>
+                    <button class="nav-close-btn" id="navCloseBtn" aria-label="Close navigation menu" type="button">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
-            </div>
+                <a href="index.html" class="nav-item-link">Home</a>
+                <a href="index.html#solutions" class="nav-item-link">AI Solutions</a>
 
-            <div class="cgdrop">
-                <a href="about.html" class="cgdrop-trigger">Company &#8964;</a>
-                <div class="cgdrop-menu">
-                    <a href="about.html">About Us</a>
-                    <a href="founders.html">Founders</a>
-                    <a href="careers.html">Careers</a>
-                    <a href="contact.html">Contact</a>
+                <div class="cgdrop">
+                    <button class="cgdrop-trigger" type="button" aria-expanded="false">
+                        <span>Services</span> <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="cgdrop-menu">
+                        <a href="service-ai.html">AI Solutions</a>
+                        <a href="service-web.html">Web Development</a>
+                        <a href="service-webapp.html">Web Applications</a>
+                        <a href="service-mobile.html">Mobile Apps</a>
+                        <a href="service-marketing.html">Digital Marketing</a>
+                        <a href="solutions.html">Digital Solutions</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="cgdrop">
-                <a href="resources.html" class="cgdrop-trigger">Resources &#8964;</a>
-                <div class="cgdrop-menu">
-                    <a href="blog.html">Blog</a>
-                    <a href="case-studies.html">Case Studies</a>
-                    <a href="faq.html">FAQ</a>
+                <div class="cgdrop">
+                    <button class="cgdrop-trigger" type="button" aria-expanded="false">
+                        <span>Company</span> <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="cgdrop-menu">
+                        <a href="about.html">About Us</a>
+                        <a href="founders.html">Founders</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
                 </div>
-            </div>
 
-            <a href="contact.html" style="padding:10px 20px;background:#1E88E5;color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.9rem;margin-left:8px;">Get Quote</a>
-        </nav>
-    </div>
-</header>
+                <div class="cgdrop">
+                    <button class="cgdrop-trigger" type="button" aria-expanded="false">
+                        <span>Resources</span> <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="cgdrop-menu">
+                        <a href="blog.html">Blog</a>
+                        <a href="case-studies.html">Case Studies</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </div>
 
-<style>
-.cgdrop { position:relative; display:inline-block; }
-.cgdrop-trigger {
-    display:inline-block;
-    padding:8px 14px;
-    font-weight:600;
-    font-size:0.9rem;
-    color:#0A1929;
-    text-decoration:none;
-    border-radius:6px;
-    cursor:pointer;
-    white-space:nowrap;
-}
-.cgdrop-trigger:hover { background:#F0F7FF; color:#1E88E5; }
-.cgdrop-menu {
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    min-width:190px;
-    background:#fff;
-    border:1px solid #E2E8F0;
-    border-radius:12px;
-    box-shadow:0 8px 30px rgba(0,0,0,0.12);
-    padding:8px 0;
-    z-index:9999;
-}
-.cgdrop:hover .cgdrop-menu { display:block; }
-.cgdrop-menu a {
-    display:block;
-    padding:10px 18px;
-    font-size:0.88rem;
-    font-weight:500;
-    color:#334155;
-    text-decoration:none;
-}
-.cgdrop-menu a:hover { background:#F0F7FF; color:#1E88E5; padding-left:22px; }
-</style>
+                <a href="contact.html" class="nav-cta-btn">Get Quote</a>
+            </nav>
+        </div>
+        <div class="nav-backdrop" id="navBackdrop"></div>
+    </header>
 
     <main>
         <!-- Hero Banner -->
@@ -220,35 +206,61 @@
     </main>
 
     <!-- Footer -->
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo" style="color: white;">Code <span>Ghar</span></a>
-                    <p>Software from Bhaktapur, built by people who give a damn.</p>
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="image.png" alt="CodeGhar Logo" width="38" height="38" style="width:38px;height:38px;object-fit:contain;border-radius:0;flex-shrink:0;">
+                        <span>CODEGHAR NEPAL</span>
+                    </a>
+                    <p>A software company from Bhaktapur. We build things that work — and we actually care about the result.</p>
+                    <p style="font-size:0.85rem; color: rgba(255,255,255,0.65); margin-top: 6px;">भक्तपुरबाट, मनले बनाएको सफ्टवेयर।</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61560791996452" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/codeghar-undefined-b00023406/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/CodeGharNepal" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
                 <div class="footer-links">
                     <h4>Company</h4>
                     <ul>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="founders.html">Our Founders</a></li>
                         <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Blog &amp; Insights</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Resources</h4>
+                    <h4>Services &amp; Solutions</h4>
                     <ul>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="documentation.html">Documentation</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="service-ai.html">AI Solutions</a></li>
+                        <li><a href="service-web.html">Web Development</a></li>
+                        <li><a href="service-webapp.html">Web Applications</a></li>
+                        <li><a href="service-mobile.html">Mobile Apps</a></li>
+                        <li><a href="service-marketing.html">Digital Marketing &amp; SEO</a></li>
+                        <li><a href="solutions.html">Digital Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="tel:+9779842378928"><i class="fas fa-phone mr-2" style="margin-right: 8px;"></i> +977-9842378928</a></li>
+                        <li><a href="mailto:nepalcodeghar@gmail.com"><i class="fas fa-envelope mr-2" style="margin-right: 8px;"></i> nepalcodeghar@gmail.com</a></li>
+                        <li><span style="color: var(--text-light); display: inline-flex; align-items: flex-start;"><i class="fas fa-map-marker-alt mr-2" style="margin-right: 8px; margin-top: 3px;"></i> Libali, Bhaktapur-8, Nepal</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Code Ghar. All Rights Reserved.</p>
-                <p>Built with ❤️ at Code Ghar</p>
+                <p>&copy; <span id="year">2026</span> CodeGhar Nepal Pvt. Ltd. All rights reserved. | Registered Office: Bhaktapur Municipality-8, Libali, Bhaktapur, Nepal</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="security.html">Security</a>
+                </div>
             </div>
         </div>
     </footer>

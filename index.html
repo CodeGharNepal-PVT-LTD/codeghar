@@ -68,19 +68,18 @@
     <meta name="twitter:creator" content="@codegharnepal">
 
     <!-- Theme & Mobile -->
-    <meta name="theme-color" content="#0A1929">
+    <meta name="theme-color" content="#012962">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="CodeGhar">
     <meta name="application-name" content="CodeGhar">
-    <meta name="msapplication-TileColor" content="#0A1929">
+    <meta name="msapplication-TileColor" content="#012962">
     <meta name="msapplication-config" content="none">
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="image.png">
+    <link rel="apple-touch-icon" href="image.png">
+    
 
     <!-- Schema.org Markup (JSON-LD) -->
     <script type="application/ld+json">
@@ -157,11 +156,11 @@
 
     <style>
         :root {
-            --primary: #0A1929;
-            --secondary: #002868;
-            --accent: #00BFFF;
-            --accent-glow: rgba(0, 191, 255, 0.5);
-            --steel: #4682B4;
+            --primary: #012962;
+            --secondary: #071326;
+            --accent: #0059C7; --brand-red: #D51B20;
+            --accent-glow: rgba(0, 89, 199, 0.25);
+            --steel: #0059C7;
             --white: #FFFFFF;
             --light-blue: #F8FBFF;
             --glass: rgba(255, 255, 255, 0.7);
@@ -428,7 +427,7 @@
             width: 80px;
             height: 80px;
             background: linear-gradient(135deg, var(--accent), #0080FF);
-            border-radius: 50%;
+            border-radius: 0;
             opacity: 0.15;
             filter: blur(20px);
         }
@@ -954,7 +953,7 @@
         .team-featured-social a {
             width: 40px;
             height: 40px;
-            border-radius: 50%;
+            border-radius: 0;
             background: transparent;
             border: 1.5px solid rgba(0, 191, 255, 0.6);
             color: rgba(255, 255, 255, 0.85);
@@ -1289,7 +1288,7 @@
             height: 50px;
             background: var(--light-blue);
             color: var(--accent);
-            border-radius: 50%;
+            border-radius: 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1353,7 +1352,7 @@
             height: 40px;
             background: rgba(255, 255, 255, 0.1);
             color: var(--white);
-            border-radius: 50%;
+            border-radius: 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1415,7 +1414,7 @@
             height: 60px;
             background: var(--accent);
             color: var(--primary);
-            border-radius: 50%;
+            border-radius: 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1439,7 +1438,7 @@
             height: 50px;
             background: var(--accent);
             color: var(--primary);
-            border-radius: 50%;
+            border-radius: 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1496,7 +1495,7 @@
         .shuffle-img {
             width: 50px;
             height: 50px;
-            border-radius: 50%;
+            border-radius: 0;
             overflow: hidden;
             border: 2px solid var(--accent);
         }
@@ -1724,8 +1723,357 @@
 
         .dropdown-menu a:hover {
             background: #F8FAFC;
-            color: #1E88E5;
+            color: #0059C7;
             padding-left: 1.75rem;
+        }
+    </style>
+    <!-- Brand Design System -->
+    <link rel="stylesheet" href="style.css">
+<style id="bulletproof-nav-css">
+        html, body { overflow-x: hidden !important; max-width: 100vw !important; }
+        /* ─── Desktop Header: Zero Hamburger, Zero Drawer Header ─── */
+        @media (min-width: 901px) {
+            .mobile-toggle {
+                display: none !important;
+            }
+            .nav-drawer-header {
+                display: none !important;
+            }
+            .nav-backdrop {
+                display: none !important;
+            }
+            .main-header {
+                position: sticky !important;
+                top: 0 !important;
+                z-index: 1000 !important;
+                background: #FFFFFF !important;
+                border-bottom: 1px solid #EEEEEE !important;
+            }
+            .nav-container {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                max-width: 1200px !important;
+                margin: 0 auto !important;
+                padding: 12px 24px !important;
+                box-sizing: border-box !important;
+            }
+            .logo-link {
+                display: inline-flex !important;
+                align-items: center !important;
+                gap: 10px !important;
+                text-decoration: none !important;
+            }
+            .brand-logo {
+                height: 38px !important;
+                width: 38px !important;
+                max-width: 38px !important;
+                max-height: 38px !important;
+                object-fit: contain !important;
+                border-radius: 0 !important;
+                display: block !important;
+                flex-shrink: 0 !important;
+            }
+            .brand-title {
+                font-weight: 800 !important;
+                color: #012962 !important;
+                font-size: 1.1rem !important;
+                font-family: Poppins, sans-serif !important;
+                letter-spacing: 0.5px !important;
+            }
+            .nav-menu {
+                display: flex !important;
+                align-items: center !important;
+                gap: 6px !important;
+                position: static !important;
+                transform: none !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                width: auto !important;
+                height: auto !important;
+                visibility: visible !important;
+            }
+            .nav-item-link {
+                padding: 8px 14px !important;
+                font-weight: 600 !important;
+                font-size: 0.9rem !important;
+                color: #012962 !important;
+                text-decoration: none !important;
+                border-radius: 6px !important;
+            }
+            .nav-item-link:hover {
+                background: #F0F7FF !important;
+                color: #0059C7 !important;
+            }
+            .cgdrop {
+                position: relative !important;
+                display: inline-block !important;
+            }
+            .cgdrop-trigger {
+                display: inline-flex !important;
+                align-items: center !important;
+                gap: 6px !important;
+                padding: 8px 14px !important;
+                font-weight: 600 !important;
+                font-size: 0.9rem !important;
+                color: #012962 !important;
+                background: transparent !important;
+                border: none !important;
+                border-radius: 6px !important;
+                cursor: pointer !important;
+                white-space: nowrap !important;
+                font-family: inherit !important;
+                transition: all 0.2s ease !important;
+            }
+            .cgdrop-trigger:hover,
+            .cgdrop.open .cgdrop-trigger {
+                background: #F0F7FF !important;
+                color: #0059C7 !important;
+            }
+            .cgdrop-trigger i {
+                font-size: 0.72rem !important;
+                transition: transform 0.25s ease !important;
+            }
+            .cgdrop.open .cgdrop-trigger i {
+                transform: rotate(180deg) !important;
+            }
+            .cgdrop-menu {
+                display: none !important;
+                position: absolute !important;
+                top: calc(100% + 4px) !important;
+                left: 0 !important;
+                min-width: 200px !important;
+                background: #FFFFFF !important;
+                border: 1px solid #E2E8F0 !important;
+                border-radius: 12px !important;
+                box-shadow: 0 12px 32px rgba(1, 41, 98, 0.12) !important;
+                padding: 8px 0 !important;
+                z-index: 1005 !important;
+            }
+            .cgdrop:hover .cgdrop-menu,
+            .cgdrop.open .cgdrop-menu {
+                display: block !important;
+            }
+            .cgdrop-menu a {
+                display: block !important;
+                padding: 9px 18px !important;
+                font-size: 0.88rem !important;
+                font-weight: 500 !important;
+                color: #334155 !important;
+                text-decoration: none !important;
+                transition: all 0.2s ease !important;
+            }
+            .cgdrop-menu a:hover {
+                background: #F0F7FF !important;
+                color: #0059C7 !important;
+                padding-left: 22px !important;
+            }
+            .nav-cta-btn {
+                padding: 10px 20px !important;
+                background: #012962 !important;
+                color: #FFFFFF !important;
+                border-radius: 8px !important;
+                text-decoration: none !important;
+                font-weight: 700 !important;
+                font-size: 0.9rem !important;
+                margin-left: 8px !important;
+                display: inline-block !important;
+                transition: background 0.2s ease !important;
+            }
+            .nav-cta-btn:hover {
+                background: #0059C7 !important;
+                color: #FFFFFF !important;
+            }
+        }
+
+        /* ─── Mobile Header: Perfect Hamburger & Off-Canvas Drawer ─── */
+        @media (max-width: 900px) {
+            .mobile-toggle {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 40px !important;
+                height: 40px !important;
+                background: #F8FAFC !important;
+                border: 1px solid #E2E8F0 !important;
+                border-radius: 8px !important;
+                color: #012962 !important;
+                cursor: pointer !important;
+                font-size: 1.2rem !important;
+                margin-left: auto !important;
+                z-index: 101 !important;
+            }
+            .main-header {
+                position: sticky !important;
+                top: 0 !important;
+                z-index: 1000 !important;
+                background: #FFFFFF !important;
+                border-bottom: 1px solid #EEEEEE !important;
+            }
+            .nav-container {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                padding: 12px 16px !important;
+                position: relative !important;
+            }
+            .nav-drawer-header {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                padding: 16px 20px !important;
+                border-bottom: 1px solid #E8EDF5 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+                background: #FFFFFF !important;
+                flex-shrink: 0 !important;
+            }
+            .nav-drawer-brand {
+                display: flex !important;
+                align-items: center !important;
+                gap: 8px !important;
+            }
+            .nav-close-btn {
+                background: #F1F5F9 !important;
+                border: none !important;
+                width: 34px !important;
+                height: 34px !important;
+                border-radius: 6px !important;
+                font-size: 1.1rem !important;
+                color: #012962 !important;
+                cursor: pointer !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            .nav-menu {
+                position: fixed !important;
+                top: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                width: min(85vw, 360px) !important;
+                max-width: 100vw !important;
+                height: 100dvh !important;
+                background: #FFFFFF !important;
+                z-index: 99999 !important;
+                display: none !important;
+                flex-direction: column !important;
+                padding: 0 0 24px 0 !important;
+                box-shadow: -8px 0 32px rgba(1, 41, 98, 0.25) !important;
+                transform: translateX(105%) !important;
+                transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease !important;
+                overflow-y: auto !important;
+                -webkit-overflow-scrolling: touch !important;
+                box-sizing: border-box !important;
+            }
+            .nav-menu.active {
+                display: flex !important;
+                transform: translateX(0) !important;
+                visibility: visible !important;
+            }
+            .nav-menu .nav-item-link {
+                padding: 14px 20px !important;
+                font-size: 1rem !important;
+                font-weight: 600 !important;
+                color: #012962 !important;
+                border-bottom: 1px solid #F1F5F9 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+                text-decoration: none !important;
+                display: block !important;
+            }
+            .cgdrop {
+                width: 100% !important;
+                display: block !important;
+                border-bottom: 1px solid #F1F5F9 !important;
+                box-sizing: border-box !important;
+            }
+            .cgdrop-trigger {
+                width: 100% !important;
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                padding: 14px 20px !important;
+                font-size: 1rem !important;
+                font-weight: 600 !important;
+                color: #012962 !important;
+                background: transparent !important;
+                border: none !important;
+                cursor: pointer !important;
+                box-sizing: border-box !important;
+                font-family: inherit !important;
+                text-align: left !important;
+                transition: background 0.2s ease !important;
+            }
+            .cgdrop-trigger:hover,
+            .cgdrop.open .cgdrop-trigger {
+                background: #F8FAFC !important;
+                color: #0059C7 !important;
+            }
+            .cgdrop-trigger i {
+                font-size: 0.75rem !important;
+                transition: transform 0.25s ease !important;
+                color: #64748B !important;
+            }
+            .cgdrop.open .cgdrop-trigger i {
+                transform: rotate(180deg) !important;
+                color: #0059C7 !important;
+            }
+            .cgdrop-menu {
+                display: none !important;
+                position: static !important;
+                background: #F4F7FB !important;
+                border: none !important;
+                border-left: 3px solid #0059C7 !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                padding: 4px 0 !important;
+                margin: 0 0 8px 16px !important;
+                width: auto !important;
+                box-sizing: border-box !important;
+            }
+            .cgdrop.open .cgdrop-menu {
+                display: block !important;
+            }
+            .cgdrop-menu a {
+                display: block !important;
+                padding: 10px 16px !important;
+                font-size: 0.9rem !important;
+                font-weight: 500 !important;
+                color: #374151 !important;
+                text-decoration: none !important;
+                border-bottom: none !important;
+                box-sizing: border-box !important;
+            }
+            .cgdrop-menu a:hover {
+                background: #E8EDF5 !important;
+                color: #0059C7 !important;
+            }
+            .nav-menu .nav-cta-btn {
+                margin: 20px 20px 0 20px !important;
+                padding: 14px !important;
+                background: #012962 !important;
+                color: #FFFFFF !important;
+                border-radius: 8px !important;
+                text-align: center !important;
+                font-weight: 700 !important;
+                text-decoration: none !important;
+                display: block !important;
+            }
+            .nav-backdrop {
+                position: fixed !important;
+                inset: 0 !important;
+                background: rgba(1, 41, 98, 0.5) !important;
+                backdrop-filter: blur(4px) !important;
+                z-index: 99998 !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+                transition: opacity 0.3s ease, visibility 0.3s ease !important;
+            }
+            .nav-backdrop.active {
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
         }
     </style>
 </head>
@@ -1733,34 +2081,50 @@
 <body>
 
     <!-- Header -->
-    <header id="header" style="position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #eee;">
-        <div
-            style="display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:12px 24px;">
-            <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-                <img src="image.png" alt="CodeGhar Logo"
-                    style="height:38px;width:38px;border-radius:50%;object-fit:contain;">
-                <span
-                    style="font-weight:800;color:#0A1929;font-size:1.1rem;font-family:'Poppins',sans-serif;letter-spacing:0.5px;">CODEGHAR
-                    NEPAL</span>
+    <header id="header" class="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="image.png" alt="CodeGhar Logo" class="brand-logo" width="38" height="38" style="width:38px;height:38px;max-width:38px;max-height:38px;object-fit:contain;flex-shrink:0;display:block;">
+                <span class="brand-title">CODEGHAR <span style="color:#D51B20;">NEPAL</span></span>
             </a>
-            <nav style="display:flex;align-items:center;gap:4px;">
-                <a href="index.html"
-                    style="padding:8px 14px;font-weight:600;font-size:0.9rem;color:#0A1929;text-decoration:none;border-radius:6px;">Home</a>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" type="button" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu" id="navLinks">
+                <div class="nav-drawer-header">
+                    <div class="nav-drawer-brand">
+                        <img src="image.png" alt="CodeGhar Logo" width="30" height="30" style="object-fit:contain;">
+                        <span>CODEGHAR <span style="color:#D51B20;">NEPAL</span></span>
+                    </div>
+                    <button class="nav-close-btn" id="navCloseBtn" aria-label="Close navigation menu" type="button">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <a href="index.html" class="nav-item-link">Home</a>
+                <a href="#solutions" class="nav-item-link">AI Solutions</a>
 
                 <div class="cgdrop">
-                    <a href="services.html" class="cgdrop-trigger">Services &#8964;</a>
+                    <button class="cgdrop-trigger" type="button" aria-expanded="false">
+                        <span>Services</span> <i class="fas fa-chevron-down"></i>
+                    </button>
                     <div class="cgdrop-menu">
+                        <a href="service-ai.html">AI Solutions</a>
                         <a href="service-web.html">Web Development</a>
                         <a href="service-webapp.html">Web Applications</a>
                         <a href="service-mobile.html">Mobile Apps</a>
-                        <a href="service-ai.html">AI Solutions</a>
                         <a href="service-marketing.html">Digital Marketing</a>
                         <a href="solutions.html">Digital Solutions</a>
                     </div>
                 </div>
 
                 <div class="cgdrop">
-                    <a href="about.html" class="cgdrop-trigger">Company &#8964;</a>
+                    <button class="cgdrop-trigger" type="button" aria-expanded="false">
+                        <span>Company</span> <i class="fas fa-chevron-down"></i>
+                    </button>
                     <div class="cgdrop-menu">
                         <a href="about.html">About Us</a>
                         <a href="founders.html">Founders</a>
@@ -1770,7 +2134,9 @@
                 </div>
 
                 <div class="cgdrop">
-                    <a href="resources.html" class="cgdrop-trigger">Resources &#8964;</a>
+                    <button class="cgdrop-trigger" type="button" aria-expanded="false">
+                        <span>Resources</span> <i class="fas fa-chevron-down"></i>
+                    </button>
                     <div class="cgdrop-menu">
                         <a href="blog.html">Blog</a>
                         <a href="case-studies.html">Case Studies</a>
@@ -1778,69 +2144,13 @@
                     </div>
                 </div>
 
-                <a href="contact.html"
-                    style="padding:10px 20px;background:#1E88E5;color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.9rem;margin-left:8px;">Get
-                    Quote</a>
+                <a href="contact.html" class="nav-cta-btn">Get Quote</a>
             </nav>
         </div>
+        <div class="nav-backdrop" id="navBackdrop"></div>
     </header>
 
-    <style>
-        .cgdrop {
-            position: relative;
-            display: inline-block;
-        }
-
-        .cgdrop-trigger {
-            display: inline-block;
-            padding: 8px 14px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: #0A1929;
-            text-decoration: none;
-            border-radius: 6px;
-            cursor: pointer;
-            white-space: nowrap;
-        }
-
-        .cgdrop-trigger:hover {
-            background: #F0F7FF;
-            color: #1E88E5;
-        }
-
-        .cgdrop-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            min-width: 190px;
-            background: #fff;
-            border: 1px solid #E2E8F0;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-            padding: 8px 0;
-            z-index: 9999;
-        }
-
-        .cgdrop:hover .cgdrop-menu {
-            display: block;
-        }
-
-        .cgdrop-menu a {
-            display: block;
-            padding: 10px 18px;
-            font-size: 0.88rem;
-            font-weight: 500;
-            color: #334155;
-            text-decoration: none;
-        }
-
-        .cgdrop-menu a:hover {
-            background: #F0F7FF;
-            color: #1E88E5;
-            padding-left: 22px;
-        }
-    </style>
+    
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -2040,10 +2350,10 @@
 
                 <!-- 2. Retail & Business -->
                 <div class="sector-card">
-                    <div style="width: 50px; height: 50px; border-radius: 12px; background: rgba(0, 191, 255, 0.12); color: #0084FF; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 18px;">
+                    <div style="width: 50px; height: 50px; border-radius: 12px; background: rgba(0, 191, 255, 0.12); color: #0059C7; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 18px;">
                         <i class="fas fa-store"></i>
                     </div>
-                    <span style="font-size: 0.75rem; font-weight: 700; color: #0084FF; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Retail &amp; Commerce</span>
+                    <span style="font-size: 0.75rem; font-weight: 700; color: #0059C7; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Retail &amp; Commerce</span>
                     <h3 style="font-size: 1.2rem; color: var(--primary); margin-bottom: 12px; font-family: 'Poppins', sans-serif;">Shops &amp; Businesses</h3>
                     <ul style="list-style: none; padding: 0; margin: 0 0 16px; font-size: 0.88rem; color: #64748B; line-height: 1.7; flex: 1;">
                         <li style="margin-bottom: 6px;"><i class="fas fa-check" style="color: #10B981; font-size: 0.75rem; margin-right: 6px;"></i> 24/7 instant chat for prices &amp; orders</li>
@@ -2651,10 +2961,10 @@
                         <h3 style="font-size: 1.75rem; font-family: 'Poppins', sans-serif; color: #FFFFFF; margin: 0 0 14px 0; font-weight: 700; line-height: 1.25;"><a href="founder-gobinda.html" style="color: inherit; text-decoration: none;" title="View Profile">Gobinda Bista</a></h3>
                         <p style="color: rgba(255, 255, 255, 0.72); line-height: 1.75; font-size: 0.95rem; margin: 0 0 22px 0;">Gobinda is the Founder &amp; CEO of CodeGhar Nepal. He builds practical AI automation and reliable software that solve real, everyday problems for local businesses, clinics, schools, and today's generation — from Bhaktapur.</p>
                         <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-                            <a href="https://github.com/GOBINDABISTA" target="_blank" title="GitHub" style="width: 40px; height: 40px; border-radius: 50%; background: transparent; border: 1.5px solid rgba(0, 191, 255, 0.6); color: rgba(255, 255, 255, 0.85); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; text-decoration: none;"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/gobinda-bista-8ba3b4267/" target="_blank" title="LinkedIn" style="width: 40px; height: 40px; border-radius: 50%; background: transparent; border: 1.5px solid rgba(0, 191, 255, 0.6); color: rgba(255, 255, 255, 0.85); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; text-decoration: none;"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://www.facebook.com/ElonGobinda.Bista.526Gb.GB" target="_blank" title="Facebook" style="width: 40px; height: 40px; border-radius: 50%; background: transparent; border: 1.5px solid rgba(0, 191, 255, 0.6); color: rgba(255, 255, 255, 0.85); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://gobindabista.com.np/" target="_blank" title="Website" style="width: 40px; height: 40px; border-radius: 50%; background: transparent; border: 1.5px solid rgba(0, 191, 255, 0.6); color: rgba(255, 255, 255, 0.85); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; text-decoration: none;"><i class="fas fa-globe"></i></a>
+                            <a href="https://github.com/GOBINDABISTA" target="_blank" title="GitHub" style="width: 40px; height: 40px; border-radius: 0; background: transparent; border: 1.5px solid rgba(0, 191, 255, 0.6); color: rgba(255, 255, 255, 0.85); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; text-decoration: none;"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/gobinda-bista-8ba3b4267/" target="_blank" title="LinkedIn" style="width: 40px; height: 40px; border-radius: 0; background: transparent; border: 1.5px solid rgba(0, 191, 255, 0.6); color: rgba(255, 255, 255, 0.85); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; text-decoration: none;"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.facebook.com/ElonGobinda.Bista.526Gb.GB" target="_blank" title="Facebook" style="width: 40px; height: 40px; border-radius: 0; background: transparent; border: 1.5px solid rgba(0, 191, 255, 0.6); color: rgba(255, 255, 255, 0.85); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://gobindabista.com.np/" target="_blank" title="Website" style="width: 40px; height: 40px; border-radius: 0; background: transparent; border: 1.5px solid rgba(0, 191, 255, 0.6); color: rgba(255, 255, 255, 0.85); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; text-decoration: none;"><i class="fas fa-globe"></i></a>
                             <a href="founder-gobinda.html" style="margin-left: auto; color: #38BDF8; font-size: 0.88rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 8px; background: rgba(0, 191, 255, 0.1); border: 1px solid rgba(0, 191, 255, 0.3); transition: all 0.3s ease;">Profile <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></a>
                         </div>
                     </div>
@@ -2795,39 +3105,36 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <div class="footer-logo">
-                        <div class="logo-svg" style="width: 40px; height: 40px;">
-                            <img src="image.png" alt="CodeGhar Logo"
-                                style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
-                        </div>
+                    <a href="index.html" class="footer-logo">
+                        <img src="image.png" alt="CodeGhar Logo" width="38" height="38" style="width:38px;height:38px;object-fit:contain;border-radius:0;flex-shrink:0;">
                         <span>CODEGHAR NEPAL</span>
-                    </div>
-                    <p>A software company from Bhaktapur. We build things that work — and we actually care about the
-                        result.</p>
+                    </a>
+                    <p>A software company from Bhaktapur. We build things that work — and we actually care about the result.</p>
+                    <p style="font-size:0.85rem; color: rgba(255,255,255,0.65); margin-top: 6px;">भक्तपुरबाट, मनले बनाएको सफ्टवेयर।</p>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/profile.php?id=61560791996452" target="_blank"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.linkedin.com/in/codeghar-undefined-b00023406/" target="_blank"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/CodeGharNepal" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61560791996452" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/codeghar-undefined-b00023406/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/CodeGharNepal" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4>Company</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#team">Our Team</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="founders.html">Our Founders</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Blog &amp; Insights</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Services</h4>
+                    <h4>Services &amp; Solutions</h4>
                     <ul>
+                        <li><a href="service-ai.html">AI Solutions</a></li>
                         <li><a href="service-web.html">Web Development</a></li>
                         <li><a href="service-webapp.html">Web Applications</a></li>
                         <li><a href="service-mobile.html">Mobile Apps</a></li>
-                        <li><a href="service-ai.html">AI Solutions</a></li>
                         <li><a href="service-marketing.html">Digital Marketing &amp; SEO</a></li>
                         <li><a href="solutions.html">Digital Solutions</a></li>
                     </ul>
@@ -2835,17 +3142,19 @@
                 <div class="footer-links">
                     <h4>Contact Us</h4>
                     <ul>
-                        <li><i class="fas fa-phone mr-2" style="margin-right: 10px;"></i> +977-9842378928</li>
-                        <li><i class="fas fa-envelope mr-2" style="margin-right: 10px;"></i> nepalcodeghar@gmail.com
-                        </li>
-                        <li><i class="fas fa-map-marker-alt mr-2" style="margin-right: 10px;"></i> Libali, Bhaktapur
-                        </li>
+                        <li><a href="tel:+9779842378928"><i class="fas fa-phone mr-2" style="margin-right: 8px;"></i> +977-9842378928</a></li>
+                        <li><a href="mailto:nepalcodeghar@gmail.com"><i class="fas fa-envelope mr-2" style="margin-right: 8px;"></i> nepalcodeghar@gmail.com</a></li>
+                        <li><span style="color: var(--text-light); display: inline-flex; align-items: flex-start;"><i class="fas fa-map-marker-alt mr-2" style="margin-right: 8px; margin-top: 3px;"></i> Libali, Bhaktapur-8, Nepal</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 CodeGhar Nepal Pvt. Ltd. All rights reserved. | Registered Office: Bhaktapur
-                    Municipality-8, Libali, Bhaktapur, Nepal</p>
+                <p>&copy; <span id="year">2026</span> CodeGhar Nepal Pvt. Ltd. All rights reserved. | Registered Office: Bhaktapur Municipality-8, Libali, Bhaktapur, Nepal</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="security.html">Security</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -2875,49 +3184,106 @@
             }
         });
 
-        // Mobile Menu Toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navLinks = document.getElementById('navLinks');
+        // Mobile Menu Toggle & Drawer Logic
+        (function() {
+            var toggle = document.getElementById('mobileToggle');
+            var drawer = document.getElementById('navLinks');
+            var backdrop = document.getElementById('navBackdrop');
+            var closeBtn = document.getElementById('navCloseBtn');
+            if (!toggle || !drawer) return;
 
-        if (mobileToggle) {
-            mobileToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                mobileToggle.querySelector('i').classList.toggle('fa-bars');
-                mobileToggle.querySelector('i').classList.toggle('fa-times');
+            function openMenu() {
+                drawer.classList.add('active');
+                if (backdrop) backdrop.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                toggle.setAttribute('aria-expanded', 'true');
+                var icon = toggle.querySelector('i');
+                if (icon) { icon.classList.remove('fa-bars'); icon.classList.add('fa-times'); }
+            }
+            function closeMenu() {
+                drawer.classList.remove('active');
+                if (backdrop) backdrop.classList.remove('active');
+                document.body.style.overflow = '';
+                toggle.setAttribute('aria-expanded', 'false');
+                var icon = toggle.querySelector('i');
+                if (icon) { icon.classList.add('fa-bars'); icon.classList.remove('fa-times'); }
+                // Close any open dropdowns inside drawer
+                drawer.querySelectorAll('.cgdrop').forEach(function(d) {
+                    d.classList.remove('open');
+                    var trig = d.querySelector('.cgdrop-trigger');
+                    if (trig) trig.setAttribute('aria-expanded', 'false');
+                });
+            }
+
+            toggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                drawer.classList.contains('active') ? closeMenu() : openMenu();
             });
 
-            // Close menu on link click (only for actual links, not dropdown toggles)
-            document.querySelectorAll('.nav-links a:not(.dropdown > a)').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    mobileToggle.querySelector('i').classList.add('fa-bars');
-                    mobileToggle.querySelector('i').classList.remove('fa-times');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    closeMenu();
+                });
+            }
+
+            if (backdrop) {
+                backdrop.addEventListener('click', closeMenu);
+            }
+
+            // Close drawer only on regular links & submenu item links (NOT triggers)
+            drawer.querySelectorAll('a').forEach(function(a) {
+                a.addEventListener('click', function() {
+                    closeMenu();
                 });
             });
-        }
 
-        // Click-to-open Dropdowns (Desktop & Mobile)
-        document.querySelectorAll('.nav-item.dropdown > a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const parent = link.parentElement;
-                const isOpen = parent.classList.contains('open');
+            // Dropdown Toggling for .cgdrop (Mobile & Desktop)
+            drawer.querySelectorAll('.cgdrop-trigger').forEach(function(trigger) {
+                trigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var parent = trigger.closest('.cgdrop');
+                    if (!parent) return;
+                    var isOpen = parent.classList.contains('open');
 
-                // Close all others
-                document.querySelectorAll('.nav-item.dropdown').forEach(d => d.classList.remove('open'));
+                    // Close other dropdowns
+                    drawer.querySelectorAll('.cgdrop').forEach(function(d) {
+                        if (d !== parent) {
+                            d.classList.remove('open');
+                            var otherTrig = d.querySelector('.cgdrop-trigger');
+                            if (otherTrig) otherTrig.setAttribute('aria-expanded', 'false');
+                        }
+                    });
 
-                if (!isOpen) {
-                    parent.classList.add('open');
+                    if (!isOpen) {
+                        parent.classList.add('open');
+                        trigger.setAttribute('aria-expanded', 'true');
+                    } else {
+                        parent.classList.remove('open');
+                        trigger.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.cgdrop')) {
+                    drawer.querySelectorAll('.cgdrop').forEach(function(d) {
+                        d.classList.remove('open');
+                        var trig = d.querySelector('.cgdrop-trigger');
+                        if (trig) trig.setAttribute('aria-expanded', 'false');
+                    });
                 }
             });
-        });
 
-        // Close dropdowns when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.nav-item.dropdown')) {
-                document.querySelectorAll('.nav-item.dropdown').forEach(d => d.classList.remove('open'));
-            }
-        });
+            // Close on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeMenu();
+                }
+            });
+        })();
 
         // Reveal Animations on Scroll
         const reveals = document.querySelectorAll('.reveal');
@@ -2954,7 +3320,7 @@
         const autoPlayElement = document.getElementById('autoPlayServices');
         if (autoPlayElement) {
             const services = [
-                { text: "AI for Business", color: "#00BFFF" },
+                { text: "AI for Business", color: "#0059C7" },
                 { text: "AI for Education", color: "#A855F7" },
                 { text: "AI for Healthcare", color: "#10B981" },
                 { text: "Daily Automation", color: "#F59E0B" },
@@ -3164,7 +3530,7 @@
                     ctx.arc(px, py, 2.2, 0, Math.PI * 2);
                     ctx.fillStyle = "rgba(0, 191, 255, 0.95)";
                     ctx.shadowBlur = 8;
-                    ctx.shadowColor = "#00BFFF";
+                    ctx.shadowColor = "#0059C7";
                     ctx.fill();
                     ctx.shadowBlur = 0;
                 }
