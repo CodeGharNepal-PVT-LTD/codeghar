@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     from_name: formData.name,
                     from_email: formData.email,
                     message: formData.message,
-                    to_email: "nepalcodegahr@gmail.com"
+                    to_email: "nepalcodeghar@gmail.com"
                 }
             ).then(() => {
                 alert("Message sent successfully! We'll contact you soon.");

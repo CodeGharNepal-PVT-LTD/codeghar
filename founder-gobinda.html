@@ -268,33 +268,39 @@
 
         .social-bar {
             display: flex;
-            gap: 14px;
-            flex-wrap: wrap
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
         }
 
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 9px 18px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: .85rem;
-            font-weight: 600;
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: var(--white);
-            background: rgba(255, 255, 255, 0.08)
+        .social-bar .social-btn {
+            width: auto !important;
+            height: auto !important;
+            min-height: 40px !important;
+            border-radius: 8px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            padding: 9px 18px !important;
+            white-space: nowrap !important;
+            text-decoration: none !important;
+            font-size: .85rem !important;
+            font-weight: 600 !important;
+            transition: var(--transition) !important;
+            border: 1px solid rgba(255, 255, 255, 0.25) !important;
+            color: var(--white) !important;
+            background: rgba(255, 255, 255, 0.08) !important;
         }
 
-        .social-btn:hover {
-            background: var(--accent);
-            color: var(--primary);
-            border-color: var(--accent)
+        .social-bar .social-btn:hover {
+            background: var(--accent) !important;
+            color: var(--primary) !important;
+            border-color: var(--accent) !important;
+            transform: translateY(-2px);
         }
 
-        .social-btn i {
-            font-size: .95rem
+        .social-bar .social-btn i {
+            font-size: .95rem !important;
         }
 
         /* Main Content */
@@ -492,9 +498,9 @@
             .social-bar {
                 gap: 8px;
             }
-            .social-btn {
-                padding: 7px 12px;
-                font-size: 0.8rem;
+            .social-bar .social-btn {
+                padding: 7px 12px !important;
+                font-size: 0.8rem !important;
             }
             .expertise-block, .info-block {
                 padding: 20px 16px;
@@ -532,8 +538,6 @@
                     </button>
                 </div>
                 <a href="index.html" class="nav-item-link">Home</a>
-                <a href="index.html#solutions" class="nav-item-link">AI Solutions</a>
-
                 <div class="cgdrop">
                     <button class="cgdrop-trigger" type="button" aria-expanded="false">
                         <span>Services</span> <i class="fas fa-chevron-down"></i>
