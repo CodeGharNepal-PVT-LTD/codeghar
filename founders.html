@@ -79,11 +79,21 @@
             position:relative;
             overflow:hidden;
         }
-        .page-hero::before {
-            content:'';
+        /* Background slideshow */
+        .page-hero-bg-slide {
             position:absolute; inset:0;
-            background:url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=60&w=1800') center/cover no-repeat;
-            opacity:0.06;
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            opacity:0;
+            transition:opacity 1.6s ease-in-out;
+        }
+        .page-hero-bg-slide.active { opacity:0.09; }
+        .page-hero-overlay {
+            position:absolute; inset:0;
+            background:#04111F;
+            opacity:0.75;
+            z-index:0;
         }
         .page-hero-inner { position:relative; z-index:1; max-width:720px; margin:0 auto; padding:0 28px; }
         .page-hero-eyebrow { display:inline-flex; align-items:center; gap:8px; background:rgba(0,89,199,0.15); border:1px solid rgba(0,89,199,0.3); color:#60A5FA; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; padding:6px 14px; border-radius:100px; margin-bottom:24px; }
@@ -245,6 +255,13 @@
 
 <!-- HERO -->
 <section class="page-hero">
+    <!-- Nepal background slideshow -->
+    <div class="page-hero-bg-slide active" style="background-image:url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="page-hero-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1562887009-4c0e1be9eeef?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="page-hero-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1565073624497-7e91b5cc3843?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="page-hero-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1582650625119-3a31f8418365?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="page-hero-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="page-hero-overlay"></div>
     <div class="page-hero-inner">
         <div class="page-hero-eyebrow reveal"><span></span> Company · Leadership</div>
         <h1 class="reveal d1">The People Behind CodeGhar</h1>
@@ -405,6 +422,18 @@
 
 
 <script>
+    // Nepal background slideshow
+    (function() {
+        const slides = document.querySelectorAll('.page-hero-bg-slide');
+        if (!slides.length) return;
+        let cur = 0;
+        setInterval(() => {
+            slides[cur].classList.remove('active');
+            cur = (cur + 1) % slides.length;
+            slides[cur].classList.add('active');
+        }, 5000);
+    })();
+
     // Nav scroll
     const header = document.getElementById('mainHeader');
     window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 10));
