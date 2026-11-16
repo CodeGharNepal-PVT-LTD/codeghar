@@ -362,20 +362,21 @@
             background-position: center;
             background-repeat: no-repeat;
             opacity: 0;
-            transition: opacity 1.6s ease-in-out;
+            transition: opacity 1.8s ease-in-out;
+            z-index: 0;
         }
 
         .hero-bg-slide.active {
-            opacity: 0.1;
+            opacity: 0.32;
         }
 
-        /* Dark overlay always on top of slides */
+        /* Dark overlay keeps text 100% readable while showing the photos */
         .hero-bg-overlay {
             position: absolute;
             inset: 0;
-            background: #04111F;
-            opacity: 0.72;
-            z-index: 0;
+            background: linear-gradient(135deg, rgba(4, 17, 31, 0.88) 0%, rgba(4, 17, 31, 0.72) 50%, rgba(1, 41, 98, 0.65) 100%);
+            z-index: 1;
+            pointer-events: none;
         }
 
         .hero-grid {
@@ -1546,21 +1547,21 @@
      HERO
 ════════════════════════════════════════════════ -->
     <section class="hero" id="home">
-        <!-- Nepal background slideshow -->
+        <!-- Nepal & Bhaktapur background slideshow -->
         <div class="hero-bg-slide active"
-            style="background-image:url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=60&w=1800');">
+            style="background-image:url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=1920');">
         </div>
         <div class="hero-bg-slide"
-            style="background-image:url('https://images.unsplash.com/photo-1582650625119-3a31f8418365?auto=format&fit=crop&q=60&w=1800');">
+            style="background-image:url('https://images.unsplash.com/photo-1618851142562-ff30d09313a9?auto=format&fit=crop&q=80&w=1920');">
         </div>
         <div class="hero-bg-slide"
-            style="background-image:url('https://images.unsplash.com/photo-1562887009-4c0e1be9eeef?auto=format&fit=crop&q=60&w=1800');">
+            style="background-image:url('https://images.unsplash.com/photo-1623492701360-fb4a1205c789?auto=format&fit=crop&q=80&w=1920');">
         </div>
         <div class="hero-bg-slide"
-            style="background-image:url('https://images.unsplash.com/photo-1565073624497-7e91b5cc3843?auto=format&fit=crop&q=60&w=1800');">
+            style="background-image:url('https://images.unsplash.com/photo-1586100345684-a135906ef03c?auto=format&fit=crop&q=80&w=1920');">
         </div>
         <div class="hero-bg-slide"
-            style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=60&w=1800');">
+            style="background-image:url('https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&q=80&w=1920');">
         </div>
         <div class="hero-bg-overlay"></div>
         <div class="container"
@@ -2001,10 +2002,10 @@
     <section class="about-section" id="about">
         <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
             <div class="about-grid">
-                <!-- Left image -->
+                <!-- Left image: Bhaktapur Landmark -->
                 <div class="about-img-wrap reveal">
-                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=900"
-                        alt="Nepal mountain landscape — where CodeGhar was built">
+                    <img src="https://images.unsplash.com/photo-1618851142562-ff30d09313a9?auto=format&fit=crop&q=80&w=1000"
+                        alt="Bhaktapur Nyatapola Temple — where CodeGhar was founded">
                     <div class="about-img-badge">
                         <span class="about-img-badge-icon">🇳🇵</span>
                         <div class="about-img-badge-text">
@@ -2206,7 +2207,7 @@
                 </div>
                 <div class="team-card reveal delay-4">
                     <div class="team-card-photo">
-                        <img src="Suresh.jpeg" alt="Suresh Shrestha — Co-Founder" style="object-position:center 45%;">
+                        <img src="Suresh.jpeg" alt="Suresh Shrestha — Co-Founder" style="object-position:center 50% !important;">
                     </div>
                     <div class="team-card-body">
                         <div class="team-card-role">Co-Founder</div>
@@ -2215,6 +2216,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
 
