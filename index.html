@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeGhar Nepal Pvt. Ltd. | Software Development &amp; AI Solutions</title>
-    <meta name="description"
-        content="CodeGhar Nepal is a software development and AI engineering company in Bhaktapur, Nepal. We build enterprise web applications, mobile apps, and AI solutions for businesses across Nepal and beyond.">
-    <meta name="keywords"
-        content="CodeGhar, CodeGhar Nepal, Software Development Nepal, Web Development Bhaktapur, AI Solutions Nepal, Mobile App Development, Digital Transformation Nepal, Enterprise Software, Gobinda Bista">
+    <meta name="description" content="CodeGhar Nepal is a software development and AI engineering company in Bhaktapur, Nepal. We build enterprise web applications, mobile apps, and AI solutions for businesses across Nepal and beyond.">
+    <meta name="keywords" content="CodeGhar, CodeGhar Nepal, Software Development Nepal, Web Development Bhaktapur, AI Solutions Nepal, Mobile App Development, Digital Transformation Nepal, Enterprise Software, Gobinda Bista">
     <meta name="author" content="CodeGhar Nepal Pvt. Ltd.">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#012962">
@@ -36,9 +34,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -77,20 +73,14 @@
         /* ── NAV ── */
         .main-header {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.97);
+            background: rgba(255,255,255,0.97);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid #E8EDF4;
             transition: box-shadow 0.25s ease;
         }
-
-        .main-header.scrolled {
-            box-shadow: 0 2px 20px rgba(1, 41, 98, 0.08);
-        }
-
+        .main-header.scrolled { box-shadow: 0 2px 20px rgba(1,41,98,0.08); }
         .nav-container {
             max-width: 1240px;
             margin: 0 auto;
@@ -101,245 +91,85 @@
             justify-content: space-between;
             gap: 24px;
         }
-
-        .logo-link {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            flex-shrink: 0;
-        }
-
-        .brand-logo {
-            height: 36px;
-            width: 36px;
-            object-fit: contain;
-            border-radius: 0;
-            display: block;
-        }
-
-        .brand-title {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 800;
-            font-size: 1.08rem;
-            color: #012962;
-            letter-spacing: 0.3px;
-        }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 2px;
-        }
-
+        .logo-link { display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0; }
+        .brand-logo { height:36px; width:36px; object-fit:contain; border-radius:0; display:block; }
+        .brand-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:1.08rem; color:#012962; letter-spacing:0.3px; }
+        .nav-menu { display:flex; align-items:center; gap:2px; }
         .nav-item-link {
-            padding: 7px 13px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #1E293B;
-            border-radius: 6px;
-            text-decoration: none;
-            white-space: nowrap;
-            transition: background 0.18s, color 0.18s;
+            padding:7px 13px; font-size:0.9rem; font-weight:600; color:#1E293B;
+            border-radius:6px; text-decoration:none; white-space:nowrap;
+            transition:background 0.18s, color 0.18s;
         }
-
-        .nav-item-link:hover {
-            background: #F0F4FF;
-            color: #0059C7;
-        }
-
-        .cgdrop {
-            position: relative;
-        }
-
+        .nav-item-link:hover { background:#F0F4FF; color:#0059C7; }
+        .cgdrop { position:relative; }
         .cgdrop-trigger {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            padding: 7px 13px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #1E293B;
-            background: none;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-family: inherit;
-            transition: background 0.18s, color 0.18s;
+            display:inline-flex; align-items:center; gap:5px;
+            padding:7px 13px; font-size:0.9rem; font-weight:600; color:#1E293B;
+            background:none; border:none; border-radius:6px; cursor:pointer;
+            font-family:inherit; transition:background 0.18s, color 0.18s;
         }
-
-        .cgdrop-trigger i {
-            font-size: 0.68rem;
-            transition: transform 0.2s;
-        }
-
+        .cgdrop-trigger i { font-size:0.68rem; transition:transform 0.2s; }
         .cgdrop:hover .cgdrop-trigger,
-        .cgdrop.open .cgdrop-trigger {
-            background: #F0F4FF;
-            color: #0059C7;
-        }
-
-        .cgdrop.open .cgdrop-trigger i {
-            transform: rotate(180deg);
-        }
-
+        .cgdrop.open .cgdrop-trigger { background:#F0F4FF; color:#0059C7; }
+        .cgdrop.open .cgdrop-trigger i { transform:rotate(180deg); }
         .cgdrop-menu {
-            display: none;
-            position: absolute;
-            top: calc(100% + 6px);
-            left: 0;
-            min-width: 200px;
-            background: #fff;
-            border: 1px solid #E2E8F0;
-            border-radius: 12px;
-            box-shadow: 0 16px 40px rgba(1, 41, 98, 0.12);
-            padding: 6px 0;
-            z-index: 999;
-            list-style: none;
+            display:none; position:absolute; top:calc(100% + 6px); left:0;
+            min-width:200px; background:#fff; border:1px solid #E2E8F0;
+            border-radius:12px; box-shadow:0 16px 40px rgba(1,41,98,0.12);
+            padding:6px 0; z-index:999; list-style:none;
         }
-
         .cgdrop:hover .cgdrop-menu,
-        .cgdrop.open .cgdrop-menu {
-            display: block;
-        }
-
+        .cgdrop.open .cgdrop-menu { display:block; }
         .cgdrop-menu a {
-            display: block;
-            padding: 9px 18px;
-            font-size: 0.88rem;
-            font-weight: 500;
-            color: #334155;
-            text-decoration: none;
-            transition: background 0.15s, color 0.15s;
+            display:block; padding:9px 18px; font-size:0.88rem;
+            font-weight:500; color:#334155; text-decoration:none;
+            transition:background 0.15s, color 0.15s;
         }
-
-        .cgdrop-menu a:hover {
-            background: #F0F4FF;
-            color: #0059C7;
-        }
-
+        .cgdrop-menu a:hover { background:#F0F4FF; color:#0059C7; }
         .nav-cta {
-            padding: 9px 20px;
-            background: #012962;
-            color: #fff;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 0.88rem;
-            text-decoration: none;
-            white-space: nowrap;
-            margin-left: 8px;
-            transition: background 0.2s;
+            padding:9px 20px; background:#012962; color:#fff;
+            border-radius:8px; font-weight:700; font-size:0.88rem;
+            text-decoration:none; white-space:nowrap; margin-left:8px;
+            transition:background 0.2s;
         }
-
-        .nav-cta:hover {
-            background: #0059C7;
-            color: #fff;
-        }
+        .nav-cta:hover { background:#0059C7; color:#fff; }
 
         /* Mobile */
         .mobile-toggle {
-            display: none;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border: 1px solid #E2E8F0;
-            border-radius: 8px;
-            background: #F8FAFC;
-            color: #012962;
-            cursor: pointer;
-            font-size: 1.1rem;
-            margin-left: auto;
+            display:none; align-items:center; justify-content:center;
+            width:40px; height:40px; border:1px solid #E2E8F0;
+            border-radius:8px; background:#F8FAFC; color:#012962;
+            cursor:pointer; font-size:1.1rem; margin-left:auto;
         }
-
         .nav-backdrop {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.45);
-            z-index: 998;
+            display:none; position:fixed; inset:0;
+            background:rgba(0,0,0,0.45); z-index:998;
         }
+        .nav-backdrop.active { display:block; }
+        .nav-drawer-header { display:none; }
 
-        .nav-backdrop.active {
-            display: block;
-        }
-
-        .nav-drawer-header {
-            display: none;
-        }
-
-        @media(max-width:900px) {
-            .mobile-toggle {
-                display: flex;
-            }
-
+        @media(max-width:900px){
+            .mobile-toggle { display:flex; }
             .nav-menu {
-                position: fixed;
-                top: 0;
-                right: -320px;
-                width: 300px;
-                height: 100vh;
-                background: #fff;
-                flex-direction: column;
-                align-items: stretch;
-                padding: 0 0 32px;
-                gap: 0;
-                overflow-y: auto;
-                box-shadow: -4px 0 32px rgba(1, 41, 98, 0.12);
-                transition: right 0.3s ease;
-                z-index: 999;
+                position:fixed; top:0; right:-320px; width:300px; height:100vh;
+                background:#fff; flex-direction:column; align-items:stretch;
+                padding:0 0 32px; gap:0; overflow-y:auto;
+                box-shadow:-4px 0 32px rgba(1,41,98,0.12);
+                transition:right 0.3s ease; z-index:999;
             }
-
-            .nav-menu.open {
-                right: 0;
-            }
-
+            .nav-menu.open { right:0; }
             .nav-drawer-header {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 16px 20px;
-                border-bottom: 1px solid #F0F4F8;
-                margin-bottom: 8px;
+                display:flex; align-items:center; justify-content:space-between;
+                padding:16px 20px; border-bottom:1px solid #F0F4F8; margin-bottom:8px;
             }
-
-            .drawer-close {
-                background: none;
-                border: none;
-                font-size: 1.3rem;
-                color: #012962;
-                cursor: pointer;
+            .drawer-close { background:none; border:none; font-size:1.3rem; color:#012962; cursor:pointer; }
+            .nav-item-link, .cgdrop-trigger {
+                display:block; padding:12px 20px; font-size:1rem; border-radius:0;
+                width:100%; text-align:left;
             }
-
-            .nav-item-link,
-            .cgdrop-trigger {
-                display: block;
-                padding: 12px 20px;
-                font-size: 1rem;
-                border-radius: 0;
-                width: 100%;
-                text-align: left;
-            }
-
-            .cgdrop-menu {
-                position: static;
-                box-shadow: none;
-                border: none;
-                border-radius: 0;
-                padding: 0;
-                background: #F8FAFC;
-            }
-
-            .cgdrop-menu a {
-                padding: 10px 36px;
-            }
-
-            .nav-cta {
-                margin: 16px 20px 0;
-                display: block;
-                text-align: center;
-                padding: 13px;
-            }
+            .cgdrop-menu { position:static; box-shadow:none; border:none; border-radius:0; padding:0; background:#F8FAFC; }
+            .cgdrop-menu a { padding:10px 36px; }
+            .nav-cta { margin:16px 20px 0; display:block; text-align:center; padding:13px; }
         }
 
         /* ── HERO ── */
@@ -353,214 +183,92 @@
             position: relative;
             overflow: hidden;
         }
-
         /* Background slideshow */
         .hero-bg-slide {
-            position: absolute;
-            inset: 0;
+            position: absolute; inset: 0;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             opacity: 0;
             transition: opacity 1.6s ease-in-out;
         }
-
-        .hero-bg-slide.active {
-            opacity: 0.1;
-        }
-
+        .hero-bg-slide.active { opacity: 0.1; }
         /* Dark overlay always on top of slides */
         .hero-bg-overlay {
-            position: absolute;
-            inset: 0;
+            position: absolute; inset: 0;
             background: #04111F;
             opacity: 0.72;
             z-index: 0;
         }
-
         .hero-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 64px;
             align-items: center;
         }
-
         .hero-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(0, 89, 199, 0.15);
-            border: 1px solid rgba(0, 89, 199, 0.3);
-            color: #60A5FA;
-            font-size: 0.78rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            padding: 6px 14px;
-            border-radius: 100px;
-            margin-bottom: 24px;
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(0,89,199,0.15); border: 1px solid rgba(0,89,199,0.3);
+            color: #60A5FA; font-size: 0.78rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 2px;
+            padding: 6px 14px; border-radius: 100px; margin-bottom: 24px;
         }
-
-        .hero-eyebrow span {
-            width: 6px;
-            height: 6px;
-            background: #0059C7;
-            border-radius: 50%;
-            display: inline-block;
-        }
-
+        .hero-eyebrow span { width:6px; height:6px; background:#0059C7; border-radius:50%; display:inline-block; }
         .hero h1 {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-            font-weight: 800;
-            line-height: 1.12;
-            color: #FFFFFF;
-            margin-bottom: 24px;
+            font-weight: 800; line-height: 1.12;
+            color: #FFFFFF; margin-bottom: 24px;
         }
-
-        .hero h1 em {
-            font-style: normal;
-            color: #3B82F6;
-        }
-
+        .hero h1 em { font-style:normal; color: #3B82F6; }
         .hero-sub {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.65);
-            line-height: 1.75;
-            margin-bottom: 40px;
-            max-width: 500px;
+            font-size: 1.1rem; color: rgba(255,255,255,0.65);
+            line-height: 1.75; margin-bottom: 40px; max-width: 500px;
         }
-
-        .hero-actions {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-            margin-bottom: 56px;
-        }
-
+        .hero-actions { display:flex; gap:14px; flex-wrap:wrap; margin-bottom: 56px; }
         .btn-hero-primary {
-            padding: 14px 28px;
-            background: #0059C7;
-            color: #fff;
-            font-weight: 700;
-            font-size: 0.95rem;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: background 0.2s, transform 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            padding: 14px 28px; background:#0059C7; color:#fff;
+            font-weight:700; font-size:0.95rem; border-radius:8px;
+            text-decoration:none; transition:background 0.2s, transform 0.2s;
+            display:inline-flex; align-items:center; gap:8px;
         }
-
-        .btn-hero-primary:hover {
-            background: #0049A8;
-            transform: translateY(-2px);
-        }
-
+        .btn-hero-primary:hover { background:#0049A8; transform:translateY(-2px); }
         .btn-hero-outline {
-            padding: 14px 28px;
-            border: 1.5px solid rgba(255, 255, 255, 0.2);
-            color: rgba(255, 255, 255, 0.85);
-            font-weight: 600;
-            font-size: 0.95rem;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: border-color 0.2s, color 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            padding:14px 28px; border:1.5px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.85);
+            font-weight:600; font-size:0.95rem; border-radius:8px;
+            text-decoration:none; transition:border-color 0.2s, color 0.2s;
+            display:inline-flex; align-items:center; gap:8px;
         }
-
-        .btn-hero-outline:hover {
-            border-color: rgba(255, 255, 255, 0.5);
-            color: #fff;
-        }
-
+        .btn-hero-outline:hover { border-color:rgba(255,255,255,0.5); color:#fff; }
         .hero-stats {
-            display: flex;
-            gap: 40px;
+            display: flex; gap: 40px;
         }
-
-        .hero-stat-num {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #fff;
-            display: block;
-            line-height: 1;
-        }
-
-        .hero-stat-label {
-            font-size: 0.78rem;
-            color: rgba(255, 255, 255, 0.45);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 4px;
-            display: block;
-        }
+        .hero-stat-num { font-family:'Plus Jakarta Sans',sans-serif; font-size:1.8rem; font-weight:800; color:#fff; display:block; line-height:1; }
+        .hero-stat-label { font-size:0.78rem; color:rgba(255,255,255,0.45); text-transform:uppercase; letter-spacing:1px; margin-top:4px; display:block; }
 
         /* Hero right card stack */
-        .hero-visual {
-            position: relative;
-        }
-
+        .hero-visual { position:relative; }
         .hero-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
             border-radius: 16px;
             padding: 28px;
             backdrop-filter: blur(8px);
         }
-
-        .hero-card-label {
-            font-size: 0.72rem;
-            color: rgba(255, 255, 255, 0.45);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 12px;
-        }
-
-        .hero-service-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
+        .hero-card-label { font-size:0.72rem; color:rgba(255,255,255,0.45); text-transform:uppercase; letter-spacing:1.5px; margin-bottom:12px; }
+        .hero-service-list { list-style:none; display:flex; flex-direction:column; gap:10px; }
         .hero-service-list li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.8);
-            font-weight: 500;
+            display:flex; align-items:center; gap:12px;
+            font-size:0.95rem; color:rgba(255,255,255,0.8); font-weight:500;
         }
-
-        .hero-service-list li i {
-            color: #3B82F6;
-            width: 16px;
-            text-align: center;
-        }
-
+        .hero-service-list li i { color:#3B82F6; width:16px; text-align:center; }
         .hero-badge {
-            position: absolute;
-            bottom: -20px;
-            right: -16px;
-            background: #0059C7;
-            color: #fff;
-            padding: 14px 20px;
-            border-radius: 12px;
-            font-size: 0.82rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 12px 32px rgba(0, 89, 199, 0.4);
+            position:absolute; bottom:-20px; right:-16px;
+            background:#0059C7; color:#fff; padding:14px 20px; border-radius:12px;
+            font-size:0.82rem; font-weight:700; display:flex; align-items:center; gap:8px;
+            box-shadow: 0 12px 32px rgba(0,89,199,0.4);
         }
-
-        .hero-badge i {
-            font-size: 1.1rem;
-        }
+        .hero-badge i { font-size:1.1rem; }
 
         /* ── TRUST BAR ── */
         .trust-bar {
@@ -569,1367 +277,822 @@
             border-bottom: 1px solid #E8EDF4;
             padding: 20px 0;
         }
-
         .trust-bar-inner {
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 0 28px;
-            display: flex;
-            align-items: center;
-            gap: 48px;
-            overflow: hidden;
+            max-width:1240px; margin:0 auto; padding:0 28px;
+            display:flex; align-items:center; gap:48px; overflow:hidden;
         }
-
-        .trust-label {
-            font-size: 0.75rem;
-            color: #94A3B8;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-
-        .trust-logos {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            overflow: hidden;
-        }
-
-        .trust-logo-item {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #94A3B8;
-            white-space: nowrap;
-            letter-spacing: 0.5px;
-        }
+        .trust-label { font-size:0.75rem; color:#94A3B8; font-weight:600; text-transform:uppercase; letter-spacing:1.5px; white-space:nowrap; flex-shrink:0; }
+        .trust-logos { display:flex; align-items:center; gap:40px; overflow:hidden; }
+        .trust-logo-item { font-size:0.9rem; font-weight:700; color:#94A3B8; white-space:nowrap; letter-spacing:0.5px; }
 
         /* ── SERVICES ── */
         .services-section {
             padding: 100px 0;
             background: #fff;
         }
-
         .section-eyebrow {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: #0059C7;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 14px;
+            display:inline-block; font-size:0.75rem; font-weight:700;
+            color:#0059C7; text-transform:uppercase; letter-spacing:2px;
+            margin-bottom:14px;
         }
-
         .section-title {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            font-weight: 800;
-            color: #0A1628;
-            line-height: 1.2;
-            margin-bottom: 16px;
+            font-family:'Plus Jakarta Sans',sans-serif;
+            font-size:clamp(1.8rem,3vw,2.5rem); font-weight:800;
+            color:#0A1628; line-height:1.2; margin-bottom:16px;
         }
-
-        .section-sub {
-            font-size: 1.05rem;
-            color: #64748B;
-            line-height: 1.75;
-            max-width: 580px;
-        }
-
+        .section-sub { font-size:1.05rem; color:#64748B; line-height:1.75; max-width:580px; }
         .services-header {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 40px;
-            align-items: end;
-            margin-bottom: 56px;
+            display:grid; grid-template-columns:1fr auto; gap:40px; align-items:end; margin-bottom:56px;
         }
-
         .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
         }
-
         .svc-card {
-            border: 1px solid #E2E8F0;
-            border-radius: 16px;
-            padding: 32px;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-            background: #fff;
+            border:1px solid #E2E8F0; border-radius:16px; padding:32px;
+            text-decoration:none; color:inherit; display:block;
+            transition:border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+            background:#fff;
         }
-
-        .svc-card:hover {
-            border-color: #0059C7;
-            box-shadow: 0 20px 48px rgba(1, 41, 98, 0.08);
-            transform: translateY(-4px);
-        }
-
+        .svc-card:hover { border-color:#0059C7; box-shadow:0 20px 48px rgba(1,41,98,0.08); transform:translateY(-4px); }
         .svc-icon {
-            width: 52px;
-            height: 52px;
-            border-radius: 12px;
-            background: #EEF4FF;
-            color: #0059C7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            transition: background 0.2s, color 0.2s;
+            width:52px; height:52px; border-radius:12px;
+            background:#EEF4FF; color:#0059C7;
+            display:flex; align-items:center; justify-content:center;
+            font-size:1.3rem; margin-bottom:20px; transition:background 0.2s, color 0.2s;
         }
-
-        .svc-card:hover .svc-icon {
-            background: #0059C7;
-            color: #fff;
-        }
-
-        .svc-card h3 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #0A1628;
-            margin-bottom: 10px;
-        }
-
-        .svc-card p {
-            font-size: 0.9rem;
-            color: #64748B;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .svc-link {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: #0059C7;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .svc-link i {
-            font-size: 0.75rem;
-            transition: transform 0.2s;
-        }
-
-        .svc-card:hover .svc-link i {
-            transform: translateX(4px);
-        }
+        .svc-card:hover .svc-icon { background:#0059C7; color:#fff; }
+        .svc-card h3 { font-family:'Plus Jakarta Sans',sans-serif; font-size:1.1rem; font-weight:700; color:#0A1628; margin-bottom:10px; }
+        .svc-card p { font-size:0.9rem; color:#64748B; line-height:1.7; margin-bottom:20px; }
+        .svc-link { font-size:0.85rem; font-weight:700; color:#0059C7; display:inline-flex; align-items:center; gap:6px; }
+        .svc-link i { font-size:0.75rem; transition:transform 0.2s; }
+        .svc-card:hover .svc-link i { transform:translateX(4px); }
 
         /* ── ABOUT / MISSION ── */
-        .about-section {
-            padding: 100px 0;
-            background: #04111F;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .about-img-wrap {
-            position: relative;
-        }
-
-        .about-img-wrap img {
-            width: 100%;
-            border-radius: 16px;
-            display: block;
-            height: 420px;
-            object-fit: cover;
-        }
-
+        .about-section { padding:100px 0; background:#04111F; }
+        .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+        .about-img-wrap { position:relative; }
+        .about-img-wrap img { width:100%; border-radius:16px; display:block; height:420px; object-fit:cover; }
         .about-img-badge {
-            position: absolute;
-            bottom: -20px;
-            left: -20px;
-            background: #0059C7;
-            color: #fff;
-            padding: 18px 22px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            box-shadow: 0 16px 40px rgba(0, 89, 199, 0.4);
+            position:absolute; bottom:-20px; left:-20px;
+            background:#0059C7; color:#fff; padding:18px 22px;
+            border-radius:14px; display:flex; align-items:center; gap:14px;
+            box-shadow:0 16px 40px rgba(0,89,199,0.4);
         }
-
-        .about-img-badge-icon {
-            font-size: 1.6rem;
-        }
-
-        .about-img-badge-text strong {
-            display: block;
-            font-size: 1.2rem;
-            font-weight: 800;
-        }
-
-        .about-img-badge-text span {
-            font-size: 0.78rem;
-            opacity: 0.8;
-        }
-
-        .about-eyebrow {
-            color: #3B82F6;
-        }
-
-        .about-title {
-            color: #fff;
-        }
-
-        .about-body {
-            color: rgba(255, 255, 255, 0.65);
-            font-size: 1.02rem;
-            line-height: 1.8;
-            margin-bottom: 36px;
-        }
-
-        .about-pillars {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
-        }
-
+        .about-img-badge-icon { font-size:1.6rem; }
+        .about-img-badge-text strong { display:block; font-size:1.2rem; font-weight:800; }
+        .about-img-badge-text span { font-size:0.78rem; opacity:0.8; }
+        .about-eyebrow { color:#3B82F6; }
+        .about-title { color:#fff; }
+        .about-body { color:rgba(255,255,255,0.65); font-size:1.02rem; line-height:1.8; margin-bottom:36px; }
+        .about-pillars { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
         .about-pillar {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 16px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 10px;
+            display:flex; align-items:flex-start; gap:12px; padding:16px;
+            background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);
+            border-radius:10px;
         }
-
-        .about-pillar i {
-            color: #3B82F6;
-            font-size: 1rem;
-            margin-top: 3px;
-            flex-shrink: 0;
-        }
-
-        .about-pillar-text h5 {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 4px;
-        }
-
-        .about-pillar-text p {
-            font-size: 0.82rem;
-            color: rgba(255, 255, 255, 0.5);
-            margin: 0;
-        }
+        .about-pillar i { color:#3B82F6; font-size:1rem; margin-top:3px; flex-shrink:0; }
+        .about-pillar-text h5 { font-size:0.9rem; font-weight:700; color:#fff; margin-bottom:4px; }
+        .about-pillar-text p { font-size:0.82rem; color:rgba(255,255,255,0.5); margin:0; }
 
         /* ── STATS ── */
         .stats-section {
-            background: #0059C7;
-            padding: 60px 0;
+            background:#0059C7;
+            padding:60px 0;
         }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0;
-        }
-
+        .stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:0; }
         .stat-col {
-            text-align: center;
-            padding: 40px 20px;
-            border-right: 1px solid rgba(255, 255, 255, 0.15);
+            text-align:center; padding:40px 20px;
+            border-right:1px solid rgba(255,255,255,0.15);
         }
-
-        .stat-col:last-child {
-            border-right: none;
-        }
-
-        .stat-col-num {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: #fff;
-            display: block;
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-
-        .stat-col-label {
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.65);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 600;
-        }
+        .stat-col:last-child { border-right:none; }
+        .stat-col-num { font-family:'Plus Jakarta Sans',sans-serif; font-size:2.8rem; font-weight:800; color:#fff; display:block; line-height:1; margin-bottom:8px; }
+        .stat-col-label { font-size:0.8rem; color:rgba(255,255,255,0.65); text-transform:uppercase; letter-spacing:1.5px; font-weight:600; }
 
         /* ── PROCESS ── */
-        .process-section {
-            padding: 100px 0;
-            background: #fff;
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0;
-            margin-top: 60px;
-            position: relative;
-        }
-
+        .process-section { padding:100px 0; background:#fff; }
+        .process-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:60px; position:relative; }
         .process-steps::before {
-            content: '';
-            position: absolute;
-            top: 28px;
-            left: calc(16.66% + 16px);
-            right: calc(16.66% + 16px);
-            height: 2px;
-            background: linear-gradient(90deg, #0059C7, #3B82F6);
-            border-radius: 2px;
+            content:''; position:absolute; top:28px; left:calc(16.66% + 16px); right:calc(16.66% + 16px);
+            height:2px; background:linear-gradient(90deg,#0059C7,#3B82F6); border-radius:2px;
         }
-
-        .process-step {
-            padding: 0 20px;
-            text-align: center;
-        }
-
+        .process-step { padding:0 20px; text-align:center; }
         .process-num {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: #0059C7;
-            color: #fff;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px;
-            position: relative;
-            z-index: 1;
-            box-shadow: 0 0 0 8px rgba(0, 89, 199, 0.1);
+            width:56px; height:56px; border-radius:50%;
+            background:#0059C7; color:#fff; font-family:'Plus Jakarta Sans',sans-serif;
+            font-size:1.1rem; font-weight:800; display:flex; align-items:center; justify-content:center;
+            margin:0 auto 24px; position:relative; z-index:1;
+            box-shadow:0 0 0 8px rgba(0,89,199,0.1);
         }
-
-        .process-step h4 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: #0A1628;
-            margin-bottom: 10px;
-        }
-
-        .process-step p {
-            font-size: 0.88rem;
-            color: #64748B;
-            line-height: 1.7;
-        }
+        .process-step h4 { font-family:'Plus Jakarta Sans',sans-serif; font-size:1.05rem; font-weight:700; color:#0A1628; margin-bottom:10px; }
+        .process-step p { font-size:0.88rem; color:#64748B; line-height:1.7; }
 
         /* ── TECH STACK ── */
-        .tech-section {
-            padding: 80px 0;
-            background: #F8FAFC;
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 16px;
-            margin-top: 48px;
-        }
-
+        .tech-section { padding:80px 0; background:#F8FAFC; }
+        .tech-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:16px; margin-top:48px; }
         .tech-item {
-            background: #fff;
-            border: 1px solid #E2E8F0;
-            border-radius: 12px;
-            padding: 24px 12px;
-            text-align: center;
-            transition: border-color 0.2s, transform 0.2s;
+            background:#fff; border:1px solid #E2E8F0; border-radius:12px;
+            padding:24px 12px; text-align:center;
+            transition:border-color 0.2s, transform 0.2s;
         }
-
-        .tech-item:hover {
-            border-color: #0059C7;
-            transform: translateY(-3px);
-        }
-
-        .tech-item i {
-            font-size: 2rem;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .tech-item span {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: #475569;
-        }
+        .tech-item:hover { border-color:#0059C7; transform:translateY(-3px); }
+        .tech-item i { font-size:2rem; display:block; margin-bottom:10px; }
+        .tech-item span { font-size:0.8rem; font-weight:600; color:#475569; }
 
         /* ── TEAM ── */
-        .team-section {
-            padding: 100px 0;
-            background: #04111F;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 24px;
-            margin-top: 60px;
-        }
-
+        .team-section { padding:100px 0; background:#04111F; }
+        .team-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; margin-top:60px; }
         .team-card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: border-color 0.25s, transform 0.25s;
+            background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);
+            border-radius:16px; overflow:hidden;
+            transition:border-color 0.25s, transform 0.25s;
         }
-
-        .team-card:hover {
-            border-color: rgba(0, 89, 199, 0.6);
-            transform: translateY(-6px);
-        }
-
-        .team-card-photo {
-            height: 260px;
-            overflow: hidden;
-        }
-
-        .team-card-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top;
-            transition: transform 0.4s;
-        }
-
-        .team-card:hover .team-card-photo img {
-            transform: scale(1.04);
-        }
-
-        .team-card-body {
-            padding: 24px;
-        }
-
+        .team-card:hover { border-color:rgba(0,89,199,0.6); transform:translateY(-6px); }
+        .team-card-photo { height:260px; overflow:hidden; }
+        .team-card-photo img { width:100%; height:100%; object-fit:cover; object-position:top; transition:transform 0.4s; }
+        .team-card:hover .team-card-photo img { transform:scale(1.04); }
+        .team-card-body { padding:24px; }
         .team-card-role {
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #3B82F6;
-            margin-bottom: 8px;
+            font-size:0.72rem; font-weight:700; text-transform:uppercase;
+            letter-spacing:1.5px; color:#3B82F6; margin-bottom:8px;
         }
-
-        .team-card-name {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 10px;
-        }
-
-        .team-card-bio {
-            font-size: 0.87rem;
-            color: rgba(255, 255, 255, 0.55);
-            line-height: 1.65;
-            margin-bottom: 18px;
-        }
-
-        .team-card-socials {
-            display: flex;
-            gap: 8px;
-        }
-
+        .team-card-name { font-family:'Plus Jakarta Sans',sans-serif; font-size:1.2rem; font-weight:800; color:#fff; margin-bottom:10px; }
+        .team-card-bio { font-size:0.87rem; color:rgba(255,255,255,0.55); line-height:1.65; margin-bottom:18px; }
+        .team-card-socials { display:flex; gap:8px; }
         .team-card-socials a {
-            width: 34px;
-            height: 34px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.85rem;
-            text-decoration: none;
-            transition: border-color 0.2s, color 0.2s, background 0.2s;
+            width:34px; height:34px; border:1px solid rgba(255,255,255,0.15);
+            border-radius:6px; display:flex; align-items:center; justify-content:center;
+            color:rgba(255,255,255,0.6); font-size:0.85rem; text-decoration:none;
+            transition:border-color 0.2s, color 0.2s, background 0.2s;
         }
-
-        .team-card-socials a:hover {
-            border-color: #0059C7;
-            color: #fff;
-            background: #0059C7;
-        }
+        .team-card-socials a:hover { border-color:#0059C7; color:#fff; background:#0059C7; }
 
         /* ── BLOG ── */
-        .blog-section {
-            padding: 100px 0;
-            background: #fff;
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-            margin-top: 56px;
-        }
-
+        .blog-section { padding:100px 0; background:#fff; }
+        .blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:56px; }
         .blog-card {
-            border: 1px solid #E2E8F0;
-            border-radius: 16px;
-            overflow: hidden;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+            border:1px solid #E2E8F0; border-radius:16px; overflow:hidden;
+            text-decoration:none; color:inherit; display:flex; flex-direction:column;
+            transition:border-color 0.2s, box-shadow 0.2s, transform 0.2s;
         }
-
-        .blog-card:hover {
-            border-color: #0059C7;
-            box-shadow: 0 20px 48px rgba(1, 41, 98, 0.08);
-            transform: translateY(-4px);
-        }
-
-        .blog-card-img {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .blog-card-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s;
-        }
-
-        .blog-card:hover .blog-card-img img {
-            transform: scale(1.05);
-        }
-
-        .blog-card-body {
-            padding: 24px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
+        .blog-card:hover { border-color:#0059C7; box-shadow:0 20px 48px rgba(1,41,98,0.08); transform:translateY(-4px); }
+        .blog-card-img { height:200px; overflow:hidden; }
+        .blog-card-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s; }
+        .blog-card:hover .blog-card-img img { transform:scale(1.05); }
+        .blog-card-body { padding:24px; flex:1; display:flex; flex-direction:column; }
         .blog-tag {
-            display: inline-block;
-            padding: 3px 11px;
-            border-radius: 100px;
-            background: #EEF4FF;
-            color: #0059C7;
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-            width: fit-content;
+            display:inline-block; padding:3px 11px; border-radius:100px;
+            background:#EEF4FF; color:#0059C7; font-size:0.72rem; font-weight:700;
+            text-transform:uppercase; letter-spacing:1px; margin-bottom:12px; width:fit-content;
         }
-
-        .blog-card-body h3 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-            color: #0A1628;
-            line-height: 1.45;
-            margin-bottom: 10px;
-        }
-
-        .blog-card-body p {
-            font-size: 0.87rem;
-            color: #64748B;
-            line-height: 1.7;
-            flex: 1;
-        }
-
-        .blog-card-footer {
-            padding: 16px 24px;
-            border-top: 1px solid #F1F5F9;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 0.8rem;
-            color: #94A3B8;
-        }
+        .blog-card-body h3 { font-family:'Plus Jakarta Sans',sans-serif; font-size:1rem; font-weight:700; color:#0A1628; line-height:1.45; margin-bottom:10px; }
+        .blog-card-body p { font-size:0.87rem; color:#64748B; line-height:1.7; flex:1; }
+        .blog-card-footer { padding:16px 24px; border-top:1px solid #F1F5F9; display:flex; align-items:center; justify-content:space-between; font-size:0.8rem; color:#94A3B8; }
 
         /* ── CTA SECTION ── */
         .cta-section {
-            padding: 100px 0;
+            padding:100px 0;
             background: linear-gradient(135deg, #012962 0%, #0059C7 100%);
-            text-align: center;
+            text-align:center;
         }
-
-        .cta-section h2 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: clamp(1.8rem, 3.5vw, 3rem);
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 18px;
-        }
-
-        .cta-section p {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.75);
-            max-width: 560px;
-            margin: 0 auto 40px;
-            line-height: 1.7;
-        }
-
-        .cta-actions {
-            display: flex;
-            gap: 14px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-cta-white {
-            padding: 14px 32px;
-            background: #fff;
-            color: #012962;
-            font-weight: 700;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: box-shadow 0.2s;
-        }
-
-        .btn-cta-white:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-cta-ghost {
-            padding: 14px 32px;
-            border: 1.5px solid rgba(255, 255, 255, 0.4);
-            color: #fff;
-            font-weight: 600;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: border-color 0.2s;
-        }
-
-        .btn-cta-ghost:hover {
-            border-color: #fff;
-        }
+        .cta-section h2 { font-family:'Plus Jakarta Sans',sans-serif; font-size:clamp(1.8rem,3.5vw,3rem); font-weight:800; color:#fff; margin-bottom:18px; }
+        .cta-section p { font-size:1.1rem; color:rgba(255,255,255,0.75); max-width:560px; margin:0 auto 40px; line-height:1.7; }
+        .cta-actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+        .btn-cta-white { padding:14px 32px; background:#fff; color:#012962; font-weight:700; border-radius:8px; text-decoration:none; font-size:0.95rem; transition:box-shadow 0.2s; }
+        .btn-cta-white:hover { box-shadow:0 8px 24px rgba(0,0,0,0.2); }
+        .btn-cta-ghost { padding:14px 32px; border:1.5px solid rgba(255,255,255,0.4); color:#fff; font-weight:600; border-radius:8px; text-decoration:none; font-size:0.95rem; transition:border-color 0.2s; }
+        .btn-cta-ghost:hover { border-color:#fff; }
 
         /* ── FOOTER ── */
-        .site-footer {
-            background: #04111F;
-            padding: 80px 0 0;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.6fr 1fr 1fr 1fr;
-            gap: 60px;
-            padding-bottom: 60px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .footer-brand-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            text-decoration: none;
-        }
-
-        .footer-brand-logo img {
-            height: 34px;
-            width: 34px;
-            object-fit: contain;
-            border-radius: 0;
-        }
-
-        .footer-brand-logo span {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 800;
-            font-size: 1.1rem;
-            color: #fff;
-        }
-
-        .footer-about-text {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.45);
-            line-height: 1.75;
-            margin-bottom: 28px;
-        }
-
-        .footer-socials {
-            display: flex;
-            gap: 10px;
-        }
-
+        .site-footer { background:#04111F; padding:80px 0 0; }
+        .footer-grid { display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:60px; padding-bottom:60px; border-bottom:1px solid rgba(255,255,255,0.06); }
+        .footer-brand-logo { display:flex; align-items:center; gap:10px; margin-bottom:20px; text-decoration:none; }
+        .footer-brand-logo img { height:34px; width:34px; object-fit:contain; border-radius:0; }
+        .footer-brand-logo span { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:1.1rem; color:#fff; }
+        .footer-about-text { font-size:0.9rem; color:rgba(255,255,255,0.45); line-height:1.75; margin-bottom:28px; }
+        .footer-socials { display:flex; gap:10px; }
         .footer-socials a {
-            width: 36px;
-            height: 36px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9rem;
-            text-decoration: none;
-            transition: background 0.2s, color 0.2s, border-color 0.2s;
+            width:36px; height:36px; border:1px solid rgba(255,255,255,0.12);
+            border-radius:8px; display:flex; align-items:center; justify-content:center;
+            color:rgba(255,255,255,0.5); font-size:0.9rem; text-decoration:none;
+            transition:background 0.2s, color 0.2s, border-color 0.2s;
         }
-
-        .footer-socials a:hover {
-            background: #0059C7;
-            color: #fff;
-            border-color: #0059C7;
-        }
-
-        .footer-col-title {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.82rem;
-            font-weight: 700;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 20px;
-        }
-
-        .footer-col-links {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .footer-col-links a {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.45);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-col-links a:hover {
-            color: #fff;
-        }
-
-        .footer-bottom {
-            padding: 24px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .footer-bottom-copy {
-            font-size: 0.83rem;
-            color: rgba(255, 255, 255, 0.3);
-        }
-
-        .footer-bottom-links {
-            display: flex;
-            gap: 24px;
-        }
-
-        .footer-bottom-links a {
-            font-size: 0.83rem;
-            color: rgba(255, 255, 255, 0.35);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-bottom-links a:hover {
-            color: #fff;
-        }
+        .footer-socials a:hover { background:#0059C7; color:#fff; border-color:#0059C7; }
+        .footer-col-title { font-family:'Plus Jakarta Sans',sans-serif; font-size:0.82rem; font-weight:700; color:#fff; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:20px; }
+        .footer-col-links { list-style:none; display:flex; flex-direction:column; gap:12px; }
+        .footer-col-links a { font-size:0.9rem; color:rgba(255,255,255,0.45); text-decoration:none; transition:color 0.2s; }
+        .footer-col-links a:hover { color:#fff; }
+        .footer-bottom { padding:24px 0; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+        .footer-bottom-copy { font-size:0.83rem; color:rgba(255,255,255,0.3); }
+        .footer-bottom-links { display:flex; gap:24px; }
+        .footer-bottom-links a { font-size:0.83rem; color:rgba(255,255,255,0.35); text-decoration:none; transition:color 0.2s; }
+        .footer-bottom-links a:hover { color:#fff; }
 
         /* ── RESPONSIVE ── */
-        @media(max-width:1024px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .tech-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 40px;
-            }
+        @media(max-width:1024px){
+            .services-grid { grid-template-columns:repeat(2,1fr); }
+        .demos-grid { grid-template-columns:repeat(2,1fr); }
+            .tech-grid { grid-template-columns:repeat(3,1fr); }
+            .footer-grid { grid-template-columns:1fr 1fr; gap:40px; }
         }
-
-        @media(max-width:860px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-visual {
-                display: none;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-img-wrap {
-                display: none;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .team-grid {
-                grid-template-columns: 1fr;
-                max-width: 420px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .blog-grid {
-                grid-template-columns: 1fr;
-                max-width: 480px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .process-steps {
-                grid-template-columns: 1fr;
-            }
-
-            .process-steps::before {
-                display: none;
-            }
-
-            .services-header {
-                grid-template-columns: 1fr;
-            }
+        @media(max-width:860px){
+            .hero-grid { grid-template-columns:1fr; }
+            .hero-visual { display:none; }
+            .about-grid { grid-template-columns:1fr; }
+            .about-img-wrap { display:none; }
+            .stats-grid { grid-template-columns:repeat(2,1fr); }
+            .team-grid { grid-template-columns:1fr; max-width:420px; margin-left:auto; margin-right:auto; }
+            .blog-grid { grid-template-columns:1fr; max-width:480px; margin-left:auto; margin-right:auto; }
+            .process-steps { grid-template-columns:1fr; }
+            .process-steps::before { display:none; }
+            .services-header { grid-template-columns:1fr; }
         }
-
-        @media(max-width:640px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .tech-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .hero-stats {
-                gap: 24px;
-                flex-wrap: wrap;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
+        @media(max-width:640px){
+            .services-grid { grid-template-columns:1fr; }
+        .demos-grid { grid-template-columns:1fr !important; }
+            .stats-grid { grid-template-columns:1fr 1fr; }
+            .tech-grid { grid-template-columns:repeat(3,1fr); }
+            .hero-stats { gap:24px; flex-wrap:wrap; }
+            .hero h1 { font-size:2.2rem; }
+            .footer-grid { grid-template-columns:1fr; gap:32px; }
         }
 
         /* Reveal animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(28px);
-            transition: opacity 0.65s ease, transform 0.65s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .delay-1 {
-            transition-delay: 0.1s;
-        }
-
-        .delay-2 {
-            transition-delay: 0.2s;
-        }
-
-        .delay-3 {
-            transition-delay: 0.3s;
-        }
-
-        .delay-4 {
-            transition-delay: 0.4s;
-        }
-
-        .delay-5 {
-            transition-delay: 0.5s;
-        }
+        .reveal { opacity:0; transform:translateY(28px); transition:opacity 0.65s ease, transform 0.65s ease; }
+        .reveal.visible { opacity:1; transform:translateY(0); }
+        .delay-1 { transition-delay:0.1s; }
+        .delay-2 { transition-delay:0.2s; }
+        .delay-3 { transition-delay:0.3s; }
+        .delay-4 { transition-delay:0.4s; }
+        .delay-5 { transition-delay:0.5s; }
     </style>
 </head>
 
 <body>
 
-    <!-- ═══════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════
      NAVIGATION
 ════════════════════════════════════════════════ -->
-    <header class="main-header" id="mainHeader">
-        <div class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img src="image.png" alt="CodeGhar Nepal Logo" class="brand-logo">
-                <span class="brand-title">CodeGhar Nepal</span>
-            </a>
+<header class="main-header" id="mainHeader">
+    <div class="nav-container">
+        <a href="index.html" class="logo-link">
+            <img src="image.png" alt="CodeGhar Nepal Logo" class="brand-logo">
+            <span class="brand-title">CodeGhar Nepal</span>
+        </a>
 
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">
-                <i class="fas fa-bars"></i>
-            </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">
+            <i class="fas fa-bars"></i>
+        </button>
 
-            <nav class="nav-menu" id="navMenu" role="navigation">
-                <div class="nav-drawer-header">
-                    <a href="index.html" class="logo-link">
-                        <img src="image.png" alt="CodeGhar Nepal" class="brand-logo">
-                        <span class="brand-title">CodeGhar Nepal</span>
-                    </a>
-                    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i
-                            class="fas fa-times"></i></button>
+        <nav class="nav-menu" id="navMenu" role="navigation">
+            <div class="nav-drawer-header">
+                <a href="index.html" class="logo-link">
+                    <img src="image.png" alt="CodeGhar Nepal" class="brand-logo">
+                    <span class="brand-title">CodeGhar Nepal</span>
+                </a>
+                <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+            </div>
+
+            <a href="index.html" class="nav-item-link">Home</a>
+
+            <div class="cgdrop">
+                <button class="cgdrop-trigger" type="button">Services <i class="fas fa-chevron-down"></i></button>
+                <div class="cgdrop-menu">
+                    <a href="service-ai.html">AI Solutions</a>
+                    <a href="service-web.html">Website Development</a>
+                    <a href="service-webapp.html">Web Applications</a>
+                    <a href="service-mobile.html">Mobile Apps</a>
+                    <a href="service-marketing.html">Digital Marketing</a>
+                    <a href="service-education.html">Education Tech</a>
+                    <a href="service-healthcare.html">Healthcare Tech</a>
                 </div>
+            </div>
 
-                <a href="index.html" class="nav-item-link">Home</a>
-
-                <div class="cgdrop">
-                    <button class="cgdrop-trigger" type="button">Services <i class="fas fa-chevron-down"></i></button>
-                    <div class="cgdrop-menu">
-                        <a href="service-ai.html">AI Solutions</a>
-                        <a href="service-web.html">Website Development</a>
-                        <a href="service-webapp.html">Web Applications</a>
-                        <a href="service-mobile.html">Mobile Apps</a>
-                        <a href="service-marketing.html">Digital Marketing</a>
-                        <a href="service-education.html">Education Tech</a>
-                        <a href="service-healthcare.html">Healthcare Tech</a>
-                    </div>
+            <div class="cgdrop">
+                <button class="cgdrop-trigger" type="button">Company <i class="fas fa-chevron-down"></i></button>
+                <div class="cgdrop-menu">
+                    <a href="about.html">About Us</a>
+                    <a href="founders.html">Leadership</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
                 </div>
+            </div>
 
-                <div class="cgdrop">
-                    <button class="cgdrop-trigger" type="button">Company <i class="fas fa-chevron-down"></i></button>
-                    <div class="cgdrop-menu">
-                        <a href="about.html">About Us</a>
-                        <a href="founders.html">Leadership</a>
-                        <a href="careers.html">Careers</a>
-                        <a href="contact.html">Contact</a>
-                    </div>
+            <div class="cgdrop">
+                <button class="cgdrop-trigger" type="button">Resources <i class="fas fa-chevron-down"></i></button>
+                <div class="cgdrop-menu">
+                    <a href="blog.html">Blog</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="documentation.html">Documentation</a>
                 </div>
+            </div>
 
-                <div class="cgdrop">
-                    <button class="cgdrop-trigger" type="button">Resources <i class="fas fa-chevron-down"></i></button>
-                    <div class="cgdrop-menu">
-                        <a href="blog.html">Blog</a>
-                        <a href="case-studies.html">Case Studies</a>
-                        <a href="faq.html">FAQ</a>
-                        <a href="documentation.html">Documentation</a>
-                    </div>
-                </div>
+            <a href="#demos" class="nav-item-link">Demos</a>
+            <a href="pricing.html" class="nav-item-link">Pricing</a>
 
-                <a href="pricing.html" class="nav-item-link">Pricing</a>
+            <a href="contact.html" class="nav-cta">Get a Quote</a>
+        </nav>
 
-                <a href="contact.html" class="nav-cta">Get a Quote</a>
-            </nav>
-
-            <div class="nav-backdrop" id="navBackdrop"></div>
-        </div>
-    </header>
+        <div class="nav-backdrop" id="navBackdrop"></div>
+    </div>
+</header>
 
 
-    <!-- ═══════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════
      HERO
 ════════════════════════════════════════════════ -->
-    <section class="hero" id="home">
-        <!-- Nepal background slideshow -->
-        <div class="hero-bg-slide active"
-            style="background-image:url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=60&w=1800');">
-        </div>
-        <div class="hero-bg-slide"
-            style="background-image:url('https://images.unsplash.com/photo-1582650625119-3a31f8418365?auto=format&fit=crop&q=60&w=1800');">
-        </div>
-        <div class="hero-bg-slide"
-            style="background-image:url('https://images.unsplash.com/photo-1562887009-4c0e1be9eeef?auto=format&fit=crop&q=60&w=1800');">
-        </div>
-        <div class="hero-bg-slide"
-            style="background-image:url('https://images.unsplash.com/photo-1565073624497-7e91b5cc3843?auto=format&fit=crop&q=60&w=1800');">
-        </div>
-        <div class="hero-bg-slide"
-            style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=60&w=1800');">
-        </div>
-        <div class="hero-bg-overlay"></div>
-        <div class="container"
-            style="max-width:1240px;margin:0 auto;padding:0 28px;position:relative;z-index:1;width:100%;">
-            <div class="hero-grid">
-                <!-- Left -->
-                <div class="hero-content">
-                    <div class="hero-eyebrow">
-                        <span></span>
-                        Software &amp; AI · Built in Nepal
-                    </div>
-                    <h1 class="reveal">
-                        Enterprise Software<br>
-                        <em>Engineered</em> for Growth
-                    </h1>
-                    <p class="hero-sub reveal delay-1">
-                        We design and build production-grade web applications, mobile platforms, and AI solutions that
-                        power businesses across Nepal and beyond.
-                    </p>
-                    <div class="hero-actions reveal delay-2">
-                        <a href="contact.html" class="btn-hero-primary">
-                            Start a Project <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="services.html" class="btn-hero-outline">
-                            Our Services <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="hero-stats reveal delay-3">
-                        <div>
-                            <span class="hero-stat-num">2026</span>
-                            <span class="hero-stat-label">Founded</span>
-                        </div>
-                        <div>
-                            <span class="hero-stat-num">4+</span>
-                            <span class="hero-stat-label">Projects Delivered</span>
-                        </div>
-                        <div>
-                            <span class="hero-stat-num">7</span>
-                            <span class="hero-stat-label">Service Lines</span>
-                        </div>
-                    </div>
+<section class="hero" id="home">
+    <!-- Nepal background slideshow -->
+    <div class="hero-bg-slide active" style="background-image:url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="hero-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="hero-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1562887009-4c0e1be9eeef?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="hero-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1565073624497-7e91b5cc3843?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="hero-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="hero-bg-overlay"></div>
+    <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;position:relative;z-index:1;width:100%;">
+        <div class="hero-grid">
+            <!-- Left -->
+            <div class="hero-content">
+                <div class="hero-eyebrow">
+                    <span></span>
+                    Software &amp; AI · Built in Nepal
                 </div>
-
-                <!-- Right -->
-                <div class="hero-visual reveal delay-2">
-                    <div class="hero-card">
-                        <p class="hero-card-label">What We Build</p>
-                        <ul class="hero-service-list">
-                            <li><i class="fas fa-brain"></i> Custom AI &amp; Automation Systems</li>
-                            <li><i class="fas fa-globe"></i> Enterprise Web Applications</li>
-                            <li><i class="fas fa-mobile-alt"></i> Cross-Platform Mobile Apps</li>
-                            <li><i class="fas fa-chart-line"></i> Digital Marketing &amp; SEO</li>
-                            <li><i class="fas fa-graduation-cap"></i> Education Technology</li>
-                            <li><i class="fas fa-heartbeat"></i> Healthcare Software</li>
-                        </ul>
+                <h1 class="reveal">
+                    Enterprise Software<br>
+                    <em>Engineered</em> for Growth
+                </h1>
+                <p class="hero-sub reveal delay-1">
+                    We design and build production-grade web applications, mobile platforms, and AI solutions that power businesses across Nepal and beyond.
+                </p>
+                <div class="hero-actions reveal delay-2">
+                    <a href="contact.html" class="btn-hero-primary">
+                        Start a Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="services.html" class="btn-hero-outline">
+                        Our Services <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="hero-stats reveal delay-3">
+                    <div>
+                        <span class="hero-stat-num">2026</span>
+                        <span class="hero-stat-label">Founded</span>
                     </div>
-                    <div class="hero-badge">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Bhaktapur, Nepal
+                    <div>
+                        <span class="hero-stat-num">4+</span>
+                        <span class="hero-stat-label">Projects Delivered</span>
+                    </div>
+                    <div>
+                        <span class="hero-stat-num">7</span>
+                        <span class="hero-stat-label">Service Lines</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-
-    <!-- ═══════════════════════════════════════════════
-     TRUST BAR
-════════════════════════════════════════════════ -->
-    <div class="trust-bar">
-        <div class="trust-bar-inner">
-            <span class="trust-label">Trusted by</span>
-            <div class="trust-logos">
-                <span class="trust-logo-item">Local Businesses</span>
-                <span class="trust-logo-item">Schools &amp; Colleges</span>
-                <span class="trust-logo-item">Clinics &amp; Hospitals</span>
-                <span class="trust-logo-item">Startups</span>
-                <span class="trust-logo-item">NGOs &amp; INGOs</span>
+            <!-- Right -->
+            <div class="hero-visual reveal delay-2">
+                <div class="hero-card">
+                    <p class="hero-card-label">What We Build</p>
+                    <ul class="hero-service-list">
+                        <li><i class="fas fa-brain"></i> Custom AI &amp; Automation Systems</li>
+                        <li><i class="fas fa-globe"></i> Enterprise Web Applications</li>
+                        <li><i class="fas fa-mobile-alt"></i> Cross-Platform Mobile Apps</li>
+                        <li><i class="fas fa-chart-line"></i> Digital Marketing &amp; SEO</li>
+                        <li><i class="fas fa-graduation-cap"></i> Education Technology</li>
+                        <li><i class="fas fa-heartbeat"></i> Healthcare Software</li>
+                    </ul>
+                </div>
+                <div class="hero-badge">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Bhaktapur, Nepal
+                </div>
             </div>
         </div>
     </div>
+</section>
 
 
-    <!-- ═══════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════
+     TRUST BAR
+════════════════════════════════════════════════ -->
+<div class="trust-bar">
+    <div class="trust-bar-inner">
+        <span class="trust-label">Trusted by</span>
+        <div class="trust-logos">
+            <span class="trust-logo-item">Local Businesses</span>
+            <span class="trust-logo-item">Schools &amp; Colleges</span>
+            <span class="trust-logo-item">Clinics &amp; Hospitals</span>
+            <span class="trust-logo-item">Startups</span>
+            <span class="trust-logo-item">NGOs &amp; INGOs</span>
+        </div>
+    </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
      SERVICES
 ════════════════════════════════════════════════ -->
-    <section class="services-section" id="services">
-        <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
-            <div class="services-header reveal">
-                <div>
-                    <span class="section-eyebrow">What We Do</span>
-                    <h2 class="section-title">Solutions Built for Real Businesses</h2>
-                    <p class="section-sub">From AI automation to mobile apps — we build software that solves actual
-                        problems for businesses across every sector.</p>
-                </div>
-                <a href="services.html"
-                    style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border:1.5px solid #E2E8F0;border-radius:8px;font-size:0.88rem;font-weight:600;color:#0A1628;text-decoration:none;white-space:nowrap;transition:border-color 0.2s,color 0.2s;"
-                    onmouseover="this.style.borderColor='#0059C7';this.style.color='#0059C7'"
-                    onmouseout="this.style.borderColor='#E2E8F0';this.style.color='#0A1628'">
-                    All Services <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
-                </a>
+<section class="services-section" id="services">
+    <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
+        <div class="services-header reveal">
+            <div>
+                <span class="section-eyebrow">What We Do</span>
+                <h2 class="section-title">Solutions Built for Real Businesses</h2>
+                <p class="section-sub">From AI automation to mobile apps — we build software that solves actual problems for businesses across every sector.</p>
             </div>
+            <a href="services.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border:1.5px solid #E2E8F0;border-radius:8px;font-size:0.88rem;font-weight:600;color:#0A1628;text-decoration:none;white-space:nowrap;transition:border-color 0.2s,color 0.2s;" onmouseover="this.style.borderColor='#0059C7';this.style.color='#0059C7'" onmouseout="this.style.borderColor='#E2E8F0';this.style.color='#0A1628'">
+                All Services <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
+            </a>
+        </div>
 
-            <div class="services-grid">
-                <a href="service-ai.html" class="svc-card reveal">
-                    <div class="svc-icon"><i class="fas fa-brain"></i></div>
-                    <h3>AI &amp; Automation</h3>
-                    <p>Custom AI chatbots, document automation, predictive analytics, and intelligent workflow systems
-                        built for Nepal's businesses.</p>
-                    <span class="svc-link">Explore <i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="service-webapp.html" class="svc-card reveal delay-1">
-                    <div class="svc-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3>Web Applications</h3>
-                    <p>Scalable SaaS platforms, dashboards, and enterprise portals — built with modern tech stacks and
-                        production-grade security.</p>
-                    <span class="svc-link">Explore <i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="service-mobile.html" class="svc-card reveal delay-2">
-                    <div class="svc-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>Mobile Apps</h3>
-                    <p>Cross-platform iOS and Android applications with seamless UX, offline capability, and real-time
-                        backend integration.</p>
-                    <span class="svc-link">Explore <i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="service-web.html" class="svc-card reveal delay-1">
-                    <div class="svc-icon"><i class="fas fa-globe"></i></div>
-                    <h3>Website Development</h3>
-                    <p>Performance-optimized business websites and landing pages designed to convert visitors into
-                        customers.</p>
-                    <span class="svc-link">Explore <i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="service-education.html" class="svc-card reveal delay-2">
-                    <div class="svc-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h3>Education Technology</h3>
-                    <p>AI-powered learning platforms, admission assistants, teacher tools, and digital resources for
-                        schools and colleges.</p>
-                    <span class="svc-link">Explore <i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="service-healthcare.html" class="svc-card reveal delay-3">
-                    <div class="svc-icon"><i class="fas fa-heartbeat"></i></div>
-                    <h3>Healthcare Software</h3>
-                    <p>Smart appointment systems, patient management platforms, and AI health assistants for clinics and
-                        hospitals.</p>
-                    <span class="svc-link">Explore <i class="fas fa-arrow-right"></i></span>
+        <div class="services-grid">
+            <a href="service-ai.html" class="svc-card reveal">
+                <div class="svc-icon"><i class="fas fa-brain"></i></div>
+                <h3>AI &amp; Automation</h3>
+                <p>Custom AI chatbots, document automation, predictive analytics, and intelligent workflow systems built for Nepal's businesses.</p>
+                <span class="svc-link">Explore <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="service-webapp.html" class="svc-card reveal delay-1">
+                <div class="svc-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Web Applications</h3>
+                <p>Scalable SaaS platforms, dashboards, and enterprise portals — built with modern tech stacks and production-grade security.</p>
+                <span class="svc-link">Explore <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="service-mobile.html" class="svc-card reveal delay-2">
+                <div class="svc-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Mobile Apps</h3>
+                <p>Cross-platform iOS and Android applications with seamless UX, offline capability, and real-time backend integration.</p>
+                <span class="svc-link">Explore <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="service-web.html" class="svc-card reveal delay-1">
+                <div class="svc-icon"><i class="fas fa-globe"></i></div>
+                <h3>Website Development</h3>
+                <p>Performance-optimized business websites and landing pages designed to convert visitors into customers.</p>
+                <span class="svc-link">Explore <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="service-education.html" class="svc-card reveal delay-2">
+                <div class="svc-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3>Education Technology</h3>
+                <p>AI-powered learning platforms, admission assistants, teacher tools, and digital resources for schools and colleges.</p>
+                <span class="svc-link">Explore <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="service-healthcare.html" class="svc-card reveal delay-3">
+                <div class="svc-icon"><i class="fas fa-heartbeat"></i></div>
+                <h3>Healthcare Software</h3>
+                <p>Smart appointment systems, patient management platforms, and AI health assistants for clinics and hospitals.</p>
+                <span class="svc-link">Explore <i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ═══════════════════════════════════════════════
+     FEATURED PRODUCTS & LIVE DEMOS (DRAFT)
+════════════════════════════════════════════════ -->
+<section class="products-section" id="demos" style="padding:100px 0; background:#F8FAFC; border-top:1px solid #E8EDF4;">
+    <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:56px;gap:24px;flex-wrap:wrap;" class="reveal">
+            <div>
+                <span style="color:#0059C7;font-weight:700;font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:12px;">Live Showcases</span>
+                <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;color:#0A1628;margin-bottom:12px;">Featured Products &amp; Demos</h2>
+                <p style="font-size:1.02rem;color:#64748B;max-width:580px;line-height:1.7;margin:0;">Explore interactive working prototypes and software systems engineered for everyday business workflows.</p>
+            </div>
+            <div>
+                <a href="contact.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#012962;color:#fff;border-radius:8px;font-size:0.9rem;font-weight:700;text-decoration:none;transition:background 0.2s;">
+                    Request Custom Demo <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
                 </a>
             </div>
         </div>
-    </section>
+
+        <div class="demos-grid" style="display:grid;grid-template-columns:repeat(2, 1fr);gap:28px;">
+            <!-- Product 1: AI Assistant & OCR -->
+            <div class="demo-card reveal" style="background:#fff;border:1px solid #E2E8F0;border-radius:18px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 20px rgba(1,41,98,0.04);">
+                <div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                        <span style="display:inline-block;padding:4px 12px;background:#EEF4FF;color:#0059C7;font-size:0.75rem;font-weight:700;border-radius:100px;text-transform:uppercase;letter-spacing:1px;">AI &amp; Automation</span>
+                        <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.78rem;font-weight:600;color:#10B981;background:#ECFDF5;padding:4px 10px;border-radius:100px;border:1px solid #A7F3D0;"><span style="width:6px;height:6px;background:#10B981;border-radius:50%;display:inline-block;"></span> Live Demo Available</span>
+                    </div>
+                    <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.35rem;font-weight:800;color:#0A1628;margin-bottom:10px;">Nepali AI Assistant &amp; OCR Engine</h3>
+                    <p style="font-size:0.92rem;color:#64748B;line-height:1.7;margin-bottom:20px;">Bilingual AI assistant for Nepali &amp; English customer queries. Integrates camera OCR to digitize paper bills into spreadsheets in under 3 seconds.</p>
+                    <ul style="list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:8px;">
+                        <li style="font-size:0.87rem;color:#334155;display:flex;align-items:center;gap:10px;"><i class="fas fa-check-circle" style="color:#0059C7;font-size:0.9rem;"></i> Understands Nepali, English, and Romanized text</li>
+                        <li style="font-size:0.87rem;color:#334155;display:flex;align-items:center;gap:10px;"><i class="fas fa-check-circle" style="color:#0059C7;font-size:0.9rem;"></i> Automated bill &amp; vat receipt digitization</li>
+                        <li style="font-size:0.87rem;color:#334155;display:flex;align-items:center;gap:10px;"><i class="fas fa-check-circle" style="color:#0059C7;font-size:0.9rem;"></i> WhatsApp and Web embed ready</li>
+                    </ul>
+                </div>
+                <div>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
+                        <span style="font-size:0.75rem;background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-weight:600;">Python</span>
+                        <span style="font-size:0.75rem;background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-weight:600;">FastAPI</span>
+                        <span style="font-size:0.75rem;background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-weight:600;">LLM</span>
+                        <span style="font-size:0.75rem;background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-weight:600;">React</span>
+                    </div>
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <a href="contact.html?demo=ai-assistant" style="padding:10px 20px;background:#0059C7;color:#fff;border-radius:8px;font-size:0.88rem;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+                            Access Demo <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+                        </a>
+                        <a href="contact.html" style="padding:10px 18px;border:1px solid #CBD5E1;color:#334155;border-radius:8px;font-size:0.88rem;font-weight:600;text-decoration:none;">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2: MedixCare Clinic Portal -->
+            <div class="demo-card reveal delay-1" style="background:#fff;border:1px solid #E2E8F0;border-radius:18px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 20px rgba(1,41,98,0.04);">
+                <div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                        <span style="display:inline-block;padding:4px 12px;background:#EFF6FF;color:#2563EB;font-size:0.75rem;font-weight:700;border-radius:100px;text-transform:uppercase;letter-spacing:1px;">Healthcare Tech</span>
+                        <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.78rem;font-weight:600;color:#10B981;background:#ECFDF5;padding:4px 10px;border-radius:100px;border:1px solid #A7F3D0;"><span style="width:6px;height:6px;background:#10B981;border-radius:50%;display:inline-block;"></span> Live Demo Available</span>
+                    </div>
+                    <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.35rem;font-weight:800;color:#0A1628;margin-bottom:10px;">MedixCare Clinic &amp; Appointment Suite</h3>
+                    <p style="font-size:0.92rem;color:#64748B;line-height:1.7;margin-bottom:20px;">Patient queue management, live OPD token display, digital prescription generator, and SMS reminder pipeline designed for polyclinics and labs.</p>
+                    <ul style="list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:8px;">
+                        <li style="font-size:0.87rem;color:#334155;display:flex;align-items:center;gap:10px;"><i class="fas fa-check-circle" style="color:#0059C7;font-size:0.9rem;"></i> Real-time OPD live token screen</li>
+                        <li style="font-size:0.87rem;color:#334155;display:flex;align-items:center;gap:10px;"><i class="fas fa-check-circle" style="color:#0059C7;font-size:0.9rem;"></i> 1-click digital prescriptions with Nepali dosage</li>
+                        <li style="font-size:0.87rem;color:#334155;display:flex;align-items:center;gap:10px;"><i class="fas fa-check-circle" style="color:#0059C7;font-size:0.9rem;"></i> Automated patient SMS alerts</li>
+                    </ul>
+                </div>
+                <div>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
+                        <span style="font-size:0.75rem;background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-weight:600;">React</span>
+                        <span style="font-size:0.75rem;background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-weight:600;">Node.js</span>
+                        <span style="font-size:0.75rem;background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-weight:600;">PostgreSQL</span>
+                        <span style="font-size:0.75rem;background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-weight:600;">SMS API</span>
+                    </div>
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <a href="contact.html?demo=clinic-portal" style="padding:10px 20px;background:#0059C7;color:#fff;border-radius:8px;font-size:0.88rem;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+                            Access Demo <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+                        </a>
+                        <a href="contact.html" style="padding:10px 18px;border:1px solid #CBD5E1;color:#334155;border-radius:8px;font-size:0.88rem;font-weight:600;text-decoration:none;">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3: EduSmart Portal -->
+            <div class="demo-card reveal delay-2" style="background:#fff;border:1px solid #E2E8F0;border-radius:18px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 20px rgba(1,41,98,0.04);">
+                <div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                        <span style="display:inline-block;padding:4px 12px;background:#FDF2F8;color:#DB2777;font-size:0.75rem;font-weight:700;border-radius:100px;text-transform:uppercase;letter-spacing:1px;">EdTech</span>
+                        <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.78rem;font-weight:600;color:#10B981;background:#ECFDF5;padding:4px 10px;border-radius:100px;border:1px solid #A7F3D0;"><span style="width:6px;height:6px;background:#10B981;border-radius:50%;display:inline-block;"></span> Live Demo Available</span>
+                    </div>
+                    <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.35rem;font-weight:800;color:#0A1628;margin-bottom:10px;">EduSmart Student &amp; Admission Hub</h3>
+                    <p style="font-size:0.92rem;color:#64748B;line-height:1.7;margin-bottom:20px;">AI student admission inquiry agent, automated quiz generation from curriculum documents, and student fee/notice tracking dashboard.</p>
+                    <ul style="list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:8px;">
+                        <li style="font-size:0.87rem;color:#334155;display:flex;align-items:center;gap:10px;"><i class="fas fa-check-circle" style="color:#0059C7;font-size:0.9rem;"></i> 24/7 admission chatbot for prospective parents</li>
+                        <li style="font-size:0.87rem;color:#334155;display:flex;align-items:center;gap:10px;"><i class="fas fa-check-circle" style="color:#0059C7;font-size:0.9rem;"></i> Auto quiz and mock test creator</li>
+                        <li style="font-size:0.87rem;color:#334155;display:flex;align-items:center;gap:10px;"><i class="fas fa-check-circle" style="color:#0059C7;font-size:0.9rem;"></i> SMS alert for fees and emergency notices</li>
+                    </ul>
+                </div>
+                <div>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
+                        <span style="font-size:0.75rem;background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-weight:600;">Next.js</span>
+                        <span style="font-size:0.75rem;background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-weight:600;">Tailwind</span>
+                        <span style="font-size:0.75rem;background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-weight:600;">PostgreSQL</span>
+                    </div>
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <a href="contact.html?demo=edusmart" style="padding:10px 20px;background:#0059C7;color:#fff;border-radius:8px;font-size:0.88rem;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+                            Access Demo <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+                        </a>
+                        <a href="contact.html" style="padding:10px 18px;border:1px solid #CBD5E1;color:#334155;border-radius:8px;font-size:0.88rem;font-weight:600;text-decoration:none;">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4: BizFlow Retail SaaS -->
+            <div class="demo-card reveal delay-3" style="background:#fff;border:1px solid #E2E8F0;border-radius:18px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 20px rgba(1,41,98,0.04);">
+                <div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                        <span style="display:inline-block;padding:4px 12px;background:#F0FDF4;color:#16A34A;font-size:0.75rem;font-weight:700;border-radius:100px;text-transform:uppercase;letter-spacing:1px;">Enterprise SaaS</span>
+                        <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.78rem;font-weight:600;color:#10B981;background:#ECFDF5;padding:4px 10px;border-radius:100px;border:1px solid #A7F3D0;"><span style="width:6px;height:6px;background:#10B981;border-radius:50%;display:inline-block;"></span> Live Demo Available</span>
+                    </div>
+                    <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.35rem;font-weight:800;color:#0A1628;margin-bottom:10px;">BizFlow Retail &amp; Billing Platform</h3>
+                    <p style="font-size:0.92rem;color:#64748B;line-height:1.7;margin-bottom:20px;">Multi-counter retail and inventory system. Generates dynamic Fonepay/eSewa QR invoices and provides real-time sales profit analytics on mobile or desktop.</p>
+                    <ul style="list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:8px;">
+                        <li style="font-size:0.87rem;color:#334155;display:flex;align-items:center;gap:10px;"><i class="fas fa-check-circle" style="color:#0059C7;font-size:0.9rem;"></i> Multi-branch real-time stock sync</li>
+                        <li style="font-size:0.87rem;color:#334155;display:flex;align-items:center;gap:10px;"><i class="fas fa-check-circle" style="color:#0059C7;font-size:0.9rem;"></i> Instant Fonepay QR invoice generation</li>
+                        <li style="font-size:0.87rem;color:#334155;display:flex;align-items:center;gap:10px;"><i class="fas fa-check-circle" style="color:#0059C7;font-size:0.9rem;"></i> Real-time daily ledger &amp; tax reports</li>
+                    </ul>
+                </div>
+                <div>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
+                        <span style="font-size:0.75rem;background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-weight:600;">React</span>
+                        <span style="font-size:0.75rem;background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-weight:600;">Node.js</span>
+                        <span style="font-size:0.75rem;background:#F1F5F9;color:#475569;padding:4px 10px;border-radius:6px;font-weight:600;">PostgreSQL</span>
+                    </div>
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <a href="contact.html?demo=bizflow" style="padding:10px 20px;background:#0059C7;color:#fff;border-radius:8px;font-size:0.88rem;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+                            Access Demo <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+                        </a>
+                        <a href="contact.html" style="padding:10px 18px;border:1px solid #CBD5E1;color:#334155;border-radius:8px;font-size:0.88rem;font-weight:600;text-decoration:none;">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-    <!-- ═══════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════
      ABOUT / MISSION
 ════════════════════════════════════════════════ -->
-    <section class="about-section" id="about">
-        <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
-            <div class="about-grid">
-                <!-- Left image -->
-                <div class="about-img-wrap reveal">
-                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=900"
-                        alt="Nepal mountain landscape — where CodeGhar was built">
-                    <div class="about-img-badge">
-                        <span class="about-img-badge-icon">🇳🇵</span>
-                        <div class="about-img-badge-text">
-                            <strong>Bhaktapur</strong>
-                            <span>Nepal · Est. 2026</span>
-                        </div>
+<section class="about-section" id="about">
+    <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
+        <div class="about-grid">
+            <!-- Left image -->
+            <div class="about-img-wrap reveal">
+                <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=900" alt="Nepal mountain landscape — where CodeGhar was built">
+                <div class="about-img-badge">
+                    <span class="about-img-badge-icon">🇳🇵</span>
+                    <div class="about-img-badge-text">
+                        <strong>Bhaktapur</strong>
+                        <span>Nepal · Est. 2026</span>
                     </div>
-                </div>
-                <!-- Right text -->
-                <div class="reveal delay-1">
-                    <span class="section-eyebrow about-eyebrow">About CodeGhar</span>
-                    <h2 class="section-title about-title">Software from Nepal,<br>Built for the World</h2>
-                    <p class="about-body">
-                        CodeGhar Nepal is a software engineering company founded in Bhaktapur with a simple belief: that
-                        world-class technology should be accessible to every business, every school, and every clinic in
-                        Nepal. We don't ship prototypes — we ship production-grade systems that our clients can rely on.
-                    </p>
-                    <div class="about-pillars">
-                        <div class="about-pillar">
-                            <i class="fas fa-shield-alt"></i>
-                            <div class="about-pillar-text">
-                                <h5>Production-Grade</h5>
-                                <p>Built to scale and built to last</p>
-                            </div>
-                        </div>
-                        <div class="about-pillar">
-                            <i class="fas fa-flag"></i>
-                            <div class="about-pillar-text">
-                                <h5>Nepal-First</h5>
-                                <p>Nepali language, context &amp; culture</p>
-                            </div>
-                        </div>
-                        <div class="about-pillar">
-                            <i class="fas fa-clock"></i>
-                            <div class="about-pillar-text">
-                                <h5>On-Time Delivery</h5>
-                                <p>Transparent sprints, weekly updates</p>
-                            </div>
-                        </div>
-                        <div class="about-pillar">
-                            <i class="fas fa-headset"></i>
-                            <div class="about-pillar-text">
-                                <h5>Ongoing Support</h5>
-                                <p>Launch is just the beginning</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="about.html"
-                        style="display:inline-flex;align-items:center;gap:8px;margin-top:36px;padding:13px 26px;background:#0059C7;color:#fff;border-radius:8px;font-weight:700;font-size:0.9rem;text-decoration:none;transition:background 0.2s;"
-                        onmouseover="this.style.background='#0049A8'" onmouseout="this.style.background='#0059C7'">
-                        Our Story <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
             </div>
+            <!-- Right text -->
+            <div class="reveal delay-1">
+                <span class="section-eyebrow about-eyebrow">About CodeGhar</span>
+                <h2 class="section-title about-title">Software from Nepal,<br>Built for the World</h2>
+                <p class="about-body">
+                    CodeGhar Nepal is a software engineering company founded in Bhaktapur with a simple belief: that world-class technology should be accessible to every business, every school, and every clinic in Nepal. We don't ship prototypes — we ship production-grade systems that our clients can rely on.
+                </p>
+                <div class="about-pillars">
+                    <div class="about-pillar">
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="about-pillar-text">
+                            <h5>Production-Grade</h5>
+                            <p>Built to scale and built to last</p>
+                        </div>
+                    </div>
+                    <div class="about-pillar">
+                        <i class="fas fa-flag"></i>
+                        <div class="about-pillar-text">
+                            <h5>Nepal-First</h5>
+                            <p>Nepali language, context &amp; culture</p>
+                        </div>
+                    </div>
+                    <div class="about-pillar">
+                        <i class="fas fa-clock"></i>
+                        <div class="about-pillar-text">
+                            <h5>On-Time Delivery</h5>
+                            <p>Transparent sprints, weekly updates</p>
+                        </div>
+                    </div>
+                    <div class="about-pillar">
+                        <i class="fas fa-headset"></i>
+                        <div class="about-pillar-text">
+                            <h5>Ongoing Support</h5>
+                            <p>Launch is just the beginning</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="about.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:36px;padding:13px 26px;background:#0059C7;color:#fff;border-radius:8px;font-weight:700;font-size:0.9rem;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='#0049A8'" onmouseout="this.style.background='#0059C7'">
+                    Our Story <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <!-- ═══════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════
      STATS
 ════════════════════════════════════════════════ -->
-    <section class="stats-section">
-        <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
-            <div class="stats-grid">
-                <div class="stat-col reveal">
-                    <span class="stat-col-num">4+</span>
-                    <span class="stat-col-label">Projects Delivered</span>
-                </div>
-                <div class="stat-col reveal delay-1">
-                    <span class="stat-col-num">7</span>
-                    <span class="stat-col-label">Industry Verticals</span>
-                </div>
-                <div class="stat-col reveal delay-2">
-                    <span class="stat-col-num">3</span>
-                    <span class="stat-col-label">Co-Founders</span>
-                </div>
-                <div class="stat-col reveal delay-3">
-                    <span class="stat-col-num">100%</span>
-                    <span class="stat-col-label">Client Retention</span>
-                </div>
+<section class="stats-section">
+    <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
+        <div class="stats-grid">
+            <div class="stat-col reveal">
+                <span class="stat-col-num">4+</span>
+                <span class="stat-col-label">Projects Delivered</span>
+            </div>
+            <div class="stat-col reveal delay-1">
+                <span class="stat-col-num">7</span>
+                <span class="stat-col-label">Industry Verticals</span>
+            </div>
+            <div class="stat-col reveal delay-2">
+                <span class="stat-col-num">3</span>
+                <span class="stat-col-label">Co-Founders</span>
+            </div>
+            <div class="stat-col reveal delay-3">
+                <span class="stat-col-num">100%</span>
+                <span class="stat-col-label">Client Retention</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <!-- ═══════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════
      HOW WE WORK
 ════════════════════════════════════════════════ -->
-    <section class="process-section">
-        <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
-            <div style="text-align:center;" class="reveal">
-                <span class="section-eyebrow">How We Work</span>
-                <h2 class="section-title">From Idea to Live Product</h2>
-                <p class="section-sub" style="margin:0 auto;">Our three-phase delivery model ensures your project is on
-                    time, on budget, and built to your exact requirements.</p>
+<section class="process-section">
+    <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
+        <div style="text-align:center;" class="reveal">
+            <span class="section-eyebrow">How We Work</span>
+            <h2 class="section-title">From Idea to Live Product</h2>
+            <p class="section-sub" style="margin:0 auto;">Our three-phase delivery model ensures your project is on time, on budget, and built to your exact requirements.</p>
+        </div>
+        <div class="process-steps">
+            <div class="process-step reveal">
+                <div class="process-num">01</div>
+                <h4>Discovery &amp; Planning</h4>
+                <p>We understand your business, define the scope, and produce a clear technical specification before writing a single line of code.</p>
             </div>
-            <div class="process-steps">
-                <div class="process-step reveal">
-                    <div class="process-num">01</div>
-                    <h4>Discovery &amp; Planning</h4>
-                    <p>We understand your business, define the scope, and produce a clear technical specification before
-                        writing a single line of code.</p>
-                </div>
-                <div class="process-step reveal delay-2">
-                    <div class="process-num">02</div>
-                    <h4>Agile Development</h4>
-                    <p>We build iteratively with weekly deliverables. You see real progress every sprint — not just at
-                        the end of the project.</p>
-                </div>
-                <div class="process-step reveal delay-4">
-                    <div class="process-num">03</div>
-                    <h4>Launch &amp; Support</h4>
-                    <p>We handle deployment, monitor live systems, and provide ongoing technical support so you can
-                        focus on your business.</p>
-                </div>
+            <div class="process-step reveal delay-2">
+                <div class="process-num">02</div>
+                <h4>Agile Development</h4>
+                <p>We build iteratively with weekly deliverables. You see real progress every sprint — not just at the end of the project.</p>
+            </div>
+            <div class="process-step reveal delay-4">
+                <div class="process-num">03</div>
+                <h4>Launch &amp; Support</h4>
+                <p>We handle deployment, monitor live systems, and provide ongoing technical support so you can focus on your business.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <!-- ═══════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════
      TECH STACK
 ════════════════════════════════════════════════ -->
-    <section class="tech-section">
-        <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
-            <div style="text-align:center;" class="reveal">
-                <span class="section-eyebrow">Technology</span>
-                <h2 class="section-title">Modern Tech Stack</h2>
+<section class="tech-section">
+    <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
+        <div style="text-align:center;" class="reveal">
+            <span class="section-eyebrow">Technology</span>
+            <h2 class="section-title">Modern Tech Stack</h2>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-item reveal">
+                <i class="fab fa-react" style="color:#61DAFB;"></i>
+                <span>React &amp; Next.js</span>
             </div>
-            <div class="tech-grid">
-                <div class="tech-item reveal">
-                    <i class="fab fa-react" style="color:#61DAFB;"></i>
-                    <span>React &amp; Next.js</span>
-                </div>
-                <div class="tech-item reveal delay-1">
-                    <i class="fab fa-node-js" style="color:#339933;"></i>
-                    <span>Node.js</span>
-                </div>
-                <div class="tech-item reveal delay-2">
-                    <i class="fab fa-python" style="color:#3776AB;"></i>
-                    <span>Python / AI</span>
-                </div>
-                <div class="tech-item reveal delay-3">
-                    <i class="fas fa-database" style="color:#336791;"></i>
-                    <span>PostgreSQL</span>
-                </div>
-                <div class="tech-item reveal delay-4">
-                    <i class="fab fa-aws" style="color:#FF9900;"></i>
-                    <span>Cloud &amp; AWS</span>
-                </div>
-                <div class="tech-item reveal delay-5">
-                    <i class="fab fa-figma" style="color:#F24E1E;"></i>
-                    <span>UI/UX Design</span>
-                </div>
+            <div class="tech-item reveal delay-1">
+                <i class="fab fa-node-js" style="color:#339933;"></i>
+                <span>Node.js</span>
+            </div>
+            <div class="tech-item reveal delay-2">
+                <i class="fab fa-python" style="color:#3776AB;"></i>
+                <span>Python / AI</span>
+            </div>
+            <div class="tech-item reveal delay-3">
+                <i class="fas fa-database" style="color:#336791;"></i>
+                <span>PostgreSQL</span>
+            </div>
+            <div class="tech-item reveal delay-4">
+                <i class="fab fa-aws" style="color:#FF9900;"></i>
+                <span>Cloud &amp; AWS</span>
+            </div>
+            <div class="tech-item reveal delay-5">
+                <i class="fab fa-figma" style="color:#F24E1E;"></i>
+                <span>UI/UX Design</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <!-- ═══════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════
      LEADERSHIP TEAM
 ════════════════════════════════════════════════ -->
-    <section class="team-section" id="team">
-        <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
-            <div style="text-align:center;" class="reveal">
-                <span class="section-eyebrow" style="color:#3B82F6;">Leadership</span>
-                <h2 class="section-title" style="color:#fff;">The Founders</h2>
-                <p class="section-sub" style="color:rgba(255,255,255,0.5);margin:0 auto;">Three engineers from Nepal
-                    building technology that matters.</p>
+<section class="team-section" id="team">
+    <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
+        <div style="text-align:center;" class="reveal">
+            <span class="section-eyebrow" style="color:#3B82F6;">Leadership</span>
+            <h2 class="section-title" style="color:#fff;">The Founders</h2>
+            <p class="section-sub" style="color:rgba(255,255,255,0.5);margin:0 auto;">Three engineers from Nepal building technology that matters.</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card reveal">
+                <div class="team-card-photo">
+                    <img src="Gobinda.jpg" alt="Gobinda Bista — Founder &amp; CEO">
+                </div>
+                <div class="team-card-body">
+                    <div class="team-card-role">Founder &amp; Chief Executive Officer</div>
+                    <div class="team-card-name">Gobinda Bista</div>
+                    <p class="team-card-bio">Lead systems architect and CEO. Drives CodeGhar's technical vision and product strategy across all service lines.</p>
+                    <div class="team-card-socials">
+                        <a href="https://www.linkedin.com/in/gobinda-bista-8ba3b4267/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/GOBINDABISTA" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://gobindabista.com.np/" target="_blank" rel="noopener" aria-label="Website"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="team-grid">
-                <div class="team-card reveal">
-                    <div class="team-card-photo">
-                        <img src="Gobinda.jpg" alt="Gobinda Bista — Founder &amp; CEO">
-                    </div>
-                    <div class="team-card-body">
-                        <div class="team-card-role">Founder &amp; Chief Executive Officer</div>
-                        <div class="team-card-name">Gobinda Bista</div>
-                        <p class="team-card-bio">Lead systems architect and CEO. Drives CodeGhar's technical vision and
-                            product strategy across all service lines.</p>
-                        <div class="team-card-socials">
-                            <a href="https://www.linkedin.com/in/gobinda-bista-8ba3b4267/" target="_blank"
-                                rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com/GOBINDABISTA" target="_blank" rel="noopener"
-                                aria-label="GitHub"><i class="fab fa-github"></i></a>
-                            <a href="https://gobindabista.com.np/" target="_blank" rel="noopener"
-                                aria-label="Website"><i class="fas fa-globe"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-card reveal delay-2">
-                    <div class="team-card-photo">
-                        <img src="Subash.jpeg" alt="Subash Bhandari — Co-Founder">
-                    </div>
-                    <div class="team-card-body">
-                        <div class="team-card-role">Co-Founder</div>
-                        <div class="team-card-name">Subash Bhandari</div>
-                    </div>
-                </div>
-                <div class="team-card reveal delay-4">
-                    <div class="team-card-photo">
-                        <img src="Suresh.jpeg" alt="Suresh Shrestha — Co-Founder">
-                    </div>
-                    <div class="team-card-body">
-                        <div class="team-card-role">Co-Founder</div>
-                        <div class="team-card-name">Suresh Shrestha</div>
-                    </div>
+            <div class="team-card reveal delay-2">
+                <div class="team-card-photo">
+                    <img src="Subash.jpeg" alt="Subash Bhandari — Co-Founder">
                 </div>
                 <div class="team-card-body">
                     <div class="team-card-role">Co-Founder</div>
                     <div class="team-card-name">Subash Bhandari</div>
-                    <p class="team-card-bio">Supports the daily operations and workflows of the company.</p>
                 </div>
             </div>
             <div class="team-card reveal delay-4">
@@ -1939,249 +1102,232 @@
                 <div class="team-card-body">
                     <div class="team-card-role">Co-Founder</div>
                     <div class="team-card-name">Suresh Shrestha</div>
-                    <p class="team-card-bio">Supports the daily operations and workflows of the company.</p>
                 </div>
             </div>
         </div>
-    </section>
+        <div style="text-align:center;margin-top:48px;" class="reveal">
+            <a href="founders.html" style="display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border:1.5px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);border-radius:8px;font-weight:600;font-size:0.9rem;text-decoration:none;transition:border-color 0.2s,color 0.2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.6)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)';this.style.color='rgba(255,255,255,0.8)'">
+                Full Leadership Profiles <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
 
-    <!-- ═══════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════
      BLOG PREVIEW
 ════════════════════════════════════════════════ -->
-    <section class="blog-section" id="blog">
-        <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
-            <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:56px;gap:24px;"
-                class="reveal">
-                <div>
-                    <span class="section-eyebrow">Insights</span>
-                    <h2 class="section-title">From the Blog</h2>
-                </div>
-                <a href="blog.html"
-                    style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border:1.5px solid #E2E8F0;border-radius:8px;font-size:0.88rem;font-weight:600;color:#0A1628;text-decoration:none;white-space:nowrap;transition:border-color 0.2s,color 0.2s;"
-                    onmouseover="this.style.borderColor='#0059C7';this.style.color='#0059C7'"
-                    onmouseout="this.style.borderColor='#E2E8F0';this.style.color='#0A1628'">
-                    All Articles <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
-                </a>
+<section class="blog-section" id="blog">
+    <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:56px;gap:24px;" class="reveal">
+            <div>
+                <span class="section-eyebrow">Insights</span>
+                <h2 class="section-title">From the Blog</h2>
             </div>
-            <div class="blog-grid">
-                <a href="blog-1.html" class="blog-card reveal">
-                    <div class="blog-card-img">
-                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
-                            alt="AI in Nepal">
-                    </div>
-                    <div class="blog-card-body">
-                        <span class="blog-tag">AI &amp; Automation</span>
-                        <h3>How AI Is Changing Small Business Operations Across Nepal</h3>
-                        <p>From chatbot-powered customer support to automated inventory — AI is becoming accessible to
-                            businesses of all sizes in Nepal.</p>
-                    </div>
-                    <div class="blog-card-footer">
-                        <span>Gobinda Bista</span>
-                        <span>Nov 2026</span>
-                    </div>
-                </a>
-                <a href="blog-2.html" class="blog-card reveal delay-2">
-                    <div class="blog-card-img">
-                        <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&q=80&w=800"
-                            alt="Mobile App Development">
-                    </div>
-                    <div class="blog-card-body">
-                        <span class="blog-tag">Mobile Dev</span>
-                        <h3>Why Your Nepal Business Needs a Mobile App in 2026</h3>
-                        <p>Mobile penetration in Nepal has reached new highs. Here's how a custom app can directly
-                            increase your revenue and retention.</p>
-                    </div>
-                    <div class="blog-card-footer">
-                        <span>CodeGhar Team</span>
-                        <span>Oct 2026</span>
-                    </div>
-                </a>
-                <a href="blog-3.html" class="blog-card reveal delay-4">
-                    <div class="blog-card-img">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
-                            alt="Software Development Nepal">
-                    </div>
-                    <div class="blog-card-body">
-                        <span class="blog-tag">Software Engineering</span>
-                        <h3>Building Production-Grade Software: What Most Nepal Dev Shops Get Wrong</h3>
-                        <p>Many projects fail not at the prototype stage but in production. We share the engineering
-                            practices we use to prevent that.</p>
-                    </div>
-                    <div class="blog-card-footer">
-                        <span>Gobinda Bista</span>
-                        <span>Sep 2026</span>
-                    </div>
-                </a>
-            </div>
+            <a href="blog.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border:1.5px solid #E2E8F0;border-radius:8px;font-size:0.88rem;font-weight:600;color:#0A1628;text-decoration:none;white-space:nowrap;transition:border-color 0.2s,color 0.2s;" onmouseover="this.style.borderColor='#0059C7';this.style.color='#0059C7'" onmouseout="this.style.borderColor='#E2E8F0';this.style.color='#0A1628'">
+                All Articles <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
+            </a>
         </div>
-    </section>
+        <div class="blog-grid">
+            <a href="blog-1.html" class="blog-card reveal">
+                <div class="blog-card-img">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800" alt="AI in Nepal">
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-tag">AI &amp; Automation</span>
+                    <h3>How AI Is Changing Small Business Operations Across Nepal</h3>
+                    <p>From chatbot-powered customer support to automated inventory — AI is becoming accessible to businesses of all sizes in Nepal.</p>
+                </div>
+                <div class="blog-card-footer">
+                    <span>Gobinda Bista</span>
+                    <span>Nov 2026</span>
+                </div>
+            </a>
+            <a href="blog-2.html" class="blog-card reveal delay-2">
+                <div class="blog-card-img">
+                    <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&q=80&w=800" alt="Mobile App Development">
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-tag">Mobile Dev</span>
+                    <h3>Why Your Nepal Business Needs a Mobile App in 2026</h3>
+                    <p>Mobile penetration in Nepal has reached new highs. Here's how a custom app can directly increase your revenue and retention.</p>
+                </div>
+                <div class="blog-card-footer">
+                    <span>CodeGhar Team</span>
+                    <span>Oct 2026</span>
+                </div>
+            </a>
+            <a href="blog-3.html" class="blog-card reveal delay-4">
+                <div class="blog-card-img">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" alt="Software Development Nepal">
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-tag">Software Engineering</span>
+                    <h3>Building Production-Grade Software: What Most Nepal Dev Shops Get Wrong</h3>
+                    <p>Many projects fail not at the prototype stage but in production. We share the engineering practices we use to prevent that.</p>
+                </div>
+                <div class="blog-card-footer">
+                    <span>Gobinda Bista</span>
+                    <span>Sep 2026</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
 
 
-    <!-- ═══════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════
      CTA
 ════════════════════════════════════════════════ -->
-    <section class="cta-section">
-        <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
-            <span
-                style="display:inline-block;font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;">Ready
-                to Build?</span>
-            <h2>Let's Turn Your Idea Into a Product</h2>
-            <p>Tell us what you need. We'll respond within 24 hours with a clear plan.</p>
-            <div class="cta-actions">
-                <a href="contact.html" class="btn-cta-white">Start a Conversation</a>
-                <a href="services.html" class="btn-cta-ghost">View Services</a>
-            </div>
+<section class="cta-section">
+    <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
+        <span style="display:inline-block;font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;">Ready to Build?</span>
+        <h2>Let's Turn Your Idea Into a Product</h2>
+        <p>Tell us what you need. We'll respond within 24 hours with a clear plan.</p>
+        <div class="cta-actions">
+            <a href="contact.html" class="btn-cta-white">Start a Conversation</a>
+            <a href="services.html" class="btn-cta-ghost">View Services</a>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <!-- ═══════════════════════════════════════════════
+<!-- ═══════════════════════════════════════════════
      FOOTER
 ════════════════════════════════════════════════ -->
-    <footer class="site-footer">
-        <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
-            <div class="footer-grid">
-                <!-- Brand -->
-                <div>
-                    <a href="index.html" class="footer-brand-logo">
-                        <img src="image.png" alt="CodeGhar Nepal">
-                        <span>CodeGhar Nepal</span>
-                    </a>
-                    <p class="footer-about-text">Enterprise software development and AI solutions from Bhaktapur, Nepal.
-                        We build systems that work — in production, at scale.</p>
-                    <div class="footer-socials">
-                        <a href="https://www.facebook.com/codegharnepal" target="_blank" rel="noopener"
-                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.linkedin.com/company/codegharnepal" target="_blank" rel="noopener"
-                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://twitter.com/codegharnepal" target="_blank" rel="noopener"
-                            aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://github.com/GOBINDABISTA" target="_blank" rel="noopener" aria-label="GitHub"><i
-                                class="fab fa-github"></i></a>
-                    </div>
-                </div>
-
-                <!-- Services -->
-                <div>
-                    <p class="footer-col-title">Services</p>
-                    <ul class="footer-col-links">
-                        <li><a href="service-ai.html">AI Solutions</a></li>
-                        <li><a href="service-webapp.html">Web Applications</a></li>
-                        <li><a href="service-mobile.html">Mobile Apps</a></li>
-                        <li><a href="service-web.html">Website Development</a></li>
-                        <li><a href="service-marketing.html">Digital Marketing</a></li>
-                        <li><a href="service-education.html">Education Tech</a></li>
-                    </ul>
-                </div>
-
-                <!-- Company -->
-                <div>
-                    <p class="footer-col-title">Company</p>
-                    <ul class="footer-col-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="founders.html">Leadership</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="case-studies.html">Case Studies</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact -->
-                <div>
-                    <p class="footer-col-title">Contact</p>
-                    <ul class="footer-col-links">
-                        <li><a href="mailto:nepalcodeghar@gmail.com">nepalcodeghar@gmail.com</a></li>
-                        <li><a href="tel:+9779842378928">+977 984 237 8928</a></li>
-                        <li><a href="https://maps.google.com/?q=Bhaktapur,Nepal" target="_blank"
-                                rel="noopener">Bhaktapur, Bagmati<br>Province, Nepal</a></li>
-                        <li style="margin-top:16px;"><a href="contact.html"
-                                style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:#0059C7;color:#fff;border-radius:7px;font-weight:700;font-size:0.85rem;text-decoration:none;">Get
-                                a Quote →</a></li>
-                    </ul>
+<footer class="site-footer">
+    <div class="container" style="max-width:1240px;margin:0 auto;padding:0 28px;">
+        <div class="footer-grid">
+            <!-- Brand -->
+            <div>
+                <a href="index.html" class="footer-brand-logo">
+                    <img src="image.png" alt="CodeGhar Nepal">
+                    <span>CodeGhar Nepal</span>
+                </a>
+                <p class="footer-about-text">Enterprise software development and AI solutions from Bhaktapur, Nepal. We build systems that work — in production, at scale.</p>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/codegharnepal" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/codegharnepal" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com/codegharnepal" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/GOBINDABISTA" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <span class="footer-bottom-copy">© 2026 CodeGhar Nepal Pvt. Ltd. · Bhaktapur, Nepal. All rights
-                    reserved.</span>
-                <div class="footer-bottom-links">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="security.html">Security</a>
-                    <a href="status.html">Status</a>
-                </div>
+            <!-- Services -->
+            <div>
+                <p class="footer-col-title">Services</p>
+                <ul class="footer-col-links">
+                    <li><a href="service-ai.html">AI Solutions</a></li>
+                    <li><a href="service-webapp.html">Web Applications</a></li>
+                    <li><a href="service-mobile.html">Mobile Apps</a></li>
+                    <li><a href="service-web.html">Website Development</a></li>
+                    <li><a href="service-marketing.html">Digital Marketing</a></li>
+                    <li><a href="service-education.html">Education Tech</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <p class="footer-col-title">Company</p>
+                <ul class="footer-col-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="founders.html">Leadership</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <p class="footer-col-title">Contact</p>
+                <ul class="footer-col-links">
+                    <li><a href="mailto:nepalcodeghar@gmail.com">nepalcodeghar@gmail.com</a></li>
+                    <li><a href="tel:+9779842378928">+977 984 237 8928</a></li>
+                    <li><a href="https://maps.google.com/?q=Bhaktapur,Nepal" target="_blank" rel="noopener">Bhaktapur, Bagmati<br>Province, Nepal</a></li>
+                    <li style="margin-top:16px;"><a href="contact.html" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:#0059C7;color:#fff;border-radius:7px;font-weight:700;font-size:0.85rem;text-decoration:none;">Get a Quote →</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+
+        <div class="footer-bottom">
+            <span class="footer-bottom-copy">© 2026 CodeGhar Nepal Pvt. Ltd. · Bhaktapur, Nepal. All rights reserved.</span>
+            <div class="footer-bottom-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="security.html">Security</a>
+                <a href="status.html">Status</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
-    <script>
-        // Nepal background slideshow
-        (function () {
-            const slides = document.querySelectorAll('.hero-bg-slide');
-            if (!slides.length) return;
-            let cur = 0;
-            setInterval(() => {
-                slides[cur].classList.remove('active');
-                cur = (cur + 1) % slides.length;
-                slides[cur].classList.add('active');
-            }, 5000);
-        })();
+<script>
+    // Nepal background slideshow
+    (function() {
+        const slides = document.querySelectorAll('.hero-bg-slide');
+        if (!slides.length) return;
+        let cur = 0;
+        setInterval(() => {
+            slides[cur].classList.remove('active');
+            cur = (cur + 1) % slides.length;
+            slides[cur].classList.add('active');
+        }, 5000);
+    })();
 
-        // Nav scroll effect
-        const header = document.getElementById('mainHeader');
-        if (header) {
-            window.addEventListener('scroll', () => {
-                header.classList.toggle('scrolled', window.scrollY > 10);
-            });
-        }
-
-        // Mobile nav
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navMenu = document.getElementById('navMenu');
-        const navBackdrop = document.getElementById('navBackdrop');
-        const drawerClose = document.getElementById('drawerClose');
-
-        function openNav() {
-            navMenu && navMenu.classList.add('open');
-            navBackdrop && navBackdrop.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeNav() {
-            navMenu && navMenu.classList.remove('open');
-            navBackdrop && navBackdrop.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        mobileToggle && mobileToggle.addEventListener('click', openNav);
-        drawerClose && drawerClose.addEventListener('click', closeNav);
-        navBackdrop && navBackdrop.addEventListener('click', closeNav);
-
-        // Dropdown toggles on mobile
-        document.querySelectorAll('.cgdrop-trigger').forEach(btn => {
-            btn.addEventListener('click', function (e) {
-                if (window.innerWidth <= 900) {
-                    e.stopPropagation();
-                    const drop = this.closest('.cgdrop');
-                    drop.classList.toggle('open');
-                }
-            });
+    // Nav scroll effect
+    const header = document.getElementById('mainHeader');
+    if(header) {
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 10);
         });
+    }
 
-        // Reveal on scroll
-        const reveals = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12 });
-        reveals.forEach(el => observer.observe(el));
-    </script>
+    // Mobile nav
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navBackdrop = document.getElementById('navBackdrop');
+    const drawerClose = document.getElementById('drawerClose');
+
+    function openNav() {
+        navMenu && navMenu.classList.add('open');
+        navBackdrop && navBackdrop.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeNav() {
+        navMenu && navMenu.classList.remove('open');
+        navBackdrop && navBackdrop.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    mobileToggle && mobileToggle.addEventListener('click', openNav);
+    drawerClose && drawerClose.addEventListener('click', closeNav);
+    navBackdrop && navBackdrop.addEventListener('click', closeNav);
+
+    // Dropdown toggles on mobile
+    document.querySelectorAll('.cgdrop-trigger').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            if(window.innerWidth <= 900) {
+                e.stopPropagation();
+                const drop = this.closest('.cgdrop');
+                drop.classList.toggle('open');
+            }
+        });
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+</script>
 
 </body>
-
 </html>
