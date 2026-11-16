@@ -994,8 +994,10 @@
         }
 
         .team-card-photo {
-            height: 260px;
+            position: relative;
+            height: 280px;
             overflow: hidden;
+            cursor: pointer;
         }
 
         .team-card-photo img {
@@ -1008,6 +1010,88 @@
 
         .team-card:hover .team-card-photo img {
             transform: scale(1.04);
+        }
+
+        .team-card-photo .photo-click-hint {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 40%, rgba(4, 17, 31, 0.85) 100%);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 14px;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+
+        .team-card-photo:hover .photo-click-hint {
+            opacity: 1;
+        }
+
+        .team-hint-badge {
+            background: rgba(0, 89, 199, 0.9);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 100px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .team-toggle-btn {
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            color: #E2E8F0;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            padding: 9px 14px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            margin-top: 6px;
+        }
+
+        .team-toggle-btn:hover {
+            background: #0059C7;
+            color: #FFFFFF;
+            border-color: #0059C7;
+        }
+
+        .team-card.is-open .team-toggle-btn {
+            background: rgba(255, 255, 255, 0.14);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .team-toggle-icon {
+            transition: transform 0.3s ease;
+            font-size: 0.75rem;
+        }
+
+        .team-card.is-open .team-toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .team-card-details {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease, margin-top 0.3s ease;
+            margin-top: 0;
+        }
+
+        .team-card.is-open .team-card-details {
+            max-height: 400px;
+            opacity: 1;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .team-card-body {
@@ -1033,9 +1117,9 @@
 
         .team-card-bio {
             font-size: 0.87rem;
-            color: rgba(255, 255, 255, 0.55);
+            color: rgba(255, 255, 255, 0.65);
             line-height: 1.65;
-            margin-bottom: 18px;
+            margin-bottom: 14px;
         }
 
         .team-card-socials {
@@ -2177,42 +2261,74 @@
                     building technology that matters.</p>
             </div>
             <div class="team-grid">
-                <div class="team-card reveal">
-                    <div class="team-card-photo">
+                <!-- 1. Gobinda Bista -->
+                <div class="team-card reveal" data-member="gobinda">
+                    <div class="team-card-photo" title="Click to view details">
                         <img src="Gobinda.jpg" alt="Gobinda Bista — Founder &amp; Lead AI Engineer" style="object-position:center 20%;">
+                        <div class="photo-click-hint">
+                            <span class="team-hint-badge"><i class="fas fa-hand-pointer"></i> Click for Details</span>
+                        </div>
                     </div>
                     <div class="team-card-body">
                         <div class="team-card-role">Founder &amp; Lead AI Engineer</div>
                         <div class="team-card-name">Gobinda Bista</div>
-                        <p class="team-card-bio">Lead AI Engineer and Systems Architect. Specializes in production LLM pipelines, multimodal document intelligence, and enterprise-grade software systems.</p>
-                        <div class="team-card-socials">
-                            <a href="https://www.linkedin.com/in/gobinda-bista-8ba3b4267/" target="_blank"
-                                rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com/GOBINDABISTA" target="_blank" rel="noopener"
-                                aria-label="GitHub"><i class="fab fa-github"></i></a>
-                            <a href="https://gobindabista.com.np/" target="_blank" rel="noopener"
-                                aria-label="Website"><i class="fas fa-globe"></i></a>
+                        <button class="team-toggle-btn" type="button" aria-expanded="false">
+                            <span class="team-toggle-text">View Details &amp; Bio</span>
+                            <i class="fas fa-chevron-down team-toggle-icon"></i>
+                        </button>
+                        <div class="team-card-details">
+                            <p class="team-card-bio">Lead AI Engineer and Systems Architect. Specializes in production LLM pipelines, multimodal document intelligence, and enterprise-grade software systems.</p>
+                            <div class="team-card-socials">
+                                <a href="https://www.linkedin.com/in/gobinda-bista-8ba3b4267/" target="_blank"
+                                    rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/GOBINDABISTA" target="_blank" rel="noopener"
+                                    aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://gobindabista.com.np/" target="_blank" rel="noopener"
+                                    aria-label="Website"><i class="fas fa-globe"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="team-card reveal delay-2">
-                    <div class="team-card-photo">
+
+                <!-- 2. Subash Bhandari -->
+                <div class="team-card reveal delay-2" data-member="subash">
+                    <div class="team-card-photo" title="Click to view details">
                         <img src="Subash.jpeg" alt="Subash Bhandari — Co-Founder" style="object-position:center 25%;">
+                        <div class="photo-click-hint">
+                            <span class="team-hint-badge"><i class="fas fa-hand-pointer"></i> Click for Details</span>
+                        </div>
                     </div>
                     <div class="team-card-body">
                         <div class="team-card-role">Co-Founder</div>
                         <div class="team-card-name">Subash Bhandari</div>
-                        <p class="team-card-bio">Supports the daily operations and workflows of the company.</p>
+                        <button class="team-toggle-btn" type="button" aria-expanded="false">
+                            <span class="team-toggle-text">View Details &amp; Bio</span>
+                            <i class="fas fa-chevron-down team-toggle-icon"></i>
+                        </button>
+                        <div class="team-card-details">
+                            <p class="team-card-bio">Supports the daily operations and workflows of the company.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="team-card reveal delay-4">
-                    <div class="team-card-photo">
+
+                <!-- 3. Suresh Shrestha -->
+                <div class="team-card reveal delay-4" data-member="suresh">
+                    <div class="team-card-photo" title="Click to view details">
                         <img src="Suresh.jpeg" alt="Suresh Shrestha — Co-Founder" style="object-position:center 50% !important;">
+                        <div class="photo-click-hint">
+                            <span class="team-hint-badge"><i class="fas fa-hand-pointer"></i> Click for Details</span>
+                        </div>
                     </div>
                     <div class="team-card-body">
                         <div class="team-card-role">Co-Founder</div>
                         <div class="team-card-name">Suresh Shrestha</div>
-                        <p class="team-card-bio">Supports the daily operations and workflows of the company.</p>
+                        <button class="team-toggle-btn" type="button" aria-expanded="false">
+                            <span class="team-toggle-text">View Details &amp; Bio</span>
+                            <i class="fas fa-chevron-down team-toggle-icon"></i>
+                        </button>
+                        <div class="team-card-details">
+                            <p class="team-card-bio">Supports the daily operations and workflows of the company.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2454,6 +2570,25 @@
             });
         }, { threshold: 0.12 });
         reveals.forEach(el => observer.observe(el));
+
+        // Interactive team cards (click photo or button to toggle details)
+        document.querySelectorAll('.team-card').forEach(card => {
+            const photoWrap = card.querySelector('.team-card-photo');
+            const toggleBtn = card.querySelector('.team-toggle-btn');
+            const toggleText = card.querySelector('.team-toggle-text');
+
+            function toggleTeamCard(e) {
+                e.stopPropagation();
+                const isOpen = card.classList.toggle('is-open');
+                if (toggleBtn) toggleBtn.setAttribute('aria-expanded', isOpen);
+                if (toggleText) {
+                    toggleText.textContent = isOpen ? 'Hide Details' : 'View Details & Bio';
+                }
+            }
+
+            if (photoWrap) photoWrap.addEventListener('click', toggleTeamCard);
+            if (toggleBtn) toggleBtn.addEventListener('click', toggleTeamCard);
+        });
     </script>
 
 </body>
