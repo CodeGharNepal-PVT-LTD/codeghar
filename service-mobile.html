@@ -19,7 +19,7 @@
         .logo img{height:36px}
         .btn{background:var(--primary);color:var(--white);padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:600;transition:var(--transition)}
         .btn:hover{background:var(--accent);color:var(--primary)}
-        .hero{background:var(--primary);color:var(--white);padding:100px 0 80px;text-align:center}
+        .hero{background:var(--primary);color:var(--white);padding:100px 0 80px;text-align:centerposition:relative!important;overflow:hidden!important;}
         .hero-badge{display:inline-block;background:rgba(0,89,199,.12);color:var(--accent);padding:6px 18px;border-radius:30px;font-size:.85rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;border:1px solid rgba(0,89,199,.25)}
         .hero h1{font-family:'Poppins',sans-serif;font-size:3rem;margin-bottom:16px}
         .hero p{font-size:1.1rem;opacity:.75;max-width:600px;margin:0 auto}
@@ -49,7 +49,24 @@
     
         
 
-    </style>
+    
+        /* Nepal background slideshow */
+        .cg-bg-slide {
+            position:absolute !important; inset:0 !important;
+            background-size:cover !important;
+            background-position:center !important;
+            background-repeat:no-repeat !important;
+            opacity:0 !important;
+            transition:opacity 1.6s ease-in-out !important;
+            z-index:0 !important;
+        }
+        .cg-bg-slide.cg-active { opacity:0.1 !important; }
+        .cg-overlay {
+            position:absolute !important; inset:0 !important;
+            background:#04111F !important; opacity:0.72 !important; z-index:1 !important;
+        }
+
+        </style>
     <!-- Brand Design System -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -124,6 +141,13 @@
     </header>
 
 <section class="hero">
+    <div class="cg-bg-slide cg-active" style="background-image:url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="cg-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1582650625119-3a31f8418365?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="cg-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1562887009-4c0e1be9eeef?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="cg-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1565073624497-7e91b5cc3843?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="cg-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="cg-overlay"></div>
+
     <div class="container">
         <div class="hero-badge"><i class="fas fa-mobile-alt"></i> Service</div>
         <h1>Mobile App Development</h1>
@@ -229,5 +253,19 @@
 
     <!-- Scripts -->
     <script src="script.js"></script>
+
+<script>
+(function(){
+    var slides=document.querySelectorAll('.cg-bg-slide');
+    if(!slides.length)return;
+    var cur=0;
+    setInterval(function(){
+        slides[cur].classList.remove('cg-active');
+        cur=(cur+1)%slides.length;
+        slides[cur].classList.add('cg-active');
+    },5000);
+})();
+</script>
+
 </body>
 </html>

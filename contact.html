@@ -117,6 +117,13 @@
     <main>
         <!-- Hero Banner -->
         <section class="hero gradient-bg" style="min-height:50vh; text-align:center; background:linear-gradient(135deg,rgba(10,30,60,0.90) 0%,rgba(0,40,104,0.85) 100%),url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat; display:flex; align-items:center; margin-bottom:0;">
+    <div class="cg-bg-slide cg-active" style="background-image:url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="cg-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1582650625119-3a31f8418365?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="cg-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1562887009-4c0e1be9eeef?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="cg-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1565073624497-7e91b5cc3843?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="cg-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="cg-overlay"></div>
+
             <div class="container">
                 <div class="hero-content" style="margin:0 auto;">
                     <div class="reveal">
@@ -304,6 +311,20 @@
     <script src="script.js"></script>
 
     
+
+
+<script>
+(function(){
+    var slides=document.querySelectorAll('.cg-bg-slide');
+    if(!slides.length)return;
+    var cur=0;
+    setInterval(function(){
+        slides[cur].classList.remove('cg-active');
+        cur=(cur+1)%slides.length;
+        slides[cur].classList.add('cg-active');
+    },5000);
+})();
+</script>
 
 </body>
 </html>

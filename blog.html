@@ -117,7 +117,7 @@
         }
 
         /* Hero */
-        .blog-hero {
+        .blog-hero { position:relative!important; overflow:hidden!important;
             background: var(--primary);
             color: var(--white);
             padding: 100px 0 80px;
@@ -133,7 +133,7 @@
             right: -100px;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(0, 89, 199, .1), transparent 70%);
+            background:transparent;
             border-radius:0
         }
 
@@ -451,7 +451,24 @@
     
         
 
-    </style>
+    
+        /* Nepal background slideshow */
+        .cg-bg-slide {
+            position:absolute !important; inset:0 !important;
+            background-size:cover !important;
+            background-position:center !important;
+            background-repeat:no-repeat !important;
+            opacity:0 !important;
+            transition:opacity 1.6s ease-in-out !important;
+            z-index:0 !important;
+        }
+        .cg-bg-slide.cg-active { opacity:0.1 !important; }
+        .cg-overlay {
+            position:absolute !important; inset:0 !important;
+            background:#04111F !important; opacity:0.72 !important; z-index:1 !important;
+        }
+
+        </style>
     <!-- Brand Design System -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -527,6 +544,13 @@
     </header>
 
     <section class="blog-hero">
+    <div class="cg-bg-slide cg-active" style="background-image:url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="cg-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1582650625119-3a31f8418365?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="cg-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1562887009-4c0e1be9eeef?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="cg-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1565073624497-7e91b5cc3843?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="cg-bg-slide" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=60&w=1800');"></div>
+    <div class="cg-overlay"></div>
+
         <div class="container">
             <div class="blog-hero-tag"><i class="fas fa-pen-nib"></i> Insights / विचारहरू</div>
             <h1>Our Blog / हाम्रो ब्लग</h1>
@@ -674,6 +698,20 @@
 
     <!-- Scripts -->
     <script src="script.js"></script>
+
+<script>
+(function(){
+    var slides=document.querySelectorAll('.cg-bg-slide');
+    if(!slides.length)return;
+    var cur=0;
+    setInterval(function(){
+        slides[cur].classList.remove('cg-active');
+        cur=(cur+1)%slides.length;
+        slides[cur].classList.add('cg-active');
+    },5000);
+})();
+</script>
+
 </body>
 
 </html>
