@@ -3,296 +3,434 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO & Social Meta Tags -->
-    <meta name="description" content="Meet the leadership of CodeGhar Nepal — Led by Founder & CEO Gobinda Bista (GB / Govinda Bista) and Co-Founders. A dedicated software engineering team based in Bhaktapur, Nepal.">
-    <meta name="keywords" content="Gobinda Bista, Govinda Bista, GB, GB Sir, Bista GB, CodeGhar, CodeGhar Nepal, Code Ghar, Code Ghar Nepal, Founder CEO CodeGhar, Leadership CodeGhar">
-    <meta name="author" content="Gobinda Bista (GB)">
+    <title>Leadership | CodeGhar Nepal</title>
+    <meta name="description" content="Meet the founders of CodeGhar Nepal — Gobinda Bista (CEO), Subash Bhandari (Technical Operations), and Suresh Shrestha (Strategic Partnerships). Building enterprise software from Bhaktapur, Nepal.">
+    <meta name="keywords" content="Gobinda Bista, CodeGhar Nepal Founders, CodeGhar Leadership, Nepal Software Company">
     <link rel="canonical" href="https://codegharnepal.com.np/founders.html">
-    
-    <!-- OpenGraph (Facebook/LinkedIn) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Our Leadership | CodeGhar Nepal — Gobinda Bista (GB)">
-    <meta property="og:description" content="Led by Founder & CEO Gobinda Bista (GB / Govinda Bista) alongside passionate co-founders in Bhaktapur building software together.">
+    <meta property="og:title" content="Leadership | CodeGhar Nepal">
+    <meta property="og:description" content="The founders of CodeGhar Nepal — building enterprise software and AI solutions from Bhaktapur.">
     <meta property="og:image" content="https://codegharnepal.com.np/Gobinda.jpg">
-
-    <!-- Schema.org Markup (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AboutPage",
-      "name": "CodeGhar Leadership & Founders",
-      "mainEntity": {
-        "@type": "Person",
-        "name": "Gobinda Bista",
-        "alternateName": ["GB", "Govinda Bista", "Bista GB", "GB Sir", "Gobinda Bista GB"],
-        "jobTitle": "Founder & CEO",
-        "url": "https://codegharnepal.com.np/founder-gobinda.html",
-        "sameAs": [
-          "https://gobindabista.com.np/",
-          "https://www.linkedin.com/in/gobinda-bista-8ba3b4267/",
-          "https://github.com/GOBINDABISTA",
-          "https://www.facebook.com/ElonGobinda.Bista.526Gb.GB"
-        ],
-        "worksFor": {
-          "@type": "Organization",
-          "name": "CodeGhar Nepal",
-          "url": "https://codegharnepal.com.np/"
-        }
-      }
-    }
-    </script>
-    
-    <!-- Mobile & Theme -->
-    <meta name="theme-color" content="#0A1E3C">
-
-    <title>Our Leadership | CodeGhar Nepal</title>
-
-    <!-- Fonts -->
+    <meta name="theme-color" content="#012962">
+    <link rel="icon" type="image/png" href="image.png">
+    <link rel="apple-touch-icon" href="image.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome 6 -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root { --nav-h: 68px; }
+
+        /* NAV (same as index) */
+        .main-header {
+            position: fixed; top:0; left:0; right:0; z-index:1000;
+            background:rgba(255,255,255,0.97); backdrop-filter:blur(12px);
+            border-bottom:1px solid #E8EDF4; transition:box-shadow 0.25s;
+        }
+        .main-header.scrolled { box-shadow:0 2px 20px rgba(1,41,98,0.08); }
+        .nav-container {
+            max-width:1240px; margin:0 auto; padding:0 28px;
+            height:var(--nav-h); display:flex; align-items:center;
+            justify-content:space-between; gap:24px;
+        }
+        .logo-link { display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0; }
+        .brand-logo { height:36px; width:36px; object-fit:contain; border-radius:0; display:block; }
+        .brand-title { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:1.08rem; color:#012962; }
+        .nav-menu { display:flex; align-items:center; gap:2px; }
+        .nav-item-link { padding:7px 13px; font-size:0.9rem; font-weight:600; color:#1E293B; border-radius:6px; text-decoration:none; transition:background 0.18s,color 0.18s; }
+        .nav-item-link:hover { background:#F0F4FF; color:#0059C7; }
+        .cgdrop { position:relative; }
+        .cgdrop-trigger { display:inline-flex; align-items:center; gap:5px; padding:7px 13px; font-size:0.9rem; font-weight:600; color:#1E293B; background:none; border:none; border-radius:6px; cursor:pointer; font-family:inherit; transition:background 0.18s,color 0.18s; }
+        .cgdrop-trigger i { font-size:0.68rem; transition:transform 0.2s; }
+        .cgdrop:hover .cgdrop-trigger, .cgdrop.open .cgdrop-trigger { background:#F0F4FF; color:#0059C7; }
+        .cgdrop.open .cgdrop-trigger i { transform:rotate(180deg); }
+        .cgdrop-menu { display:none; position:absolute; top:calc(100% + 6px); left:0; min-width:200px; background:#fff; border:1px solid #E2E8F0; border-radius:12px; box-shadow:0 16px 40px rgba(1,41,98,0.12); padding:6px 0; z-index:999; }
+        .cgdrop:hover .cgdrop-menu, .cgdrop.open .cgdrop-menu { display:block; }
+        .cgdrop-menu a { display:block; padding:9px 18px; font-size:0.88rem; font-weight:500; color:#334155; text-decoration:none; transition:background 0.15s,color 0.15s; }
+        .cgdrop-menu a:hover { background:#F0F4FF; color:#0059C7; }
+        .nav-cta { padding:9px 20px; background:#012962; color:#fff; border-radius:8px; font-weight:700; font-size:0.88rem; text-decoration:none; margin-left:8px; transition:background 0.2s; }
+        .nav-cta:hover { background:#0059C7; color:#fff; }
+        .mobile-toggle { display:none; align-items:center; justify-content:center; width:40px; height:40px; border:1px solid #E2E8F0; border-radius:8px; background:#F8FAFC; color:#012962; cursor:pointer; font-size:1.1rem; margin-left:auto; }
+        .nav-backdrop { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.45); z-index:998; }
+        .nav-backdrop.active { display:block; }
+        .nav-drawer-header { display:none; }
+        @media(max-width:900px){
+            .mobile-toggle { display:flex; }
+            .nav-menu { position:fixed; top:0; right:-320px; width:300px; height:100vh; background:#fff; flex-direction:column; align-items:stretch; padding:0 0 32px; gap:0; overflow-y:auto; box-shadow:-4px 0 32px rgba(1,41,98,0.12); transition:right 0.3s ease; z-index:999; }
+            .nav-menu.open { right:0; }
+            .nav-drawer-header { display:flex; align-items:center; justify-content:space-between; padding:16px 20px; border-bottom:1px solid #F0F4F8; margin-bottom:8px; }
+            .drawer-close { background:none; border:none; font-size:1.3rem; color:#012962; cursor:pointer; }
+            .nav-item-link, .cgdrop-trigger { display:block; padding:12px 20px; font-size:1rem; border-radius:0; width:100%; text-align:left; }
+            .cgdrop-menu { position:static; box-shadow:none; border:none; border-radius:0; padding:0; background:#F8FAFC; }
+            .cgdrop-menu a { padding:10px 36px; }
+            .nav-cta { margin:16px 20px 0; display:block; text-align:center; padding:13px; }
+        }
+
+        /* PAGE */
+        body { padding-top: var(--nav-h); font-family:'Inter',sans-serif; color:#1E293B; background:#fff; }
+
+        /* HERO */
+        .page-hero {
+            background:#04111F;
+            padding:80px 0 72px;
+            text-align:center;
+            position:relative;
+            overflow:hidden;
+        }
+        .page-hero::before {
+            content:'';
+            position:absolute; inset:0;
+            background:url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=60&w=1800') center/cover no-repeat;
+            opacity:0.06;
+        }
+        .page-hero-inner { position:relative; z-index:1; max-width:720px; margin:0 auto; padding:0 28px; }
+        .page-hero-eyebrow { display:inline-flex; align-items:center; gap:8px; background:rgba(0,89,199,0.15); border:1px solid rgba(0,89,199,0.3); color:#60A5FA; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; padding:6px 14px; border-radius:100px; margin-bottom:24px; }
+        .page-hero-eyebrow span { width:6px; height:6px; background:#0059C7; border-radius:50%; display:inline-block; }
+        .page-hero h1 { font-family:'Plus Jakarta Sans',sans-serif; font-size:clamp(2rem,4vw,3rem); font-weight:800; color:#fff; line-height:1.15; margin-bottom:16px; }
+        .page-hero p { font-size:1.05rem; color:rgba(255,255,255,0.6); line-height:1.75; }
+
+        /* TEAM SECTION */
+        .team-section { padding:96px 0; background:#fff; }
+        .team-wrap { max-width:1100px; margin:0 auto; padding:0 28px; }
+
+        /* CEO card — horizontal full-width */
+        .ceo-card {
+            display:grid;
+            grid-template-columns:320px 1fr;
+            border:1px solid #E2E8F0;
+            border-radius:20px;
+            overflow:hidden;
+            margin-bottom:32px;
+            transition:border-color 0.25s, box-shadow 0.25s;
+        }
+        .ceo-card:hover { border-color:#0059C7; box-shadow:0 24px 56px rgba(1,41,98,0.08); }
+        .ceo-photo { overflow:hidden; }
+        .ceo-photo img { width:100%; height:100%; object-fit:cover; object-position:top center; display:block; transition:transform 0.4s; }
+        .ceo-card:hover .ceo-photo img { transform:scale(1.03); }
+        .ceo-body { padding:48px; display:flex; flex-direction:column; justify-content:center; }
+        .ceo-role { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:#0059C7; margin-bottom:12px; }
+        .ceo-name { font-family:'Plus Jakarta Sans',sans-serif; font-size:2rem; font-weight:800; color:#0A1628; margin-bottom:14px; line-height:1.1; }
+        .ceo-bio { font-size:0.97rem; color:#64748B; line-height:1.75; margin-bottom:28px; max-width:520px; }
+        .ceo-tags { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px; }
+        .ceo-tag { background:#EEF4FF; color:#0059C7; font-size:0.75rem; font-weight:600; padding:5px 12px; border-radius:100px; }
+        .ceo-socials { display:flex; gap:10px; }
+        .ceo-socials a { width:38px; height:38px; border:1px solid #E2E8F0; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#64748B; font-size:0.9rem; text-decoration:none; transition:border-color 0.2s,color 0.2s,background 0.2s; }
+        .ceo-socials a:hover { border-color:#0059C7; color:#fff; background:#0059C7; }
+
+        /* Co-founders 2-col grid */
+        .cofounders-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+        .cofounder-card {
+            border:1px solid #E2E8F0; border-radius:16px; overflow:hidden;
+            transition:border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+        }
+        .cofounder-card:hover { border-color:#0059C7; box-shadow:0 20px 48px rgba(1,41,98,0.08); transform:translateY(-4px); }
+        .cofounder-photo { height:260px; overflow:hidden; }
+        .cofounder-photo img { width:100%; height:100%; object-fit:cover; object-position:top; transition:transform 0.4s; }
+        .cofounder-card:hover .cofounder-photo img { transform:scale(1.04); }
+        .cofounder-body { padding:28px; }
+        .cofounder-role { font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:#0059C7; margin-bottom:8px; }
+        .cofounder-name { font-family:'Plus Jakarta Sans',sans-serif; font-size:1.3rem; font-weight:800; color:#0A1628; margin-bottom:10px; }
+        .cofounder-bio { font-size:0.88rem; color:#64748B; line-height:1.7; }
+
+        /* VALUES STRIP */
+        .values-strip { padding:80px 0; background:#F8FAFC; border-top:1px solid #E8EDF4; }
+        .values-strip-inner { max-width:1100px; margin:0 auto; padding:0 28px; }
+        .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:48px; }
+        .value-card { padding:32px; border:1px solid #E2E8F0; border-radius:14px; background:#fff; transition:border-color 0.2s, box-shadow 0.2s; }
+        .value-card:hover { border-color:#0059C7; box-shadow:0 12px 32px rgba(1,41,98,0.07); }
+        .value-icon { width:48px; height:48px; background:#EEF4FF; border-radius:12px; display:flex; align-items:center; justify-content:center; color:#0059C7; font-size:1.2rem; margin-bottom:18px; }
+        .value-card h4 { font-family:'Plus Jakarta Sans',sans-serif; font-size:1rem; font-weight:700; color:#0A1628; margin-bottom:8px; }
+        .value-card p { font-size:0.87rem; color:#64748B; line-height:1.7; margin:0; }
+
+        /* CTA */
+        .founders-cta { padding:88px 0; background:linear-gradient(135deg,#012962 0%,#0059C7 100%); text-align:center; }
+        .founders-cta h2 { font-family:'Plus Jakarta Sans',sans-serif; font-size:2rem; font-weight:800; color:#fff; margin-bottom:14px; }
+        .founders-cta p { color:rgba(255,255,255,0.7); font-size:1rem; margin-bottom:36px; max-width:480px; margin-left:auto; margin-right:auto; line-height:1.7; }
+        .btn-cta-white { display:inline-flex; align-items:center; gap:8px; padding:14px 28px; background:#fff; color:#012962; font-weight:700; border-radius:8px; text-decoration:none; font-size:0.9rem; transition:box-shadow 0.2s; }
+        .btn-cta-white:hover { box-shadow:0 8px 24px rgba(0,0,0,0.2); }
+
+        /* FOOTER */
+        .site-footer { background:#04111F; padding:80px 0 0; }
+        .footer-grid { display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:60px; padding-bottom:60px; border-bottom:1px solid rgba(255,255,255,0.06); max-width:1240px; margin:0 auto; padding-left:28px; padding-right:28px; }
+        .footer-brand-logo { display:flex; align-items:center; gap:10px; margin-bottom:20px; text-decoration:none; }
+        .footer-brand-logo img { height:34px; width:34px; object-fit:contain; border-radius:0; }
+        .footer-brand-logo span { font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:1.1rem; color:#fff; }
+        .footer-about-text { font-size:0.9rem; color:rgba(255,255,255,0.45); line-height:1.75; margin-bottom:28px; }
+        .footer-socials { display:flex; gap:10px; }
+        .footer-socials a { width:36px; height:36px; border:1px solid rgba(255,255,255,0.12); border-radius:8px; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.5); font-size:0.9rem; text-decoration:none; transition:background 0.2s,color 0.2s,border-color 0.2s; }
+        .footer-socials a:hover { background:#0059C7; color:#fff; border-color:#0059C7; }
+        .footer-col-title { font-family:'Plus Jakarta Sans',sans-serif; font-size:0.82rem; font-weight:700; color:#fff; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:20px; }
+        .footer-col-links { list-style:none; display:flex; flex-direction:column; gap:12px; }
+        .footer-col-links a { font-size:0.9rem; color:rgba(255,255,255,0.45); text-decoration:none; transition:color 0.2s; }
+        .footer-col-links a:hover { color:#fff; }
+        .footer-bottom { max-width:1240px; margin:0 auto; padding:24px 28px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+        .footer-bottom-copy { font-size:0.83rem; color:rgba(255,255,255,0.3); }
+        .footer-bottom-links { display:flex; gap:24px; }
+        .footer-bottom-links a { font-size:0.83rem; color:rgba(255,255,255,0.35); text-decoration:none; transition:color 0.2s; }
+        .footer-bottom-links a:hover { color:#fff; }
+
+        /* REVEAL */
+        .reveal { opacity:0; transform:translateY(24px); transition:opacity 0.6s ease,transform 0.6s ease; }
+        .reveal.visible { opacity:1; transform:translateY(0); }
+        .d1 { transition-delay:0.1s; } .d2 { transition-delay:0.2s; } .d3 { transition-delay:0.3s; }
+
+        /* RESPONSIVE */
+        @media(max-width:860px){
+            .ceo-card { grid-template-columns:1fr; }
+            .ceo-photo { height:300px; }
+            .ceo-body { padding:32px; }
+            .cofounders-grid { grid-template-columns:1fr; }
+            .values-grid { grid-template-columns:1fr; }
+            .footer-grid { grid-template-columns:1fr 1fr; gap:40px; }
+        }
+        @media(max-width:580px){
+            .footer-grid { grid-template-columns:1fr; gap:32px; }
+        }
+    </style>
 </head>
-<body class="page-header-offset">
+<body>
 
-    <!-- Header -->
-    <header id="header" class="main-header">
-        <div class="nav-container">
-            <a href="index.html" class="logo-link">
-                <img src="image.png" alt="CodeGhar Logo" class="brand-logo" width="38" height="38" style="width:38px;height:38px;max-width:38px;max-height:38px;object-fit:contain;border-radius:0;flex-shrink:0;display:block;">
-                <span class="brand-title">CODEGHAR NEPAL</span>
-            </a>
-
-            <!-- Mobile Hamburger Toggle -->
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" type="button" aria-expanded="false">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <!-- Navigation Menu -->
-            <nav class="nav-menu" id="navLinks">
-                <!-- Mobile Drawer Header -->
-                <div class="nav-drawer-header">
-                    <div class="nav-drawer-brand">
-                        <img src="image.png" alt="CodeGhar Logo" width="30" height="30">
-                        <span>CODEGHAR NEPAL</span>
-                    </div>
-                    <button class="nav-close-btn" id="navCloseBtn" aria-label="Close navigation menu" type="button">
-                        <i class="fas fa-times"></i>
-                    </button>
+<!-- NAV -->
+<header class="main-header" id="mainHeader">
+    <div class="nav-container">
+        <a href="index.html" class="logo-link">
+            <img src="image.png" alt="CodeGhar Nepal" class="brand-logo">
+            <span class="brand-title">CodeGhar Nepal</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+        <nav class="nav-menu" id="navMenu">
+            <div class="nav-drawer-header">
+                <a href="index.html" class="logo-link"><img src="image.png" alt="" class="brand-logo"><span class="brand-title">CodeGhar Nepal</span></a>
+                <button class="drawer-close" id="drawerClose"><i class="fas fa-times"></i></button>
+            </div>
+            <a href="index.html" class="nav-item-link">Home</a>
+            <div class="cgdrop">
+                <button class="cgdrop-trigger" type="button">Services <i class="fas fa-chevron-down"></i></button>
+                <div class="cgdrop-menu">
+                    <a href="service-ai.html">AI Solutions</a>
+                    <a href="service-web.html">Website Development</a>
+                    <a href="service-webapp.html">Web Applications</a>
+                    <a href="service-mobile.html">Mobile Apps</a>
+                    <a href="service-marketing.html">Digital Marketing</a>
+                    <a href="service-education.html">Education Tech</a>
+                    <a href="service-healthcare.html">Healthcare Tech</a>
                 </div>
-                <a href="index.html" class="nav-item-link">Home</a>
-                <div class="cgdrop">
-                    <button class="cgdrop-trigger" type="button" aria-expanded="false">
-                        <span>Services</span> <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="cgdrop-menu">
-                        <a href="service-ai.html">AI Solutions</a>
-                        <a href="service-web.html">Web Development</a>
-                        <a href="service-webapp.html">Web Applications</a>
-                        <a href="service-mobile.html">Mobile Apps</a>
-                        <a href="service-marketing.html">Digital Marketing</a>
-                        <a href="solutions.html">Digital Solutions</a>
-                    </div>
+            </div>
+            <div class="cgdrop">
+                <button class="cgdrop-trigger" type="button">Company <i class="fas fa-chevron-down"></i></button>
+                <div class="cgdrop-menu">
+                    <a href="about.html">About Us</a>
+                    <a href="founders.html">Leadership</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
                 </div>
-
-                <div class="cgdrop">
-                    <button class="cgdrop-trigger" type="button" aria-expanded="false">
-                        <span>Company</span> <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="cgdrop-menu">
-                        <a href="about.html">About Us</a>
-                        <a href="founders.html">Founders</a>
-                        <a href="careers.html">Careers</a>
-                        <a href="contact.html">Contact</a>
-                    </div>
+            </div>
+            <div class="cgdrop">
+                <button class="cgdrop-trigger" type="button">Resources <i class="fas fa-chevron-down"></i></button>
+                <div class="cgdrop-menu">
+                    <a href="blog.html">Blog</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="faq.html">FAQ</a>
                 </div>
-
-                <div class="cgdrop">
-                    <button class="cgdrop-trigger" type="button" aria-expanded="false">
-                        <span>Resources</span> <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="cgdrop-menu">
-                        <a href="blog.html">Blog</a>
-                        <a href="case-studies.html">Case Studies</a>
-                        <a href="faq.html">FAQ</a>
-                    </div>
-                </div>
-
-                <a href="contact.html" class="nav-cta-btn">Get Quote</a>
-            </nav>
-        </div>
+            </div>
+            <a href="pricing.html" class="nav-item-link">Pricing</a>
+            <a href="contact.html" class="nav-cta">Get a Quote</a>
+        </nav>
         <div class="nav-backdrop" id="navBackdrop"></div>
-    </header>
+    </div>
+</header>
 
-    <main>
-        <section class="founders-section" style="background:linear-gradient(135deg,rgba(10,30,60,0.95) 0%,rgba(0,40,104,0.90) 100%),url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat; padding:120px 0 90px; margin-bottom:0;">
-            <div class="container">
-                <div class="section-header reveal" style="color:white; margin-bottom: 48px;">
-                    <span style="display:inline-block; text-transform:uppercase; font-size:0.85rem; letter-spacing:2px; font-weight:700; color:#38BDF8; margin-bottom:12px;">Executive Leadership</span>
-                    <h2 style="color:white; font-size:3rem; margin-bottom:14px;">Leadership &amp; Vision</h2>
-                    <p style="color:rgba(255,255,255,0.85); max-width:720px; margin:0 auto; line-height:1.8; font-size:1.1rem;">Software engineers, system architects, and strategic operators building production-grade digital products and practical AI solutions from Bhaktapur, Nepal.</p>
-                </div>
 
-                <div class="founders-team-wrap">
-                    <!-- Gobinda Bista — Full-Width Featured Card -->
-                    <div class="founders-featured-card reveal">
-                        <div class="founders-featured-photo">
-                            <img src="Gobinda.jpg" alt="Gobinda Bista">
-                        </div>
-                        <div class="founders-featured-content">
-                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                                <span class="founders-cofounder-badge" style="letter-spacing: 1.2px;">Founder &amp; Chief Executive Officer · Lead Systems Architect</span>
-                            </div>
-                            <h3 style="font-size: 1.85rem; margin-bottom: 12px; color: #FFFFFF;">Gobinda Bista</h3>
-                            <p style="font-size: 1rem; line-height: 1.75; color: rgba(255, 255, 255, 0.82); margin-bottom: 20px;">Leading CodeGhar Nepal's overarching vision, enterprise architecture, and artificial intelligence initiatives. Dedicated to engineering robust software solutions, scalable cloud systems, and modern AI automation for businesses across Nepal and international markets.</p>
-                            <div class="founders-featured-social" style="flex-wrap: wrap; gap: 12px;">
-                                <a href="https://www.linkedin.com/in/gobinda-bista-8ba3b4267/" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://github.com/GOBINDABISTA" target="_blank" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                                <a href="https://gobindabista.com.np/" target="_blank" title="Personal Website" aria-label="Website"><i class="fas fa-globe"></i></a>
-                                <a href="mailto:nepalcodeghar@gmail.com" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                            </div>
-                        </div>
-                    </div>
+<!-- HERO -->
+<section class="page-hero">
+    <div class="page-hero-inner">
+        <div class="page-hero-eyebrow reveal"><span></span> Company · Leadership</div>
+        <h1 class="reveal d1">The People Behind CodeGhar</h1>
+        <p class="reveal d2">Three engineers from Nepal building production-grade software and AI solutions for businesses across every sector.</p>
+    </div>
+</section>
 
-                    <!-- Co-Founders — 2-Column Row -->
-                    <div class="founders-cofounders-grid">
-                        <!-- Co-Founder 1 -->
-                        <div class="founders-cofounder-card reveal" style="display: flex; gap: 20px; align-items: center; padding: 24px;">
-                            <div class="founders-cofounder-photo" style="width: 100px; height: 100px; flex-shrink: 0; border-radius: 50%; overflow: hidden; border: 2px solid rgba(56, 189, 248, 0.4);">
-                                <img src="Subash.jpeg" alt="Subash Bhandari" style="width: 100%; height: 100%; object-fit: cover;">
-                            </div>
-                            <div class="founders-cofounder-info" style="flex: 1;">
-                                <span class="founders-cofounder-badge">Co-Founder &amp; Technical Operations</span>
-                                <h4 style="font-size: 1.3rem; margin: 6px 0 8px; color: #FFFFFF;">Subash Bhandari</h4>
-                                <p style="font-size: 0.9rem; line-height: 1.6; color: rgba(255, 255, 255, 0.75); margin: 0;">Directing engineering operations, delivery workflows, and quality assurance to ensure reliable deployment and project success.</p>
-                            </div>
-                        </div>
-                        <!-- Co-Founder 2 -->
-                        <div class="founders-cofounder-card reveal" style="display: flex; gap: 20px; align-items: center; padding: 24px;">
-                            <div class="founders-cofounder-photo" style="width: 100px; height: 100px; flex-shrink: 0; border-radius: 50%; overflow: hidden; border: 2px solid rgba(56, 189, 248, 0.4);">
-                                <img src="Suresh.jpeg" alt="Suresh Shrestha" style="width: 100%; height: 100%; object-fit: cover;">
-                            </div>
-                            <div class="founders-cofounder-info" style="flex: 1;">
-                                <span class="founders-cofounder-badge">Co-Founder &amp; Strategic Partnerships</span>
-                                <h4 style="font-size: 1.3rem; margin: 6px 0 8px; color: #FFFFFF;">Suresh Shrestha</h4>
-                                <p style="font-size: 0.9rem; line-height: 1.6; color: rgba(255, 255, 255, 0.75); margin: 0;">Driving strategic client partnerships, business development, and market growth across regional technology initiatives.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+<!-- TEAM -->
+<section class="team-section">
+    <div class="team-wrap">
+
+        <!-- CEO — Full width horizontal card -->
+        <div class="ceo-card reveal">
+            <div class="ceo-photo">
+                <img src="Gobinda.jpg" alt="Gobinda Bista — Founder &amp; CEO, CodeGhar Nepal">
             </div>
-        </section>
-
-        <!-- Our Story -->
-        <section style="background:var(--bg-light);">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2>Our Story</h2>
+            <div class="ceo-body">
+                <div class="ceo-role">Founder &amp; Chief Executive Officer</div>
+                <div class="ceo-name">Gobinda Bista</div>
+                <p class="ceo-bio">Systems architect and company founder. Leads CodeGhar's technical direction, product strategy, and AI engineering initiatives. Focused on delivering software that solves real business problems — not just prototypes.</p>
+                <div class="ceo-tags">
+                    <span class="ceo-tag">AI &amp; Machine Learning</span>
+                    <span class="ceo-tag">Systems Architecture</span>
+                    <span class="ceo-tag">Full-Stack Engineering</span>
+                    <span class="ceo-tag">Bhaktapur, Nepal</span>
                 </div>
-                <div class="about-grid">
-                    <div class="about-text reveal">
-                        <p style="font-size:1.1rem; line-height:1.85; margin-bottom:0.5rem;">Under the vision and leadership of Founder &amp; CEO <strong>Gobinda Bista</strong>, CodeGhar started with a simple belief: Nepal has world-class engineering talent, and businesses deserve technology built with transparency, precision, and genuine dedication. We didn't launch with big corporate investor backing; we began with deep engineering expertise, shared goals, and a lot of chai in Bhaktapur.</p>
-                        <p style="font-size:1.1rem; line-height:1.85; margin-bottom:0.5rem;">As Founder &amp; CEO, Gobinda steers our overall technical architecture, company direction, and client partnerships, ensuring that every web application, mobile app, and AI system we deploy solves real business problems. We remain intentionally hands-on so that when you partner with CodeGhar, you work directly with passionate engineers who care deeply about your success.</p>
-                    </div>
-                    <div class="profile-sidebar reveal">
-                        <div class="sidebar-card" style="background:white;">
-                            <h4 style="color:var(--accent); margin-bottom:0.5rem;"><i class="fa-solid fa-location-dot"></i> Office</h4>
-                            <p>Bhaktapur Municipality-8, Libali<br>Bhaktapur, Nepal</p>
-                        </div>
-                        <div class="sidebar-card" style="background:white;">
-                            <h4 style="color:var(--accent); margin-bottom:0.5rem;"><i class="fa-solid fa-envelope"></i> Email</h4>
-                            <p>nepalcodeghar@gmail.com</p>
-                        </div>
-                        <div class="sidebar-card" style="background:white;">
-                            <h4 style="color:var(--accent); margin-bottom:0.5rem;"><i class="fa-solid fa-phone"></i> Phone</h4>
-                            <p>9842378928</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section style="background:var(--primary); text-align:center; padding:80px 0;">
-            <div class="container">
-                <div class="reveal">
-                    <h2 style="color:var(--white); margin-bottom:0.5rem;">Want to Work With Our Team?</h2>
-                    <p style="color:rgba(255,255,255,0.7); margin-bottom:2rem;">We take on new projects every month. Let us know what you need.</p>
-                    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <a href="index.html" class="footer-logo">
-                        <img src="image.png" alt="CodeGhar Logo" width="38" height="38" style="width:38px;height:38px;object-fit:contain;border-radius:0;flex-shrink:0;">
-                        <span>CODEGHAR NEPAL</span>
-                    </a>
-                    <p>A software company from Bhaktapur. We build things that work — and we actually care about the result.</p>
-                    <p style="font-size:0.85rem; color: rgba(255,255,255,0.65); margin-top: 6px;">भक्तपुरबाट, मनले बनाएको सफ्टवेयर।</p>
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/profile.php?id=61560791996452" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.linkedin.com/in/codeghar-undefined-b00023406/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/CodeGharNepal" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="founders.html">Our Founders</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="blog.html">Blog &amp; Insights</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services &amp; Solutions</h4>
-                    <ul>
-                        <li><a href="service-ai.html">AI Solutions</a></li>
-                        <li><a href="service-web.html">Web Development</a></li>
-                        <li><a href="service-webapp.html">Web Applications</a></li>
-                        <li><a href="service-mobile.html">Mobile Apps</a></li>
-                        <li><a href="service-marketing.html">Digital Marketing &amp; SEO</a></li>
-                        <li><a href="solutions.html">Digital Solutions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><a href="tel:+9779842378928"><i class="fas fa-phone mr-2" style="margin-right: 8px;"></i> +977-9842378928</a></li>
-                        <li><a href="mailto:nepalcodeghar@gmail.com"><i class="fas fa-envelope mr-2" style="margin-right: 8px;"></i> nepalcodeghar@gmail.com</a></li>
-                        <li><span style="color: var(--text-light); display: inline-flex; align-items: flex-start;"><i class="fas fa-map-marker-alt mr-2" style="margin-right: 8px; margin-top: 3px;"></i> Libali, Bhaktapur-8, Nepal</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="year">2026</span> CodeGhar Nepal Pvt. Ltd. All rights reserved. | Registered Office: Bhaktapur Municipality-8, Libali, Bhaktapur, Nepal</p>
-                <div class="footer-legal">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="security.html">Security</a>
+                <div class="ceo-socials">
+                    <a href="https://www.linkedin.com/in/gobinda-bista-8ba3b4267/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/GOBINDABISTA" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://gobindabista.com.np/" target="_blank" rel="noopener" aria-label="Website"><i class="fas fa-globe"></i></a>
+                    <a href="mailto:nepalcodeghar@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+        <!-- Co-Founders -->
+        <div class="cofounders-grid">
+            <div class="cofounder-card reveal d1">
+                <div class="cofounder-photo">
+                    <img src="Subash.jpeg" alt="Subash Bhandari — Co-Founder, Technical Operations">
+                </div>
+                <div class="cofounder-body">
+                    <div class="cofounder-role">Co-Founder · Technical Operations</div>
+                    <div class="cofounder-name">Subash Bhandari</div>
+                    <p class="cofounder-bio">Oversees infrastructure, deployment pipelines, and backend engineering quality across all client projects.</p>
+                </div>
+            </div>
+            <div class="cofounder-card reveal d2">
+                <div class="cofounder-photo">
+                    <img src="Suresh.jpeg" alt="Suresh Shrestha — Co-Founder, Strategic Partnerships">
+                </div>
+                <div class="cofounder-body">
+                    <div class="cofounder-role">Co-Founder · Strategic Partnerships</div>
+                    <div class="cofounder-name">Suresh Shrestha</div>
+                    <p class="cofounder-bio">Drives business development, client relationships, and market growth across Nepal and international markets.</p>
+                </div>
+            </div>
+        </div>
 
-    
+    </div>
+</section>
+
+
+<!-- VALUES -->
+<section class="values-strip">
+    <div class="values-strip-inner">
+        <div style="text-align:center;" class="reveal">
+            <span style="display:inline-block;font-size:0.75rem;font-weight:700;color:#0059C7;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">What Drives Us</span>
+            <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#0A1628;margin-bottom:0;">Our Core Principles</h2>
+        </div>
+        <div class="values-grid">
+            <div class="value-card reveal">
+                <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+                <h4>Production-Grade Only</h4>
+                <p>We build systems designed to run in production — secure, scalable, and built to last. No prototypes shipped as final products.</p>
+            </div>
+            <div class="value-card reveal d1">
+                <div class="value-icon"><i class="fas fa-flag"></i></div>
+                <h4>Nepal-First Mindset</h4>
+                <p>Every solution is designed for Nepal's context — Nepali language support, local business workflows, and real-world constraints.</p>
+            </div>
+            <div class="value-card reveal d2">
+                <div class="value-icon"><i class="fas fa-eye"></i></div>
+                <h4>Full Transparency</h4>
+                <p>Weekly progress updates, clear timelines, and honest conversations. You always know exactly where your project stands.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- CTA -->
+<section class="founders-cta">
+    <div style="max-width:600px;margin:0 auto;padding:0 28px;">
+        <h2 class="reveal">Work With Our Team</h2>
+        <p class="reveal d1">We take on new projects every month. Tell us what you need and we'll respond within 24 hours.</p>
+        <a href="contact.html" class="btn-cta-white reveal d2">
+            Start a Conversation <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div>
+            <a href="index.html" class="footer-brand-logo">
+                <img src="image.png" alt="CodeGhar Nepal">
+                <span>CodeGhar Nepal</span>
+            </a>
+            <p class="footer-about-text">Enterprise software and AI solutions from Bhaktapur, Nepal. We build systems that work — in production, at scale.</p>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/codegharnepal" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/codegharnepal" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/GOBINDABISTA" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div>
+            <p class="footer-col-title">Services</p>
+            <ul class="footer-col-links">
+                <li><a href="service-ai.html">AI Solutions</a></li>
+                <li><a href="service-webapp.html">Web Applications</a></li>
+                <li><a href="service-mobile.html">Mobile Apps</a></li>
+                <li><a href="service-web.html">Website Development</a></li>
+                <li><a href="service-marketing.html">Digital Marketing</a></li>
+            </ul>
+        </div>
+        <div>
+            <p class="footer-col-title">Company</p>
+            <ul class="footer-col-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="founders.html">Leadership</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <p class="footer-col-title">Contact</p>
+            <ul class="footer-col-links">
+                <li><a href="mailto:nepalcodeghar@gmail.com">nepalcodeghar@gmail.com</a></li>
+                <li><a href="tel:+9779842378928">+977 984 237 8928</a></li>
+                <li><a href="#">Bhaktapur-8, Libali, Nepal</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span class="footer-bottom-copy">© 2026 CodeGhar Nepal Pvt. Ltd. All rights reserved.</span>
+        <div class="footer-bottom-links">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="security.html">Security</a>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    // Nav scroll
+    const header = document.getElementById('mainHeader');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 10));
+
+    // Mobile nav
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navBackdrop = document.getElementById('navBackdrop');
+    const drawerClose = document.getElementById('drawerClose');
+    const openNav = () => { navMenu.classList.add('open'); navBackdrop.classList.add('active'); document.body.style.overflow='hidden'; };
+    const closeNav = () => { navMenu.classList.remove('open'); navBackdrop.classList.remove('active'); document.body.style.overflow=''; };
+    mobileToggle && mobileToggle.addEventListener('click', openNav);
+    drawerClose && drawerClose.addEventListener('click', closeNav);
+    navBackdrop && navBackdrop.addEventListener('click', closeNav);
+    document.querySelectorAll('.cgdrop-trigger').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            if(window.innerWidth <= 900) { e.stopPropagation(); this.closest('.cgdrop').classList.toggle('open'); }
+        });
+    });
+
+    // Reveal
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
