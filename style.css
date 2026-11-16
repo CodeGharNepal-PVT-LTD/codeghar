@@ -2950,10 +2950,12 @@ footer {
     transition: opacity 0.3s ease, visibility 0.3s ease !important;
   }
 
-  .nav-backdrop.active {
+  .nav-backdrop.active,
+  .nav-backdrop.open {
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: auto !important;
+    display: block !important;
   }
 
   /* Off-Canvas Navigation Drawer */
@@ -2986,7 +2988,8 @@ footer {
     transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.32s ease !important;
   }
 
-  .nav-menu.active {
+  .nav-menu.active,
+  .nav-menu.open {
     transform: translateX(0) !important;
     visibility: visible !important;
     pointer-events: auto !important;

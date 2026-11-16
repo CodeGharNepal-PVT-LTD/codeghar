@@ -35,14 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Mobile Navigation Drawer & Dropdown Logic
     const mobileToggle = document.getElementById('mobileToggle');
-    const navLinks = document.getElementById('navLinks');
+    const navLinks = document.getElementById('navLinks') || document.getElementById('navMenu') || document.querySelector('.nav-menu');
     const navBackdrop = document.getElementById('navBackdrop');
-    const navCloseBtn = document.getElementById('navCloseBtn');
+    const navCloseBtn = document.getElementById('navCloseBtn') || document.getElementById('drawerClose') || document.querySelector('.drawer-close');
 
     const closeMobileMenu = () => {
-        if (navLinks && navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-            if (navBackdrop) navBackdrop.classList.remove('active');
+        if (navLinks) {
+            navLinks.classList.remove('active', 'open');
+            if (navBackdrop) navBackdrop.classList.remove('active', 'open');
             if (mobileToggle) {
                 const icon = mobileToggle.querySelector('i');
                 if (icon) {
@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const openMobileMenu = () => {
         if (navLinks) {
-            navLinks.classList.add('active');
-            if (navBackdrop) navBackdrop.classList.add('active');
+            navLinks.classList.add('active', 'open');
+            if (navBackdrop) navBackdrop.classList.add('active', 'open');
             if (mobileToggle) {
                 const icon = mobileToggle.querySelector('i');
                 if (icon) {
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileToggle && navLinks) {
         mobileToggle.addEventListener('click', (e) => {
             e.stopPropagation();
-            if (navLinks.classList.contains('active')) {
+            if (navLinks.classList.contains('active') || navLinks.classList.contains('open')) {
                 closeMobileMenu();
             } else {
                 openMobileMenu();
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Close menu when tapping any regular navigation link
-    document.querySelectorAll('#navLinks a:not(.cgdrop-trigger)').forEach(link => {
+    document.querySelectorAll('.nav-menu a:not(.cgdrop-trigger), #navLinks a:not(.cgdrop-trigger)').forEach(link => {
         link.addEventListener('click', () => {
             closeMobileMenu();
         });
