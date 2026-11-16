@@ -294,6 +294,11 @@
         }
 
         /* PAGE */
+        html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+
         body {
             padding-top: var(--nav-h);
             font-family: 'Inter', sans-serif;
@@ -452,6 +457,7 @@
             padding: 16px;
             opacity: 0;
             transition: opacity 0.25s ease;
+            pointer-events: none;
         }
 
         .founder-photo-wrap:hover .photo-overlay-hint,
@@ -858,24 +864,35 @@
 
         /* RESPONSIVE */
         @media(max-width:860px) {
-            .ceo-card {
+            .team-section {
+                padding: 60px 0;
+            }
+
+            .team-wrap {
+                padding: 0 16px;
+            }
+
+            .founders-grid {
                 grid-template-columns: 1fr;
+                max-width: 100%;
+                gap: 20px;
             }
 
-            .ceo-photo {
-                height: 300px;
+            .founder-photo-wrap {
+                height: 280px;
             }
 
-            .ceo-body {
-                padding: 32px;
+            .founder-content {
+                padding: 20px 16px;
             }
 
-            .cofounders-grid {
-                grid-template-columns: 1fr;
+            .founder-card.is-open .founder-details {
+                max-height: 1000px;
             }
 
             .values-grid {
                 grid-template-columns: 1fr;
+                gap: 16px;
             }
 
             .footer-grid {
@@ -885,6 +902,22 @@
         }
 
         @media(max-width:580px) {
+            .page-hero {
+                padding: 110px 0 60px;
+            }
+
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .page-hero p {
+                font-size: 0.95rem;
+            }
+
+            .founder-photo-wrap {
+                height: 260px;
+            }
+
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 32px;
