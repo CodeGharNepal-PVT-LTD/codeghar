@@ -225,51 +225,104 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 6. EmailJS Form Handling
-    // Initialize EmailJS with your Public Key
-    if (typeof emailjs !== 'undefined') { emailjs.init("VIgUDPahfPdZmEG5V"); }
+    const EMAILJS_PUBLIC_KEY = "VIgUDPahfPdZmEG5V";
+    const EMAILJS_SERVICE_ID = "service_324q5pn";
+    const EMAILJS_TEMPLATE_ID = "template_7sj8ni2";
+
+    if (typeof emailjs !== 'undefined') {
+        try {
+            emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+        } catch (e) {
+            try { emailjs.init(EMAILJS_PUBLIC_KEY); } catch (e2) {}
+        }
+    }
 
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
+            const btn = contactForm.querySelector('button[type="submit"]') || contactForm.querySelector('button');
+            const originalText = btn ? btn.textContent : "Send Message / पठाउनुस्";
 
-            console.log('Form Data:', formData);
+            if (btn) {
+                btn.textContent = "Sending / पठाउँदैछ...";
+                btn.disabled = true;
+            }
 
-            const btn = contactForm.querySelector('button');
-            const originalText = btn.textContent;
-
-            btn.textContent = "Sending...";
-            btn.disabled = true;
-
-            // Send email using EmailJS
-            emailjs.send(
-                "service_05j4wnp",
-                "template_rcgrwzk",
-                {
-                    from_name: formData.name,
-                    from_email: formData.email,
-                    message: formData.message,
-                    to_email: "nepalcodeghar@gmail.com"
+            // Safety timeout to prevent getting permanently stuck
+            const safetyTimeout = setTimeout(() => {
+                if (btn && btn.disabled) {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                    alert("Request timed out. Please check your network connection or email us directly at nepalcodeghar@gmail.com.");
                 }
-            ).then(() => {
-                alert("Message sent successfully! We'll contact you soon.");
-                console.log('Email sent:', formData);
-                btn.textContent = originalText;
-                btn.disabled = false;
-                contactForm.reset();
-            }).catch(error => {
-                console.error('Failed to send email:', error);
-                alert("Failed to send message. Please try again.");
-                btn.textContent = originalText;
-                btn.disabled = false;
-            });
+            }, 15000);
+
+            try {
+                if (typeof emailjs === 'undefined') {
+                    clearTimeout(safetyTimeout);
+                    if (btn) {
+                        btn.textContent = originalText;
+                        btn.disabled = false;
+                    }
+                    alert("Email service is temporarily unavailable. Please email us directly at nepalcodeghar@gmail.com or call +977-9842378928.");
+                    return;
+                }
+
+                // Get form values
+                const nameEl = document.getElementById('name');
+                const emailEl = document.getElementById('email');
+                const phoneEl = document.getElementById('phone');
+                const serviceEl = document.getElementById('service');
+                const messageEl = document.getElementById('message');
+
+                const templateParams = {
+                    from_name: nameEl ? nameEl.value.trim() : "",
+                    name: nameEl ? nameEl.value.trim() : "",
+                    user_name: nameEl ? nameEl.value.trim() : "",
+                    from_email: emailEl ? emailEl.value.trim() : "",
+                    email: emailEl ? emailEl.value.trim() : "",
+                    user_email: emailEl ? emailEl.value.trim() : "",
+                    phone: phoneEl ? phoneEl.value.trim() : "",
+                    user_phone: phoneEl ? phoneEl.value.trim() : "",
+                    service: serviceEl ? serviceEl.value : "",
+                    message: messageEl ? messageEl.value.trim() : "",
+                    to_email: "nepalcodeghar@gmail.com"
+                };
+
+                // Send email using EmailJS
+                emailjs.send(
+                    EMAILJS_SERVICE_ID,
+                    EMAILJS_TEMPLATE_ID,
+                    templateParams,
+                    EMAILJS_PUBLIC_KEY
+                ).then((response) => {
+                    clearTimeout(safetyTimeout);
+                    alert("धन्यवाद! तपाईंको सन्देश सफलतापूर्वक पठाइयो। (Message sent successfully! We will contact you soon.)");
+                    if (btn) {
+                        btn.textContent = originalText;
+                        btn.disabled = false;
+                    }
+                    contactForm.reset();
+                }).catch((error) => {
+                    clearTimeout(safetyTimeout);
+                    console.error('Failed to send email via EmailJS:', error);
+                    alert("सन्देश पठाउन सकिएन। कृपया फेरि प्रयास गर्नुहोला वा सिधै nepalcodeghar@gmail.com मा सम्पर्क गर्नुहोस्।\n(Failed to send message: " + (error?.text || error?.message || "Unknown error") + ")");
+                    if (btn) {
+                        btn.textContent = originalText;
+                        btn.disabled = false;
+                    }
+                });
+            } catch (err) {
+                clearTimeout(safetyTimeout);
+                console.error('Unexpected form submission error:', err);
+                if (btn) {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                }
+                alert("सन्देश पठाउँदा समस्या आयो। कृपया nepalcodeghar@gmail.com मा इमेल गर्नुहोस्।");
+            }
         });
     }
 });
