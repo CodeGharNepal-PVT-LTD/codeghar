@@ -90,8 +90,13 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- EmailJS SDK (Local + CDN Fallback) -->
+    <script src="email.min.js"></script>
+    <script>
+        if (typeof emailjs === 'undefined') {
+            document.write('<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"><\/script>');
+        }
+    </script>
 </head>
 <body class="page-header-offset">
 
@@ -358,7 +363,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="script.js"></script>
+    <script src="script.js?v=2.2"></script>
 
     
 
@@ -374,6 +379,72 @@
         slides[cur].classList.add('cg-active');
     },5000);
 })();
+
+// Direct Form Submission Handler with fresh credentials
+document.addEventListener('DOMContentLoaded', function() {
+    var contactForm = document.getElementById('contactForm');
+    if (!contactForm) return;
+
+    if (typeof emailjs !== 'undefined') {
+        try {
+            emailjs.init({ publicKey: "VIgUDPahfPdZmEG5V" });
+        } catch (e) {
+            try { emailjs.init("VIgUDPahfPdZmEG5V"); } catch (e2) {}
+        }
+    }
+
+    contactForm.onsubmit = function(e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+
+        var btn = contactForm.querySelector('button[type="submit"]') || contactForm.querySelector('button');
+        var originalText = btn ? btn.textContent : "Send Message / पठाउनुस्";
+
+        if (btn) {
+            btn.textContent = "Sending / पठाउँदैछ...";
+            btn.disabled = true;
+        }
+
+        var nameVal = (document.getElementById('name') ? document.getElementById('name').value : '').trim();
+        var emailVal = (document.getElementById('email') ? document.getElementById('email').value : '').trim();
+        var phoneVal = (document.getElementById('phone') ? document.getElementById('phone').value : '').trim();
+        var serviceVal = document.getElementById('service') ? document.getElementById('service').value : '';
+        var messageVal = (document.getElementById('message') ? document.getElementById('message').value : '').trim();
+
+        var templateParams = {
+            from_name: nameVal,
+            name: nameVal,
+            user_name: nameVal,
+            from_email: emailVal,
+            email: emailVal,
+            user_email: emailVal,
+            phone: phoneVal,
+            user_phone: phoneVal,
+            service: serviceVal,
+            service_interest: serviceVal,
+            message: messageVal,
+            to_email: "nepalcodeghar@gmail.com"
+        };
+
+        if (typeof emailjs === 'undefined') {
+            if (btn) { btn.textContent = originalText; btn.disabled = false; }
+            alert("Email service loading. Please try once again.");
+            return;
+        }
+
+        emailjs.send("service_324q5pn", "template_7sj8ni2", templateParams, "VIgUDPahfPdZmEG5V")
+            .then(function(res) {
+                alert("धन्यवाद! तपाईंको सन्देश सफलतापूर्वक पठाइयो। (Message sent successfully!)");
+                if (btn) { btn.textContent = originalText; btn.disabled = false; }
+                contactForm.reset();
+            })
+            .catch(function(err) {
+                console.error("EmailJS Error:", err);
+                alert("सन्देश पठाउन सकिएन: " + (err ? (err.text || err.message || JSON.stringify(err)) : "Error"));
+                if (btn) { btn.textContent = originalText; btn.disabled = false; }
+            });
+    };
+});
 </script>
 
 </body>
