@@ -287,6 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     phone: phoneEl ? phoneEl.value.trim() : "",
                     user_phone: phoneEl ? phoneEl.value.trim() : "",
                     service: serviceEl ? serviceEl.value : "",
+                    service_interest: serviceEl ? serviceEl.value : "",
                     message: messageEl ? messageEl.value.trim() : "",
                     to_email: "nepalcodeghar@gmail.com"
                 };
