@@ -4,21 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing &amp; Engagement Models | CodeGhar Nepal</title>
-    <meta name="description"
-        content="Transparent, requirement-based pricing for software engineering and AI solutions. We quote based on your exact project scope and technical requirements.">
-    <meta name="keywords" content="CodeGhar Pricing, Software Development Cost Nepal, AI Solutions Cost, Custom Software Quote">
-    <link rel="canonical" href="https://codegharnepal.com.np/pricing.html">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Pricing &amp; Engagement Models | CodeGhar Nepal">
-    <meta property="og:description"
-        content="Transparent, requirement-based pricing for software and AI engineering. Custom estimates tailored to your business scope.">
-    <meta property="og:image" content="https://codegharnepal.com.np/image.png">
+    <title>Pricing & Engagement Models | CodeGhar Nepal</title>
+    <meta name="description" content="Transparent pricing and flexible software engineering models: dedicated agile squads, fixed-price milestones, and retained developer teams.">
+    <meta name="keywords" content="CodeGhar, CodeGhar Nepal, Software Development Nepal, Web Development Bhaktapur, AI Solutions Nepal, Mobile App Development, Enterprise Software, Nepal IT Company, Gobinda Bista">
+    <meta name="author" content="CodeGhar Nepal Pvt. Ltd.">
+    <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#012962">
+    <link rel="canonical" href="https://codegharnepal.com.np/pricing.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://codegharnepal.com.np/pricing.html">
+    <meta property="og:title" content="Pricing & Engagement Models | CodeGhar Nepal">
+    <meta property="og:description" content="Transparent pricing and flexible software engineering models: dedicated agile squads, fixed-price milestones, and retained developer teams.">
+    <meta property="og:image" content="https://codegharnepal.com.np/image.png">
+    <meta property="og:site_name" content="CodeGhar Nepal">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://codegharnepal.com.np/pricing.html">
+    <meta name="twitter:title" content="Pricing & Engagement Models | CodeGhar Nepal">
+    <meta name="twitter:description" content="Transparent pricing and flexible software engineering models: dedicated agile squads, fixed-price milestones, and retained developer teams.">
+    <meta name="twitter:image" content="https://codegharnepal.com.np/image.png">
+
+    <!-- Geo Metadata -->
+    <meta name="geo.region" content="NP-BA">
+    <meta name="geo.placename" content="Bhaktapur">
+    <meta name="geo.position" content="27.6710;85.4298">
+    <meta name="ICBM" content="27.6710, 85.4298">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="image.png">
     <link rel="apple-touch-icon" href="image.png">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Pricing & Engagement Models | CodeGhar Nepal",
+    "description": "Transparent pricing and flexible software engineering models: dedicated agile squads, fixed-price milestones, and retained developer teams.",
+    "url": "https://codegharnepal.com.np/pricing.html",
+    "publisher": {
+        "@type": "Organization",
+        "name": "CodeGhar Nepal Pvt. Ltd.",
+        "url": "https://codegharnepal.com.np/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://codegharnepal.com.np/image.png"
+        }
+    }
+}
+    </script>
+
+    <!-- Favicon -->
+    
+    
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -147,21 +189,35 @@
         .cgdrop-menu {
             display: none;
             position: absolute;
-            top: calc(100% + 6px);
+            top: 100%;
+            margin-top: 2px;
             left: 0;
-            min-width: 200px;
+            min-width: 210px;
             background: #fff;
             border: 1px solid #E2E8F0;
             border-radius: 12px;
-            box-shadow: 0 16px 40px rgba(1, 41, 98, 0.12);
-            padding: 6px 0;
-            z-index: 999;
+            box-shadow: 0 16px 40px rgba(1, 41, 98, 0.14);
+            padding: 8px 0;
+            z-index: 1005;
             list-style: none;
         }
 
-        .cgdrop:hover .cgdrop-menu,
-        .cgdrop.open .cgdrop-menu {
+        .cgdrop-menu::before {
+            content: "";
+            position: absolute;
+            top: -12px;
+            left: 0;
+            right: 0;
+            height: 12px;
             display: block;
+        }
+
+        .cgdrop:hover > .cgdrop-menu,
+        .cgdrop.open > .cgdrop-menu {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            pointer-events: auto !important;
         }
 
         .cgdrop-menu a {
@@ -332,7 +388,7 @@
             position: absolute !important;
             inset: 0 !important;
             background-size: cover !important;
-            background-position: center !important;
+            background-position: center 30% !important;
             background-repeat: no-repeat !important;
             opacity: 0 !important;
             transition: opacity 1.6s ease-in-out !important;
@@ -1236,17 +1292,52 @@
             });
         }
 
-        // Close drawer when clicking any link
-        document.querySelectorAll('.nav-menu a:not(.cgdrop-trigger)').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 900) {
-                    closeNav();
-                }
-            });
-        });
+        // Dropdown toggles on desktop and mobile
         document.querySelectorAll('.cgdrop-trigger').forEach(btn => {
             btn.addEventListener('click', function (e) {
-                if (window.innerWidth <= 900) { e.stopPropagation(); this.closest('.cgdrop').classList.toggle('open'); }
+                e.preventDefault();
+                e.stopPropagation();
+                const drop = this.closest('.cgdrop');
+                if (!drop) return;
+                const isOpen = drop.classList.contains('open');
+                document.querySelectorAll('.cgdrop').forEach(d => {
+                    if (d !== drop) d.classList.remove('open');
+                });
+                drop.classList.toggle('open', !isOpen);
+            });
+        });
+
+        // Close dropdowns on outside click
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.cgdrop')) {
+                document.querySelectorAll('.cgdrop').forEach(d => d.classList.remove('open'));
+            }
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.cgdrop').forEach(d => d.classList.remove('open'));
+                closeNav();
+            }
+        });
+
+        // Close drawer when clicking in-page anchor hash links
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#') && href !== '#') {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 900) {
+                        closeNav();
+                    }
+                });
+            }
+        });
+
+        // Ensure subnav links navigate cleanly
+        document.querySelectorAll('.cgdrop-menu a').forEach(sub => {
+            sub.addEventListener('click', function (e) {
+                e.stopPropagation();
             });
         });
     </script>

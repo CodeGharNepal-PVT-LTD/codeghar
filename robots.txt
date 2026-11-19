@@ -1,4 +1,7 @@
+# robots.txt for https://codegharnepal.com.np
 User-agent: *
 Allow: /
+Disallow: /404.html
 
+# Sitemaps
 Sitemap: https://codegharnepal.com.np/sitemap.xml

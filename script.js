@@ -96,11 +96,14 @@ document.addEventListener('DOMContentLoaded', () => {
         navBackdrop.addEventListener('click', closeMobileMenu);
     }
 
-    // Close menu when tapping any regular navigation link
-    document.querySelectorAll('.nav-menu a:not(.cgdrop-trigger), #navLinks a:not(.cgdrop-trigger)').forEach(link => {
-        link.addEventListener('click', () => {
-            closeMobileMenu();
-        });
+    // Close menu when tapping in-page anchor links (hashes)
+    document.querySelectorAll('.nav-menu a, #navLinks a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#') && href !== '#') {
+            link.addEventListener('click', () => {
+                closeMobileMenu();
+            });
+        }
     });
 
     // Dropdown Toggling for .cgdrop
@@ -124,6 +127,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 parent.classList.remove('open');
                 trigger.setAttribute('aria-expanded', 'false');
             }
+        });
+    });
+
+    // Allow subnav links inside .cgdrop-menu to be clicked cleanly without parent interference
+    document.querySelectorAll('.cgdrop-menu a').forEach(subLink => {
+        subLink.addEventListener('click', (e) => {
+            e.stopPropagation();
         });
     });
 
